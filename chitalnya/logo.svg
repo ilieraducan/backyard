@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2F6A6F"/><stop offset="1" stop-color="#21474B"/></linearGradient>
+    <linearGradient id="pl" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#E9E2D0"/><stop offset=".25" stop-color="#FBF8F0"/></linearGradient>
+    <linearGradient id="pr" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E9E2D0"/><stop offset=".25" stop-color="#FBF8F0"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- cover edge -->
+  <path d="M80 168 Q168 140 256 176 Q344 140 432 168 L432 380 Q344 352 256 388 Q168 352 80 380 Z" fill="#163437" opacity=".55" transform="translate(0 14)"/>
+  <!-- pages stack -->
+  <path d="M92 160 Q170 132 256 166 L256 378 Q170 344 92 372 Z" fill="#D9CFB8"/>
+  <path d="M420 160 Q342 132 256 166 L256 378 Q342 344 420 372 Z" fill="#D9CFB8"/>
+  <!-- top pages -->
+  <path d="M100 150 Q174 122 256 158 L256 368 Q174 334 100 362 Z" fill="url(#pl)"/>
+  <path d="M412 150 Q338 122 256 158 L256 368 Q338 334 412 362 Z" fill="url(#pr)"/>
+  <!-- text lines -->
+  <g stroke="#B9AE95" stroke-width="7" stroke-linecap="round" fill="none">
+    <path d="M128 190 Q178 174 228 190"/><path d="M128 222 Q178 206 228 222"/><path d="M128 254 Q178 238 228 254"/><path d="M128 286 Q170 272 208 284"/>
+    <path d="M284 190 Q334 174 384 190"/><path d="M284 222 Q334 206 384 222"/><path d="M284 254 Q334 238 384 254"/>
+  </g>
+  <!-- spine -->
+  <path d="M256 158 L256 368" stroke="#A89C80" stroke-width="4"/>
+  <!-- bookmark ribbon -->
+  <path d="M330 148 L330 300 L346 284 L362 300 L362 140 Z" fill="#D9A441"/>
+</svg>
