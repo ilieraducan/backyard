@@ -1350,6 +1350,7 @@ var DATENSCHUTZ = `<article><h1>Datenschutzerkl\xE4rung</h1>
 function siteResponse(url, req) {
   const p = url.pathname.replace(/\/+$/, "") || "/";
   const H = { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=3600" };
+  if (p === "/googleefc73af5336f00f5.html") return new Response("google-site-verification: googleefc73af5336f00f5.html", { headers: { "content-type": "text/html" } });
   if (p === "/robots.txt") return new Response(`User-agent: *
 Allow: /
 Disallow: /setup
