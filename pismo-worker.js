@@ -1196,6 +1196,10 @@ var langKb = /* @__PURE__ */ __name(() => {
 }, "langKb");
 var btnIs = /* @__PURE__ */ __name((text, key) => Object.keys(LANGS).some((l) => t(l, key) === text), "btnIs");
 async function handle(up, env, ctx) {
+  if (!env.OWNER_ID) {
+    const o = await env.KV.get("owner");
+    if (o) env.OWNER_ID = o;
+  }
   if (up.pre_checkout_query) return tg(env, "answerPreCheckoutQuery", { pre_checkout_query_id: up.pre_checkout_query.id, ok: true });
   if (up.callback_query) return onCallback(up.callback_query, env);
   const m = up.message;
@@ -1228,6 +1232,12 @@ async function handle(up, env, ctx) {
   if (text === "/address" || btnIs(text, "btnAddress")) return askAddress(env, u, uid, chat);
   if (u.awaiting === "address" && text && !text.startsWith("/") && !Object.keys(LANGS).some((l) => Object.values({ a: t(l, "btnLetter"), b: t(l, "btnOffice"), c: t(l, "btnSub"), d: t(l, "btnLang") }).includes(text))) return saveAddress(env, u, uid, chat, text);
   if (text === "/sub" || btnIs(text, "btnSub")) return subInfo(env, u, chat);
+  if (text.startsWith("/claim ") && env.WEBHOOK_SECRET && text.slice(7).trim() === env.WEBHOOK_SECRET.slice(0, 8)) {
+    if (env.OWNER_ID && String(env.OWNER_ID) !== String(uid)) return send(env, chat, "Owner already set.");
+    await env.KV.put("owner", String(uid));
+    env.OWNER_ID = String(uid);
+    return send(env, chat, "\u2705 \u0412\u044B \u0432\u043B\u0430\u0434\u0435\u043B\u0435\u0446 \u0431\u043E\u0442\u0430. \u041A\u043E\u043C\u0430\u043D\u0434\u044B: /stats \u2014 \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430 \u0437\u0430 7 \u0434\u043D\u0435\u0439, /feedbacks \u2014 \u043E\u0442\u0437\u044B\u0432\u044B. \u0423\u0432\u0435\u0434\u043E\u043C\u043B\u0435\u043D\u0438\u044F \u043E\u0431 \u043E\u043F\u043B\u0430\u0442\u0430\u0445 \u0438 \u043E\u0442\u0437\u044B\u0432\u0430\u0445 \u0431\u0443\u0434\u0443\u0442 \u043F\u0440\u0438\u0445\u043E\u0434\u0438\u0442\u044C \u0441\u044E\u0434\u0430.");
+  }
   if (text === "/stats" && String(uid) === String(env.OWNER_ID)) return ownerStats(env, chat);
   if (text === "/feedbacks" && String(uid) === String(env.OWNER_ID)) {
     const l = await env.KV.list({ prefix: "fb:" });
@@ -1725,6 +1735,16 @@ async function setup(url, env) {
     const commands = ids.map((command, i) => ({ command, description: i === 11 ? T[lc].btnFeedback.replace(/^💬 /, "") : (T[lc].cmd || T.en.cmd)[i] }));
     out.push((await tg(env, "setMyCommands", { commands, language_code: lc })).ok);
     if (lc === "en") out.push((await tg(env, "setMyCommands", { commands })).ok);
+  }
+  for (const lc of Object.keys(LANGS)) {
+    const d = T[lc].welcome.replace(/\*/g, "").replace(/\{free\}/g, "3").replace(/\{freeOffice\}/g, "1").slice(0, 512);
+    const sd = T[lc].welcome.split("\n")[0].replace(/^👋\s*/, "").slice(0, 120);
+    out.push((await tg(env, "setMyDescription", { description: d, language_code: lc })).ok);
+    out.push((await tg(env, "setMyShortDescription", { short_description: sd, language_code: lc })).ok);
+    if (lc === "en") {
+      await tg(env, "setMyDescription", { description: d });
+      await tg(env, "setMyShortDescription", { short_description: sd });
+    }
   }
   return new Response("setup: " + JSON.stringify(out));
 }
