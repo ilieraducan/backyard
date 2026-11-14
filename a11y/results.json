@@ -1,0 +1,16 @@
+{
+ "https://www.allbirds.com/": {
+  "ok": true,
+  "title": "Allbirds: Comfortable, Sustainable Shoes & Apparel",
+  "total": 0,
+  "violations": [],
+  "shot": "shots/www_allbirds_com_.jpg"
+ },
+ "https://www.example.com/": {
+  "ok": true,
+  "title": "Example Domain",
+  "total": 0,
+  "violations": [],
+  "shot": "shots/www_example_com_.jpg"
+ }
+}
