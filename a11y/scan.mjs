@@ -6,7 +6,7 @@ const urls = fs.readFileSync(new URL("./urls.txt", import.meta.url), "utf8").spl
 const out = {};
 const b = await chromium.launch();
 for (const u of urls) {
-  const ctx = await b.newContext({ viewport: { width: 1366, height: 900 }, userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" });
+  const ctx = await b.newContext({ bypassCSP: true, viewport: { width: 1366, height: 900 }, userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36" });
   const p = await ctx.newPage();
   try {
     await p.goto(u, { waitUntil: "domcontentloaded", timeout: 45000 });
