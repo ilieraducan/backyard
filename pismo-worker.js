@@ -1640,6 +1640,7 @@ async function handle(up, env, ctx) {
     if (u.mode !== "office") return officeVoiceOutside(env, u, uid, chat, m);
     return officeUtterance(env, u, uid, chat, { voice: m.voice || m.audio });
   }
+  if (text.startsWith("/")) return send(env, chat, html(t(L, "welcome", { free: FREE_LETTERS, freeOffice: FREE_OFFICE })), { reply_markup: mainKb(L) });
   if (text) {
     if (u.mode === "office") return officeUtterance(env, u, uid, chat, { text });
     return askQuestion(env, u, uid, chat, text);
