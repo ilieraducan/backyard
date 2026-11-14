@@ -10,7 +10,7 @@ concurrency: { group: leads, cancel-in-progress: true }
 jobs:
   find:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     strategy:
       fail-fast: false
       matrix:
@@ -23,6 +23,8 @@ jobs:
       - run: |
           cd leads && curl -sL -o t.zip https://tranco-list.eu/top-1m.csv.zip && unzip -o t.zip >/dev/null && wc -l top-1m.csv
           S=$(( ${{ matrix.part }} * 250000 )); node find.mjs $S $(( S + 250000 ))
+          npm install --no-audit --no-fund >/dev/null && npx playwright install --with-deps chromium >/dev/null
+          node scan.mjs leads-$S.json 200
           P=${{ matrix.part }}
           openssl rand -hex 32 > k.txt
           openssl enc -aes-256-cbc -pbkdf2 -salt -in leads-$S.json -out part$P.enc -pass file:k.txt
