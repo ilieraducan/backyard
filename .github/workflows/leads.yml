@@ -6,11 +6,13 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency: { group: leads, cancel-in-progress: true }
 jobs:
   find:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     strategy:
+      fail-fast: false
       matrix:
         part: [0, 1, 2, 3]
     steps:
@@ -21,21 +23,11 @@ jobs:
       - run: |
           cd leads && curl -sL -o t.zip https://tranco-list.eu/top-1m.csv.zip && unzip -o t.zip >/dev/null && wc -l top-1m.csv
           S=$(( ${{ matrix.part }} * 250000 )); node find.mjs $S $(( S + 250000 ))
-      - uses: actions/upload-artifact@v4
-        with: { name: "leads-${{ matrix.part }}", path: "leads/leads-*.json", retention-days: 1 }
-  merge:
-    needs: find
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with: { ref: kira-tmp }
-      - uses: actions/download-artifact@v4
-        with: { path: parts }
-      - run: |
-          node -e 'const fs=require("fs");let all=[];for(const d of fs.readdirSync("parts"))for(const f of fs.readdirSync("parts/"+d))all=all.concat(JSON.parse(fs.readFileSync("parts/"+d+"/"+f)));fs.writeFileSync("plain.json",JSON.stringify(all));console.log(all.length)'
+          P=${{ matrix.part }}
           openssl rand -hex 32 > k.txt
-          openssl enc -aes-256-cbc -pbkdf2 -salt -in plain.json -out leads/us-shopify.enc -pass file:k.txt
-          openssl pkeyutl -encrypt -pubin -inkey leads/lead.pub -in k.txt -out leads/us-shopify.key.enc
-          rm -f plain.json k.txt
+          openssl enc -aes-256-cbc -pbkdf2 -salt -in leads-$S.json -out part$P.enc -pass file:k.txt
+          openssl pkeyutl -encrypt -pubin -inkey lead.pub -in k.txt -out part$P.key.enc
+          rm -f leads-*.json k.txt top-1m.csv t.zip
           git config user.name a11y-bot && git config user.email a11y-bot@users.noreply.github.com
-          git add leads/us-shopify.enc leads/us-shopify.key.enc && git commit -m "leads" && git pull --rebase origin kira-tmp && git push origin HEAD:kira-tmp
+          git add part$P.enc part$P.key.enc && git commit -m "leads part $P"
+          for i in 1 2 3 4 5; do git pull --rebase origin kira-tmp && git push origin HEAD:kira-tmp && break; sleep $((RANDOM % 20 + 5)); done
