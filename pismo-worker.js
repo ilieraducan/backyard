@@ -6,6 +6,17 @@ var LANGS = { ru: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439", ro: "Rom\xE2n\u0
 var LANG_NAME_EN = { ru: "Russian", ro: "Romanian", uk: "Ukrainian" };
 var T = {
   ru: {
+    btnAddress: "\u{1F3E0} \u041C\u043E\u0439 \u0430\u0434\u0440\u0435\u0441",
+    askAddress: "\u{1F3E0} \u0423\u043A\u0430\u0436\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u043F\u0440\u043E\u043F\u0438\u0441\u043A\u0438 (Meldeadresse) \u2014 \u043D\u0430\u043F\u0440\u0438\u043C\u0435\u0440: Hauptstra\xDFe 5, 21682 Stade. \u041C\u043E\u0436\u043D\u043E \u0442\u043E\u043B\u044C\u043A\u043E \u0438\u043D\u0434\u0435\u043A\u0441 \u0438 \u0433\u043E\u0440\u043E\u0434.\n\n\u0417\u0430\u0447\u0435\u043C: \u0447\u0442\u043E\u0431\u044B \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u044C *\u0432\u0430\u0448\u0435* \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u043E (Jobcenter, Ausl\xE4nderbeh\xF6rde\u2026) \u0438 \u0441\u0442\u0440\u043E\u0438\u0442\u044C \u043C\u0430\u0440\u0448\u0440\u0443\u0442 \u043D\u0430 \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u0435. \u0410\u0434\u0440\u0435\u0441 \u0445\u0440\u0430\u043D\u0438\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u0443 \u0431\u043E\u0442\u0430, \u0443\u0434\u0430\u043B\u0438\u0442\u044C \u2014 /forget.",
+    btnSkip: "\u041F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u0442\u044C",
+    addressSaved: "\u2705 \u0410\u0434\u0440\u0435\u0441 \u0441\u043E\u0445\u0440\u0430\u043D\u0451\u043D: {a}\n\u0420\u0430\u0439\u043E\u043D: {c}",
+    addressNotFound: "\u041D\u0435 \u043D\u0430\u0448\u0451\u043B \u0442\u0430\u043A\u043E\u0439 \u0430\u0434\u0440\u0435\u0441. \u041D\u0430\u043F\u0438\u0448\u0438\u0442\u0435 \u0438\u043D\u0434\u0435\u043A\u0441 \u0438 \u0433\u043E\u0440\u043E\u0434, \u043D\u0430\u043F\u0440\u0438\u043C\u0435\u0440: 21682 Stade.",
+    skipped: "\u0425\u043E\u0440\u043E\u0448\u043E. \u0423\u043A\u0430\u0437\u0430\u0442\u044C \u0430\u0434\u0440\u0435\u0441 \u043C\u043E\u0436\u043D\u043E \u043F\u043E\u0437\u0436\u0435 \u2014 \u043A\u043D\u043E\u043F\u043A\u0430 \xAB\u{1F3E0} \u041C\u043E\u0439 \u0430\u0434\u0440\u0435\u0441\xBB.",
+    btnRoute: "\u{1F68C} \u041C\u0430\u0440\u0448\u0440\u0443\u0442 \u043D\u0430 \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u0435",
+    foundOffice: "\u{1F50E} \u0412 \u043F\u0438\u0441\u044C\u043C\u0435 \u043D\u0435\u0442 \u0430\u0434\u0440\u0435\u0441\u0430. \u041F\u043E \u0432\u0430\u0448\u0435\u043C\u0443 \u0430\u0434\u0440\u0435\u0441\u0443, \u0441\u043A\u043E\u0440\u0435\u0435 \u0432\u0441\u0435\u0433\u043E, \u0432\u0430\u043C \u0441\u044E\u0434\u0430:",
+    confirmOffice: "\u26A0\uFE0F \u041D\u0430\u0439\u0434\u0435\u043D\u043E \u043F\u043E \u043A\u0430\u0440\u0442\u0435 \u2014 \u043F\u0435\u0440\u0435\u0434 \u043F\u043E\u0435\u0437\u0434\u043A\u043E\u0439 \u043F\u043E\u0437\u0432\u043E\u043D\u0438\u0442\u0435 \u0438 \u0443\u0442\u043E\u0447\u043D\u0438\u0442\u0435, \u0447\u0442\u043E \u044D\u0442\u043E \u0432\u0430\u0448\u0435 \u043E\u0442\u0434\u0435\u043B\u0435\u043D\u0438\u0435.",
+    noOfficeFound: "\u041D\u0435 \u043D\u0430\u0448\u0451\u043B \u0430\u0434\u0440\u0435\u0441 \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438. \u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0438\u0442\u0435 \u043D\u0430 \u0441\u0430\u0439\u0442\u0435 \u0432\u0430\u0448\u0435\u0433\u043E \u0433\u043E\u0440\u043E\u0434\u0430/\u0440\u0430\u0439\u043E\u043D\u0430 \u0438\u043B\u0438 \u043F\u043E\u0437\u0432\u043E\u043D\u0438\u0442\u0435 \u043D\u0430 \u0435\u0434\u0438\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440.",
+    needAddress: "\u0427\u0442\u043E\u0431\u044B \u043D\u0430\u0439\u0442\u0438 \u0432\u0430\u0448\u0435 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u043E \u0438 \u043C\u0430\u0440\u0448\u0440\u0443\u0442, \u0443\u043A\u0430\u0436\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u2014 \u043A\u043D\u043E\u043F\u043A\u0430 \xAB\u{1F3E0} \u041C\u043E\u0439 \u0430\u0434\u0440\u0435\u0441\xBB.",
     btnOfficeInfo: "\u{1F4CD} \u0410\u0434\u0440\u0435\u0441 \u0438 \u0432\u0440\u0435\u043C\u044F \u0440\u0430\u0431\u043E\u0442\u044B",
     whereGo: "\u{1F4CD} *\u041A\u0443\u0434\u0430 \u0438\u0434\u0442\u0438*",
     hours: "\u{1F558} \u0412\u0440\u0435\u043C\u044F \u0440\u0430\u0431\u043E\u0442\u044B",
@@ -47,13 +58,24 @@ var T = {
     paid: "\u2705 \u041F\u043E\u0434\u043F\u0438\u0441\u043A\u0430 \u0430\u043A\u0442\u0438\u0432\u043D\u0430 \u0434\u043E {d}. \u0421\u043F\u0430\u0441\u0438\u0431\u043E!",
     subActive: "\u2B50 \u041F\u043E\u0434\u043F\u0438\u0441\u043A\u0430 \u0430\u043A\u0442\u0438\u0432\u043D\u0430 \u0434\u043E {d}.",
     subNone: "\u041F\u043E\u0434\u043F\u0438\u0441\u043A\u0438 \u043D\u0435\u0442. \u041E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E: \u043F\u0438\u0441\u0435\u043C \u2014 {l}, \u0432\u0438\u0437\u0438\u0442\u043E\u0432 \u2014 {o}.",
-    privacy: "\u{1F512} \u041A\u043E\u043D\u0444\u0438\u0434\u0435\u043D\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C\n\u2022 \u0424\u043E\u0442\u043E \u0438 PDF \u043D\u0435 \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u044E\u0442\u0441\u044F \u2014 \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0431\u0440\u0430\u0431\u0430\u0442\u044B\u0432\u0430\u044E\u0442\u0441\u044F \u0438 \u0441\u0440\u0430\u0437\u0443 \u0443\u0434\u0430\u043B\u044F\u044E\u0442\u0441\u044F.\n\u2022 \u0422\u0435\u043A\u0441\u0442 \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0435\u0433\u043E \u043F\u0438\u0441\u044C\u043C\u0430 \u0445\u0440\u0430\u043D\u0438\u0442\u0441\u044F 24 \u0447\u0430\u0441\u0430, \u0447\u0442\u043E\u0431\u044B \u043E\u0442\u0432\u0435\u0447\u0430\u0442\u044C \u043D\u0430 \u0432\u043E\u043F\u0440\u043E\u0441\u044B \u0438 \u043F\u0438\u0441\u0430\u0442\u044C \u043E\u0442\u0432\u0435\u0442. \u041F\u043E\u0442\u043E\u043C \u0443\u0434\u0430\u043B\u044F\u0435\u0442\u0441\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438. /forget \u2014 \u0443\u0434\u0430\u043B\u0438\u0442\u044C \u0441\u0440\u0430\u0437\u0443.\n\u2022 \u0414\u043B\u044F \u0440\u0430\u0437\u0431\u043E\u0440\u0430 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F \u0418\u0418 Claude (Anthropic) \u0438 \u0440\u0430\u0441\u043F\u043E\u0437\u043D\u0430\u0432\u0430\u043D\u0438\u0435 \u0440\u0435\u0447\u0438 Cloudflare. \u0414\u0430\u043D\u043D\u044B\u0435 \u043D\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u044E\u0442\u0441\u044F \u0434\u043B\u044F \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F.\n\u2022 \u041D\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u044F \u0445\u0440\u0430\u043D\u044F\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u0434\u0430\u0442\u0443 \u0438 \u043A\u043E\u0440\u043E\u0442\u043A\u043E\u0435 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435.",
-    forgot: "\u{1F5D1} \u0423\u0434\u0430\u043B\u0435\u043D\u043E: \u0442\u0435\u043A\u0441\u0442 \u043F\u0438\u0441\u044C\u043C\u0430 \u0438 \u043D\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u044F.",
+    privacy: "\u{1F512} \u041A\u043E\u043D\u0444\u0438\u0434\u0435\u043D\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C\n\u2022 \u0424\u043E\u0442\u043E \u0438 PDF \u043D\u0435 \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u044E\u0442\u0441\u044F \u2014 \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0431\u0440\u0430\u0431\u0430\u0442\u044B\u0432\u0430\u044E\u0442\u0441\u044F \u0438 \u0441\u0440\u0430\u0437\u0443 \u0443\u0434\u0430\u043B\u044F\u044E\u0442\u0441\u044F.\n\u2022 \u0422\u0435\u043A\u0441\u0442 \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0435\u0433\u043E \u043F\u0438\u0441\u044C\u043C\u0430 \u0445\u0440\u0430\u043D\u0438\u0442\u0441\u044F 24 \u0447\u0430\u0441\u0430, \u0447\u0442\u043E\u0431\u044B \u043E\u0442\u0432\u0435\u0447\u0430\u0442\u044C \u043D\u0430 \u0432\u043E\u043F\u0440\u043E\u0441\u044B \u0438 \u043F\u0438\u0441\u0430\u0442\u044C \u043E\u0442\u0432\u0435\u0442. \u041F\u043E\u0442\u043E\u043C \u0443\u0434\u0430\u043B\u044F\u0435\u0442\u0441\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438. /forget \u2014 \u0443\u0434\u0430\u043B\u0438\u0442\u044C \u0441\u0440\u0430\u0437\u0443.\n\u2022 \u0414\u043B\u044F \u0440\u0430\u0437\u0431\u043E\u0440\u0430 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F \u0418\u0418 Claude (Anthropic) \u0438 \u0440\u0430\u0441\u043F\u043E\u0437\u043D\u0430\u0432\u0430\u043D\u0438\u0435 \u0440\u0435\u0447\u0438 Cloudflare. \u0414\u0430\u043D\u043D\u044B\u0435 \u043D\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u044E\u0442\u0441\u044F \u0434\u043B\u044F \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F.\n\u2022 \u041D\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u044F \u0445\u0440\u0430\u043D\u044F\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u0434\u0430\u0442\u0443 \u0438 \u043A\u043E\u0440\u043E\u0442\u043A\u043E\u0435 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435.\n\u2022 \u0410\u0434\u0440\u0435\u0441 \u043F\u0440\u043E\u043F\u0438\u0441\u043A\u0438 (\u0435\u0441\u043B\u0438 \u0443\u043A\u0430\u0437\u0430\u043B\u0438) \u0445\u0440\u0430\u043D\u0438\u0442\u0441\u044F, \u043F\u043E\u043A\u0430 \u0432\u044B \u0435\u0433\u043E \u043D\u0435 \u0443\u0434\u0430\u043B\u0438\u0442\u0435 (/forget).",
+    forgot: "\u{1F5D1} \u0423\u0434\u0430\u043B\u0435\u043D\u043E: \u0442\u0435\u043A\u0441\u0442 \u043F\u0438\u0441\u044C\u043C\u0430, \u043D\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u044F \u0438 \u0430\u0434\u0440\u0435\u0441.",
     paysupport: "\u041F\u043E \u0432\u043E\u043F\u0440\u043E\u0441\u0430\u043C \u043E\u043F\u043B\u0430\u0442\u044B \u043D\u0430\u043F\u0438\u0448\u0438\u0442\u0435 \u0441\u044E\u0434\u0430: {contact}. \u0412\u043E\u0437\u0432\u0440\u0430\u0442 Stars \u2014 \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 7 \u0434\u043D\u0435\u0439, \u0435\u0441\u043B\u0438 \u0441\u0435\u0440\u0432\u0438\u0441 \u043D\u0435 \u043F\u043E\u043C\u043E\u0433.",
     terms: "\u0423\u0441\u043B\u043E\u0432\u0438\u044F: \u0441\u0435\u0440\u0432\u0438\u0441 \u0434\u0430\u0451\u0442 \u043F\u043E\u044F\u0441\u043D\u0435\u043D\u0438\u044F \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E \u0418\u0418 \u0438 \u043D\u0435 \u0437\u0430\u043C\u0435\u043D\u044F\u0435\u0442 \u044E\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043A\u0443\u044E \u043A\u043E\u043D\u0441\u0443\u043B\u044C\u0442\u0430\u0446\u0438\u044E. \u041F\u0440\u043E\u0432\u0435\u0440\u044F\u0439\u0442\u0435 \u0441\u0440\u043E\u043A\u0438 \u0438 \u0441\u0443\u043C\u043C\u044B \u043F\u043E \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\u0443. \u041F\u043E\u0434\u043F\u0438\u0441\u043A\u0443 \u043C\u043E\u0436\u043D\u043E \u043E\u0442\u043C\u0435\u043D\u0438\u0442\u044C \u0432 \u043B\u044E\u0431\u043E\u0439 \u043C\u043E\u043C\u0435\u043D\u0442 \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445 Telegram.",
     tooLong: "\u0413\u043E\u043B\u043E\u0441\u043E\u0432\u043E\u0435 \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0434\u043B\u0438\u043D\u043D\u043E\u0435 \u2014 \u0434\u043E 2 \u043C\u0438\u043D\u0443\u0442, \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430."
   },
   ro: {
+    btnAddress: "\u{1F3E0} Adresa mea",
+    askAddress: "\u{1F3E0} Scrie adresa de domiciliu (Meldeadresse) \u2014 de ex.: Hauptstra\xDFe 5, 21682 Stade. Po\u021Bi scrie doar codul po\u0219tal \u0219i ora\u0219ul.\n\nDe ce: ca s\u0103 g\u0103sesc *institu\u021Bia ta* (Jobcenter, Ausl\xE4nderbeh\xF6rde\u2026) \u0219i traseul cu transportul public. Adresa r\u0103m\xE2ne doar la bot, \u0219tergere \u2014 /forget.",
+    btnSkip: "Sari peste",
+    addressSaved: "\u2705 Adres\u0103 salvat\u0103: {a}\nZona: {c}",
+    addressNotFound: "N-am g\u0103sit adresa. Scrie codul po\u0219tal \u0219i ora\u0219ul, de ex.: 21682 Stade.",
+    skipped: "Bine. Po\u021Bi ad\u0103uga adresa mai t\xE2rziu \u2014 butonul \u201E\u{1F3E0} Adresa mea\u201D.",
+    btnRoute: "\u{1F68C} Traseu cu transportul public",
+    foundOffice: "\u{1F50E} Scrisoarea nu are adres\u0103. Dup\u0103 adresa ta, cel mai probabil trebuie s\u0103 mergi aici:",
+    confirmOffice: "\u26A0\uFE0F G\u0103sit pe hart\u0103 \u2014 \xEEnainte s\u0103 mergi, sun\u0103 \u0219i verific\u0103 dac\u0103 e filiala ta.",
+    noOfficeFound: "N-am g\u0103sit adresa automat. Caut\u0103 pe site-ul ora\u0219ului/districtului sau sun\u0103 la num\u0103rul central.",
+    needAddress: "Ca s\u0103 g\u0103sesc institu\u021Bia ta \u0219i traseul, adaug\u0103 adresa \u2014 butonul \u201E\u{1F3E0} Adresa mea\u201D.",
     btnOfficeInfo: "\u{1F4CD} Adres\u0103 \u0219i program",
     whereGo: "\u{1F4CD} *Unde mergi*",
     hours: "\u{1F558} Program",
@@ -95,13 +117,24 @@ var T = {
     paid: "\u2705 Abonament activ p\xE2n\u0103 la {d}. Mul\u021Bumesc!",
     subActive: "\u2B50 Abonament activ p\xE2n\u0103 la {d}.",
     subNone: "F\u0103r\u0103 abonament. Gratuit r\u0103mas: scrisori \u2014 {l}, vizite \u2014 {o}.",
-    privacy: "\u{1F512} Confiden\u021Bialitate\n\u2022 Pozele \u0219i PDF-urile nu se salveaz\u0103 \u2014 doar se proceseaz\u0103 \u0219i se \u0219terg imediat.\n\u2022 Textul ultimei scrisori se p\u0103streaz\u0103 24 de ore, pentru \xEEntreb\u0103ri \u0219i r\u0103spuns. Apoi se \u0219terge automat. /forget \u2014 \u0219terge acum.\n\u2022 Se folose\u0219te AI Claude (Anthropic) \u0219i recunoa\u0219tere vocal\u0103 Cloudflare. Datele nu sunt folosite pentru antrenare.\n\u2022 Memento-urile p\u0103streaz\u0103 doar data \u0219i un titlu scurt.",
-    forgot: "\u{1F5D1} \u0218ters: textul scrisorii \u0219i memento-urile.",
+    privacy: "\u{1F512} Confiden\u021Bialitate\n\u2022 Pozele \u0219i PDF-urile nu se salveaz\u0103 \u2014 doar se proceseaz\u0103 \u0219i se \u0219terg imediat.\n\u2022 Textul ultimei scrisori se p\u0103streaz\u0103 24 de ore, pentru \xEEntreb\u0103ri \u0219i r\u0103spuns. Apoi se \u0219terge automat. /forget \u2014 \u0219terge acum.\n\u2022 Se folose\u0219te AI Claude (Anthropic) \u0219i recunoa\u0219tere vocal\u0103 Cloudflare. Datele nu sunt folosite pentru antrenare.\n\u2022 Memento-urile p\u0103streaz\u0103 doar data \u0219i un titlu scurt.\n\u2022 Adresa (dac\u0103 ai dat-o) se p\u0103streaz\u0103 p\xE2n\u0103 o \u0219tergi (/forget).",
+    forgot: "\u{1F5D1} \u0218ters: textul scrisorii, memento-urile \u0219i adresa.",
     paysupport: "Pentru pl\u0103\u021Bi scrie aici: {contact}. Rambursare Stars \xEEn 7 zile, dac\u0103 serviciul nu te-a ajutat.",
     terms: "Condi\u021Bii: serviciul ofer\u0103 explica\u021Bii generate de AI \u0219i nu \xEEnlocuie\u0219te consultan\u021Ba juridic\u0103. Verific\u0103 termenele \u0219i sumele \xEEn original. Abonamentul se anuleaz\u0103 oric\xE2nd din set\u0103rile Telegram.",
     tooLong: "Mesajul vocal e prea lung \u2014 p\xE2n\u0103 la 2 minute, te rog."
   },
   uk: {
+    btnAddress: "\u{1F3E0} \u041C\u043E\u044F \u0430\u0434\u0440\u0435\u0441\u0430",
+    askAddress: "\u{1F3E0} \u0412\u043A\u0430\u0436\u0456\u0442\u044C \u0430\u0434\u0440\u0435\u0441\u0443 \u0440\u0435\u0454\u0441\u0442\u0440\u0430\u0446\u0456\u0457 (Meldeadresse) \u2014 \u043D\u0430\u043F\u0440\u0438\u043A\u043B\u0430\u0434: Hauptstra\xDFe 5, 21682 Stade. \u041C\u043E\u0436\u043D\u0430 \u043B\u0438\u0448\u0435 \u0456\u043D\u0434\u0435\u043A\u0441 \u0456 \u043C\u0456\u0441\u0442\u043E.\n\n\u041D\u0430\u0432\u0456\u0449\u043E: \u0449\u043E\u0431 \u0437\u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0438 *\u0432\u0430\u0448\u0443* \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0443 (Jobcenter, Ausl\xE4nderbeh\xF6rde\u2026) \u0456 \u0431\u0443\u0434\u0443\u0432\u0430\u0442\u0438 \u043C\u0430\u0440\u0448\u0440\u0443\u0442 \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u043E\u043C. \u0410\u0434\u0440\u0435\u0441\u0430 \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u0454\u0442\u044C\u0441\u044F \u043B\u0438\u0448\u0435 \u0432 \u0431\u043E\u0442\u0430, \u0432\u0438\u0434\u0430\u043B\u0438\u0442\u0438 \u2014 /forget.",
+    btnSkip: "\u041F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u0442\u0438",
+    addressSaved: "\u2705 \u0410\u0434\u0440\u0435\u0441\u0443 \u0437\u0431\u0435\u0440\u0435\u0436\u0435\u043D\u043E: {a}\n\u0420\u0430\u0439\u043E\u043D: {c}",
+    addressNotFound: "\u041D\u0435 \u0437\u043D\u0430\u0439\u0448\u043E\u0432 \u0442\u0430\u043A\u043E\u0457 \u0430\u0434\u0440\u0435\u0441\u0438. \u041D\u0430\u043F\u0438\u0448\u0456\u0442\u044C \u0456\u043D\u0434\u0435\u043A\u0441 \u0456 \u043C\u0456\u0441\u0442\u043E, \u043D\u0430\u043F\u0440\u0438\u043A\u043B\u0430\u0434: 21682 Stade.",
+    skipped: "\u0414\u043E\u0431\u0440\u0435. \u0412\u043A\u0430\u0437\u0430\u0442\u0438 \u0430\u0434\u0440\u0435\u0441\u0443 \u043C\u043E\u0436\u043D\u0430 \u043F\u0456\u0437\u043D\u0456\u0448\u0435 \u2014 \u043A\u043D\u043E\u043F\u043A\u0430 \xAB\u{1F3E0} \u041C\u043E\u044F \u0430\u0434\u0440\u0435\u0441\u0430\xBB.",
+    btnRoute: "\u{1F68C} \u041C\u0430\u0440\u0448\u0440\u0443\u0442 \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u043E\u043C",
+    foundOffice: "\u{1F50E} \u0423 \u043B\u0438\u0441\u0442\u0456 \u043D\u0435\u043C\u0430\u0454 \u0430\u0434\u0440\u0435\u0441\u0438. \u0417\u0430 \u0432\u0430\u0448\u043E\u044E \u0430\u0434\u0440\u0435\u0441\u043E\u044E, \u043D\u0430\u0439\u0456\u043C\u043E\u0432\u0456\u0440\u043D\u0456\u0448\u0435, \u0432\u0430\u043C \u0441\u044E\u0434\u0438:",
+    confirmOffice: "\u26A0\uFE0F \u0417\u043D\u0430\u0439\u0434\u0435\u043D\u043E \u0437\u0430 \u043A\u0430\u0440\u0442\u043E\u044E \u2014 \u043F\u0435\u0440\u0435\u0434 \u043F\u043E\u0457\u0437\u0434\u043A\u043E\u044E \u0437\u0430\u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0443\u0439\u0442\u0435 \u0439 \u0443\u0442\u043E\u0447\u043D\u0456\u0442\u044C, \u0449\u043E \u0446\u0435 \u0432\u0430\u0448\u0435 \u0432\u0456\u0434\u0434\u0456\u043B\u0435\u043D\u043D\u044F.",
+    noOfficeFound: "\u041D\u0435 \u0437\u043D\u0430\u0439\u0448\u043E\u0432 \u0430\u0434\u0440\u0435\u0441\u0443 \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u043D\u043E. \u041F\u043E\u0434\u0438\u0432\u0456\u0442\u044C\u0441\u044F \u043D\u0430 \u0441\u0430\u0439\u0442\u0456 \u0432\u0430\u0448\u043E\u0433\u043E \u043C\u0456\u0441\u0442\u0430/\u0440\u0430\u0439\u043E\u043D\u0443 \u0430\u0431\u043E \u0437\u0430\u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0443\u0439\u0442\u0435 \u043D\u0430 \u0454\u0434\u0438\u043D\u0438\u0439 \u043D\u043E\u043C\u0435\u0440.",
+    needAddress: "\u0429\u043E\u0431 \u0437\u043D\u0430\u0439\u0442\u0438 \u0432\u0430\u0448\u0443 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0443 \u0439 \u043C\u0430\u0440\u0448\u0440\u0443\u0442, \u0432\u043A\u0430\u0436\u0456\u0442\u044C \u0430\u0434\u0440\u0435\u0441\u0443 \u2014 \u043A\u043D\u043E\u043F\u043A\u0430 \xAB\u{1F3E0} \u041C\u043E\u044F \u0430\u0434\u0440\u0435\u0441\u0430\xBB.",
     btnOfficeInfo: "\u{1F4CD} \u0410\u0434\u0440\u0435\u0441\u0430 \u0439 \u0433\u043E\u0434\u0438\u043D\u0438 \u0440\u043E\u0431\u043E\u0442\u0438",
     whereGo: "\u{1F4CD} *\u041A\u0443\u0434\u0438 \u0439\u0442\u0438*",
     hours: "\u{1F558} \u0413\u043E\u0434\u0438\u043D\u0438 \u0440\u043E\u0431\u043E\u0442\u0438",
@@ -143,8 +176,8 @@ var T = {
     paid: "\u2705 \u041F\u0456\u0434\u043F\u0438\u0441\u043A\u0430 \u0430\u043A\u0442\u0438\u0432\u043D\u0430 \u0434\u043E {d}. \u0414\u044F\u043A\u0443\u044E!",
     subActive: "\u2B50 \u041F\u0456\u0434\u043F\u0438\u0441\u043A\u0430 \u0430\u043A\u0442\u0438\u0432\u043D\u0430 \u0434\u043E {d}.",
     subNone: "\u041F\u0456\u0434\u043F\u0438\u0441\u043A\u0438 \u043D\u0435\u043C\u0430\u0454. \u0417\u0430\u043B\u0438\u0448\u0438\u043B\u043E\u0441\u044C \u0431\u0435\u0437\u043A\u043E\u0448\u0442\u043E\u0432\u043D\u043E: \u043B\u0438\u0441\u0442\u0456\u0432 \u2014 {l}, \u0432\u0456\u0437\u0438\u0442\u0456\u0432 \u2014 {o}.",
-    privacy: "\u{1F512} \u041A\u043E\u043D\u0444\u0456\u0434\u0435\u043D\u0446\u0456\u0439\u043D\u0456\u0441\u0442\u044C\n\u2022 \u0424\u043E\u0442\u043E \u0442\u0430 PDF \u043D\u0435 \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u044E\u0442\u044C\u0441\u044F \u2014 \u043B\u0438\u0448\u0435 \u043E\u0431\u0440\u043E\u0431\u043B\u044F\u044E\u0442\u044C\u0441\u044F \u0456 \u043E\u0434\u0440\u0430\u0437\u0443 \u0432\u0438\u0434\u0430\u043B\u044F\u044E\u0442\u044C\u0441\u044F.\n\u2022 \u0422\u0435\u043A\u0441\u0442 \u043E\u0441\u0442\u0430\u043D\u043D\u044C\u043E\u0433\u043E \u043B\u0438\u0441\u0442\u0430 \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u0454\u0442\u044C\u0441\u044F 24 \u0433\u043E\u0434\u0438\u043D\u0438, \u0449\u043E\u0431 \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u0430\u0442\u0438 \u043D\u0430 \u043F\u0438\u0442\u0430\u043D\u043D\u044F \u0439 \u043F\u0438\u0441\u0430\u0442\u0438 \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C. \u041F\u043E\u0442\u0456\u043C \u0432\u0438\u0434\u0430\u043B\u044F\u0454\u0442\u044C\u0441\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u043D\u043E. /forget \u2014 \u0432\u0438\u0434\u0430\u043B\u0438\u0442\u0438 \u043E\u0434\u0440\u0430\u0437\u0443.\n\u2022 \u0412\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u043E\u0432\u0443\u0454\u0442\u044C\u0441\u044F \u0428\u0406 Claude (Anthropic) \u0456 \u0440\u043E\u0437\u043F\u0456\u0437\u043D\u0430\u0432\u0430\u043D\u043D\u044F \u043C\u043E\u0432\u043B\u0435\u043D\u043D\u044F Cloudflare. \u0414\u0430\u043D\u0456 \u043D\u0435 \u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u043E\u0432\u0443\u044E\u0442\u044C\u0441\u044F \u0434\u043B\u044F \u043D\u0430\u0432\u0447\u0430\u043D\u043D\u044F.\n\u2022 \u041D\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043D\u043D\u044F \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u044E\u0442\u044C \u043B\u0438\u0448\u0435 \u0434\u0430\u0442\u0443 \u0439 \u043A\u043E\u0440\u043E\u0442\u043A\u0443 \u043D\u0430\u0437\u0432\u0443.",
-    forgot: "\u{1F5D1} \u0412\u0438\u0434\u0430\u043B\u0435\u043D\u043E: \u0442\u0435\u043A\u0441\u0442 \u043B\u0438\u0441\u0442\u0430 \u0439 \u043D\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043D\u043D\u044F.",
+    privacy: "\u{1F512} \u041A\u043E\u043D\u0444\u0456\u0434\u0435\u043D\u0446\u0456\u0439\u043D\u0456\u0441\u0442\u044C\n\u2022 \u0424\u043E\u0442\u043E \u0442\u0430 PDF \u043D\u0435 \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u044E\u0442\u044C\u0441\u044F \u2014 \u043B\u0438\u0448\u0435 \u043E\u0431\u0440\u043E\u0431\u043B\u044F\u044E\u0442\u044C\u0441\u044F \u0456 \u043E\u0434\u0440\u0430\u0437\u0443 \u0432\u0438\u0434\u0430\u043B\u044F\u044E\u0442\u044C\u0441\u044F.\n\u2022 \u0422\u0435\u043A\u0441\u0442 \u043E\u0441\u0442\u0430\u043D\u043D\u044C\u043E\u0433\u043E \u043B\u0438\u0441\u0442\u0430 \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u0454\u0442\u044C\u0441\u044F 24 \u0433\u043E\u0434\u0438\u043D\u0438, \u0449\u043E\u0431 \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u0430\u0442\u0438 \u043D\u0430 \u043F\u0438\u0442\u0430\u043D\u043D\u044F \u0439 \u043F\u0438\u0441\u0430\u0442\u0438 \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C. \u041F\u043E\u0442\u0456\u043C \u0432\u0438\u0434\u0430\u043B\u044F\u0454\u0442\u044C\u0441\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u043D\u043E. /forget \u2014 \u0432\u0438\u0434\u0430\u043B\u0438\u0442\u0438 \u043E\u0434\u0440\u0430\u0437\u0443.\n\u2022 \u0412\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u043E\u0432\u0443\u0454\u0442\u044C\u0441\u044F \u0428\u0406 Claude (Anthropic) \u0456 \u0440\u043E\u0437\u043F\u0456\u0437\u043D\u0430\u0432\u0430\u043D\u043D\u044F \u043C\u043E\u0432\u043B\u0435\u043D\u043D\u044F Cloudflare. \u0414\u0430\u043D\u0456 \u043D\u0435 \u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u043E\u0432\u0443\u044E\u0442\u044C\u0441\u044F \u0434\u043B\u044F \u043D\u0430\u0432\u0447\u0430\u043D\u043D\u044F.\n\u2022 \u041D\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043D\u043D\u044F \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u044E\u0442\u044C \u043B\u0438\u0448\u0435 \u0434\u0430\u0442\u0443 \u0439 \u043A\u043E\u0440\u043E\u0442\u043A\u0443 \u043D\u0430\u0437\u0432\u0443.\n\u2022 \u0410\u0434\u0440\u0435\u0441\u0430 \u0440\u0435\u0454\u0441\u0442\u0440\u0430\u0446\u0456\u0457 (\u044F\u043A\u0449\u043E \u0432\u043A\u0430\u0437\u0430\u043B\u0438) \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u0454\u0442\u044C\u0441\u044F, \u0434\u043E\u043A\u0438 \u0432\u0438 \u0457\u0457 \u043D\u0435 \u0432\u0438\u0434\u0430\u043B\u0438\u0442\u0435 (/forget).",
+    forgot: "\u{1F5D1} \u0412\u0438\u0434\u0430\u043B\u0435\u043D\u043E: \u0442\u0435\u043A\u0441\u0442 \u043B\u0438\u0441\u0442\u0430, \u043D\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043D\u043D\u044F \u0439 \u0430\u0434\u0440\u0435\u0441\u0443.",
     paysupport: "\u0417 \u043F\u0438\u0442\u0430\u043D\u044C \u043E\u043F\u043B\u0430\u0442\u0438 \u043F\u0438\u0448\u0456\u0442\u044C \u0441\u044E\u0434\u0438: {contact}. \u041F\u043E\u0432\u0435\u0440\u043D\u0435\u043D\u043D\u044F Stars \u2014 \u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C 7 \u0434\u043D\u0456\u0432, \u044F\u043A\u0449\u043E \u0441\u0435\u0440\u0432\u0456\u0441 \u043D\u0435 \u0434\u043E\u043F\u043E\u043C\u0456\u0433.",
     terms: "\u0423\u043C\u043E\u0432\u0438: \u0441\u0435\u0440\u0432\u0456\u0441 \u0434\u0430\u0454 \u043F\u043E\u044F\u0441\u043D\u0435\u043D\u043D\u044F \u0437\u0430 \u0434\u043E\u043F\u043E\u043C\u043E\u0433\u043E\u044E \u0428\u0406 \u0439 \u043D\u0435 \u0437\u0430\u043C\u0456\u043D\u044E\u0454 \u044E\u0440\u0438\u0434\u0438\u0447\u043D\u0443 \u043A\u043E\u043D\u0441\u0443\u043B\u044C\u0442\u0430\u0446\u0456\u044E. \u041F\u0435\u0440\u0435\u0432\u0456\u0440\u044F\u0439\u0442\u0435 \u0441\u0442\u0440\u043E\u043A\u0438 \u0439 \u0441\u0443\u043C\u0438 \u0437\u0430 \u043E\u0440\u0438\u0433\u0456\u043D\u0430\u043B\u043E\u043C. \u041F\u0456\u0434\u043F\u0438\u0441\u043A\u0443 \u043C\u043E\u0436\u043D\u0430 \u0441\u043A\u0430\u0441\u0443\u0432\u0430\u0442\u0438 \u0431\u0443\u0434\u044C-\u043A\u043E\u043B\u0438 \u0432 \u043D\u0430\u043B\u0430\u0448\u0442\u0443\u0432\u0430\u043D\u043D\u044F\u0445 Telegram.",
     tooLong: "\u0413\u043E\u043B\u043E\u0441\u043E\u0432\u0435 \u0437\u0430\u0434\u043E\u0432\u0433\u0435 \u2014 \u0434\u043E 2 \u0445\u0432\u0438\u043B\u0438\u043D, \u0431\u0443\u0434\u044C \u043B\u0430\u0441\u043A\u0430."
@@ -158,10 +191,12 @@ __name(t, "t");
 
 // src/prompts.js
 var today = /* @__PURE__ */ __name(() => (/* @__PURE__ */ new Date()).toISOString().slice(0, 10), "today");
-function letterSystem(lang) {
+function letterSystem(lang, home) {
   const L = LANG_NAME_EN[lang] || "Russian";
+  const H = home ? `
+Reader's registered address area (Meldeadresse): ${[home.plz, home.city, home.county, home.state].filter(Boolean).join(", ")}. Use it to name the locally responsible office when the letter only says e.g. "wenden Sie sich an Ihr Jobcenter".` : "";
   return `You help immigrants in Germany understand official German letters (Jobcenter, Familienkasse, Finanzamt, Ausl\xE4nderbeh\xF6rde, Krankenkasse, Rundfunkbeitrag, landlords, debt collectors, courts, employers, schools).
-Today is ${today()}. The user reads ${L} and little or no German.
+Today is ${today()}. The user reads ${L} and little or no German.${H}
 
 Read the attached letter (photo pages or PDF) and answer ONLY with one JSON object, no prose around it:
 {
@@ -179,6 +214,7 @@ Read the attached letter (photo pages or PDF) and answer ONLY with one JSON obje
  "free_help": "..."|null,              // only for medium/high: in ${L}, which FREE counselling fits (Migrationsberatung f\xFCr Erwachsene (MBE) / Jugendmigrationsdienst (JMD) for under 27, Schuldnerberatung, Mieterverein, Sozialberatung of Caritas/Diakonie/AWO, Unabh\xE4ngige Patientenberatung, Verbraucherzentrale) and that they can find the nearest MBE/JMD on bamf-navi.bamf.de
  "scam_warning": "..."|null,           // in ${L}, only if there are signs of a fake letter (odd IBAN abroad, pressure, wrong logo, threats, payment by gift cards)
  "reply_useful": true|false,           // would a written reply/Widerspruch/request help?
+ "go_to": "..."|null,                 // German name of the office TYPE the reader must contact/visit if the letter does not print its address, e.g. "Jobcenter", "Ausl\xE4nderbeh\xF6rde", "B\xFCrgeramt", "Familienkasse", "Krankenkasse <Name>"; null if not needed
  "visit_needed": true|false,           // must the reader go somewhere in person (appointment, bring documents)?
  "office": {                           // contact data of the RESPONSIBLE office exactly as printed in the letter (header/footer/Besucheradresse). null fields if not printed. Never guess.
    "name": "..."|null, "address": "..."|null,   // Besucheradresse preferred over Postanschrift/Postfach
@@ -304,7 +340,7 @@ function parseJson(s) {
 }
 __name(parseJson, "parseJson");
 var mainKb = /* @__PURE__ */ __name((lang) => ({
-  keyboard: [[{ text: t(lang, "btnLetter") }, { text: t(lang, "btnOffice") }], [{ text: t(lang, "btnSub") }, { text: t(lang, "btnLang") }]],
+  keyboard: [[{ text: t(lang, "btnLetter") }, { text: t(lang, "btnOffice") }], [{ text: t(lang, "btnAddress") }, { text: t(lang, "btnSub") }, { text: t(lang, "btnLang") }]],
   resize_keyboard: true,
   is_persistent: true
 }), "mainKb");
@@ -332,7 +368,14 @@ async function handle(up, env, ctx) {
   if (text === "/privacy") return send(env, chat, html(t(L, "privacy")));
   if (text === "/terms") return send(env, chat, html(t(L, "terms")));
   if (text === "/paysupport") return send(env, chat, html(t(L, "paysupport", { contact: env.SUPPORT_CONTACT || "@support" })));
-  if (text === "/forget") return forget(env, uid, chat, L);
+  if (text === "/forget") {
+    u.home = null;
+    u.awaiting = null;
+    await putUser(env, uid, u);
+    return forget(env, uid, chat, L);
+  }
+  if (text === "/address" || btnIs(text, "btnAddress")) return askAddress(env, u, uid, chat);
+  if (u.awaiting === "address" && text && !text.startsWith("/") && !Object.keys(LANGS).some((l) => Object.values({ a: t(l, "btnLetter"), b: t(l, "btnOffice"), c: t(l, "btnSub"), d: t(l, "btnLang") }).includes(text))) return saveAddress(env, u, uid, chat, text);
   if (text === "/sub" || btnIs(text, "btnSub")) return subInfo(env, u, chat);
   if (text === "/stats" && String(uid) === String(env.OWNER_ID)) return ownerStats(env, chat);
   if (text === "/office" || btnIs(text, "btnOffice")) return officeStart(env, u, uid, chat);
@@ -374,11 +417,22 @@ async function onCallback(q, env) {
   if (kind === "lang" && LANGS[val]) {
     u.lang = val;
     await putUser(env, uid, u);
-    return send(env, chat, t(val, "langSet"), { reply_markup: mainKb(val) });
+    await send(env, chat, t(val, "langSet"), { reply_markup: mainKb(val) });
+    if (!u.home && !u.addrAsked) {
+      u.addrAsked = true;
+      return askAddress(env, u, uid, chat);
+    }
+    return;
   }
   if (kind === "reply") return writeReply(env, u, uid, chat);
   if (kind === "remind") return setReminder(env, u, uid, chat);
   if (kind === "where") return officeInfo(env, u, uid, chat);
+  if (kind === "addr") return askAddress(env, u, uid, chat);
+  if (kind === "skipaddr") {
+    u.awaiting = null;
+    await putUser(env, uid, u);
+    return send(env, chat, t(u.lang, "skipped"));
+  }
   if (kind === "ask") return send(env, chat, t(u.lang, "askQuestion"));
   if (kind === "pay") return payLink(env, u, uid, chat);
 }
@@ -424,7 +478,7 @@ async function processLetter(env, u, uid, chat, parts, replyTo) {
       else content.push({ type: "image", source: { type: "base64", media_type: /png/.test(p.mime) ? "image/png" : /webp/.test(p.mime) ? "image/webp" : "image/jpeg", data: b64(buf) } });
     }
     content.push({ type: "text", text: "Here is the letter. Return the JSON." });
-    const r = parseJson(await claude(env, letterSystem(L), content, 3e3));
+    const r = parseJson(await claude(env, letterSystem(L, u.home), content, 3e3));
     if (!r.is_letter) {
       await del(env, chat, wait);
       return send(env, chat, t(L, "notLetter"));
@@ -432,7 +486,7 @@ async function processLetter(env, u, uid, chat, parts, replyTo) {
     if (!isSub(u)) u.letters++;
     u.monthCount++;
     await putUser(env, uid, u);
-    await env.KV.put(ctxKey(uid), JSON.stringify({ office: r.office || null, sender: r.sender, doc_type: r.doc_type, deadline: r.deadline, deadline_label: r.deadline_label, text: r.letter_text_de, summary: r.summary }), { expirationTtl: DAY });
+    await env.KV.put(ctxKey(uid), JSON.stringify({ office: r.office || null, go_to: r.go_to || null, sender: r.sender, doc_type: r.doc_type, deadline: r.deadline, deadline_label: r.deadline_label, text: r.letter_text_de, summary: r.summary }), { expirationTtl: DAY });
     await stat(env, "letters");
     await del(env, chat, wait);
     const lines = [];
@@ -451,7 +505,7 @@ async function processLetter(env, u, uid, chat, parts, replyTo) {
     if (r.reply_useful) row.push({ text: t(L, "btnReply"), callback_data: "reply" });
     if (r.deadline) row.push({ text: t(L, "btnRemind"), callback_data: "remind" });
     if (row.length) kb.push(row);
-    if (r.office?.address || r.office?.phone) kb.push([{ text: t(L, "btnOfficeInfo"), callback_data: "where" }]);
+    if (r.office?.address || r.office?.phone || r.go_to) kb.push([{ text: t(L, "btnOfficeInfo"), callback_data: "where" }]);
     kb.push([{ text: t(L, "btnExplainMore"), callback_data: "ask" }]);
     await send(env, chat, lines.join("\n").slice(0, 4e3), { reply_markup: { inline_keyboard: kb } });
     if (!isSub(u) && u.letters === FREE_LETTERS) await paywallSoft(env, u, chat);
@@ -508,29 +562,104 @@ __name(askQuestion, "askQuestion");
 async function officeInfo(env, u, uid, chat) {
   const L = u.lang;
   const c = await env.KV.get(ctxKey(uid), "json");
-  const o = c?.office;
-  if (!o) return send(env, chat, t(L, "sendLetter"));
+  if (!c) return send(env, chat, t(L, "sendLetter"));
+  let o = c.office || {};
   const lines = [html(t(L, "whereGo")), ""];
+  let guessed = false;
+  if (!o.address && c.go_to) {
+    if (!u.home) return send(env, chat, t(L, "needAddress"), { reply_markup: { inline_keyboard: [[{ text: t(L, "btnAddress"), callback_data: "addr" }]] } });
+    const f = await findOffice(c.go_to, u.home).catch(() => null);
+    if (!f) return send(env, chat, `${esc(c.go_to)}
+
+${esc(t(L, "noOfficeFound"))}`);
+    o = { ...o, ...f, hours: o.hours || f.hours };
+    guessed = true;
+    lines.push(esc(t(L, "foundOffice")), "");
+  }
   if (o.name) lines.push(`<b>${esc(o.name)}</b>`);
   if (o.address) lines.push(esc(o.address));
   if (o.phone) lines.push(`\u260E\uFE0F ${esc(o.phone)}`);
   if (o.email) lines.push(`\u2709\uFE0F ${esc(o.email)}`);
+  if (o.website) lines.push(`\u{1F310} ${esc(o.website)}`);
   if (o.appointment) lines.push("", `${esc(t(L, "yourAppt"))}: <b>${esc(o.appointment)}</b>`);
-  if (o.hours) lines.push("", `${esc(t(L, "hours"))}: ${esc(o.hours)}`);
-  else {
-    const h = o.address ? await osmHours(o.name, o.address).catch(() => null) : null;
+  if (o.hours) lines.push("", `${esc(t(L, guessed ? "osmHours" : "hours"))}${guessed ? "" : ":"} ${esc(o.hours)}`);
+  else if (o.address) {
+    const h = await osmHours(o.name, o.address).catch(() => null);
     lines.push("", h ? `${esc(t(L, "osmHours"))} <code>${esc(h)}</code>` : esc(t(L, "noHours")));
   }
   if (o.booking) lines.push("", `${esc(t(L, "booking"))}: ${esc(o.booking)}`);
-  lines.push("", `<i>${esc(t(L, "zustNote"))}</i>`);
-  const q = encodeURIComponent([o.name, o.address].filter(Boolean).join(", "));
-  const kb = o.address ? { inline_keyboard: [[{ text: t(L, "maps"), url: `https://www.google.com/maps/search/?api=1&query=${q}` }]] } : void 0;
-  await stat(env, "where");
-  return send(env, chat, lines.join("\n"), kb ? { reply_markup: kb } : {});
+  lines.push("", `<i>${esc(t(L, guessed ? "confirmOffice" : "zustNote"))}</i>`);
+  const dest = o.lat ? `${o.lat},${o.lon}` : [o.name, o.address].filter(Boolean).join(", ");
+  const kb = [];
+  if (dest) {
+    kb.push([{ text: t(L, "maps"), url: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(dest)}` }]);
+    if (u.home) kb.push([{ text: t(L, "btnRoute"), url: `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(u.home.q)}&destination=${encodeURIComponent(dest)}&travelmode=transit` }]);
+  }
+  await stat(env, guessed ? "where_found" : "where");
+  return send(env, chat, lines.join("\n"), kb.length ? { reply_markup: { inline_keyboard: kb } } : {});
 }
 __name(officeInfo, "officeInfo");
+var NOMI = { "User-Agent": "PismoBot/1.0 (Telegram bot; contact via bot)", "Accept-Language": "de" };
+async function askAddress(env, u, uid, chat) {
+  u.awaiting = "address";
+  await putUser(env, uid, u);
+  return send(env, chat, html(t(u.lang, "askAddress")), { reply_markup: { inline_keyboard: [[{ text: t(u.lang, "btnSkip"), callback_data: "skipaddr" }]] } });
+}
+__name(askAddress, "askAddress");
+async function saveAddress(env, u, uid, chat, text) {
+  const L = u.lang;
+  const g = await geocode(text).catch(() => null);
+  if (!g) return send(env, chat, t(L, "addressNotFound"));
+  u.home = { q: text.slice(0, 120), ...g };
+  u.awaiting = null;
+  await putUser(env, uid, u);
+  await stat(env, "addresses");
+  return send(env, chat, t(L, "addressSaved", { a: [g.plz, g.city].filter(Boolean).join(" "), c: [g.county, g.state].filter(Boolean).join(", ") }));
+}
+__name(saveAddress, "saveAddress");
+async function geocode(q) {
+  const r = await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=1&countrycodes=de&q=${encodeURIComponent(q)}`, { headers: NOMI });
+  const [h] = await r.json();
+  if (!h) return null;
+  const a = h.address || {};
+  return { lat: +h.lat, lon: +h.lon, plz: a.postcode || null, city: a.city || a.town || a.village || a.municipality || null, county: a.county || a.city || null, state: a.state || null };
+}
+__name(geocode, "geocode");
+async function findOffice(type, home) {
+  const area = home.county || home.city || "";
+  const qs = [`${type} ${area}`, `${type} ${home.city || ""}`];
+  let best = null;
+  for (const q of qs) {
+    const r = await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&extratags=1&namedetails=1&limit=8&countrycodes=de&q=${encodeURIComponent(q)}`, { headers: NOMI });
+    const hits = (await r.json()).filter((h2) => (h2.name || h2.display_name || "").toLowerCase().includes(type.split(" ")[0].toLowerCase()));
+    for (const h2 of hits) {
+      const d = dist(home.lat, home.lon, +h2.lat, +h2.lon);
+      if (d < 60 && (!best || d < best.d)) best = { d, h: h2 };
+    }
+    if (best) break;
+  }
+  if (!best) return null;
+  const h = best.h, a = h.address || {}, x = h.extratags || {};
+  const street = [a.road, a.house_number].filter(Boolean).join(" ");
+  return {
+    name: h.name || type,
+    address: [street, [a.postcode, a.city || a.town || a.village].filter(Boolean).join(" ")].filter(Boolean).join(", "),
+    phone: x.phone || x["contact:phone"] || null,
+    website: x.website || x["contact:website"] || null,
+    hours: x.opening_hours || null,
+    lat: +h.lat,
+    lon: +h.lon
+  };
+}
+__name(findOffice, "findOffice");
+function dist(a, b, c, d) {
+  const R = 6371, r = Math.PI / 180;
+  const x = Math.sin((c - a) * r / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin((d - b) * r / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(x));
+}
+__name(dist, "dist");
 async function osmHours(name, address) {
-  const H = { "User-Agent": "PismoBot/1.0 (Telegram bot; contact via bot)" };
+  const H = NOMI;
   const q = encodeURIComponent(`${name || ""} ${address}`.trim());
   const r = await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&extratags=1&limit=3&countrycodes=de&q=${q}`, { headers: H });
   let res = await r.json();
