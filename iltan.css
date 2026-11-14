@@ -1,0 +1,45 @@
+/* ILTAN rebuild */
+:root{--il-navy:#13263b;--il-ink:#1d2733;--il-sun:#f2a900;--il-soft:#f4f6f8;--il-wa:#1fa855}
+.entry-content>.il-section,.entry-content>.il-band,.entry-content>.il-cta,.entry-content>.il-hero{margin-top:0;margin-bottom:0}
+.il-section{padding:56px 0}
+.il-first{padding-top:24px}
+.il-band{background:var(--il-soft);padding:44px 24px;border-radius:14px;margin:8px 0}
+.il-hero{border-radius:14px;overflow:hidden;padding:48px 32px!important}
+.il-hero .il-h1{color:#fff;font-size:clamp(30px,4.6vw,52px);line-height:1.12;max-width:820px;text-wrap:balance}
+.il-hero .il-lead{color:#e9eef3;font-size:clamp(17px,1.8vw,21px);max-width:680px;line-height:1.55}
+.il-section h2,.il-band h2,.il-cta h2{font-size:clamp(24px,3vw,34px);text-wrap:balance;margin-bottom:18px}
+.il-section h1{font-size:clamp(28px,4vw,44px);text-wrap:balance}
+.il-btn-main .wp-block-button__link{background:var(--il-sun)!important;color:#13263b!important;font-weight:700;border-radius:8px;padding:14px 26px}
+.il-btn-wa .wp-block-button__link{background:var(--il-wa)!important;color:#fff!important;font-weight:700;border-radius:8px;padding:14px 26px}
+.il-btn-main .wp-block-button__link:hover,.il-btn-wa .wp-block-button__link:hover{filter:brightness(1.07)}
+.il-hero-btns{margin-top:22px}
+.il-trust p{border-left:4px solid var(--il-sun);padding-left:14px;margin:0;line-height:1.5}
+.il-cards{gap:24px!important;margin-bottom:24px}
+.il-card{background:#fff;border:1px solid #e3e7ec;border-radius:12px;overflow:hidden;height:100%;padding:0 0 18px!important}
+.il-card figure{margin:0 0 14px}
+.il-card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block}
+.il-card h3,.il-card p{padding:0 20px}
+.il-card h3{margin:0 0 8px;font-size:21px}
+.il-more a{font-weight:700;color:var(--il-navy);text-decoration:none;border-bottom:2px solid var(--il-sun)}
+.il-note{background:#fff7e0;border-left:4px solid var(--il-sun);padding:14px 18px;border-radius:6px;font-size:15px}
+.il-steps p{background:var(--il-soft);border-radius:10px;padding:18px;height:100%;margin:0}
+.il-gallery img{border-radius:8px;aspect-ratio:4/3;object-fit:cover}
+.il-wide img{width:100%;max-height:460px;object-fit:cover;border-radius:12px}
+.il-cta{background:var(--il-navy);color:#fff;border-radius:14px;padding:48px 28px!important;text-align:center;margin:40px 0}
+.il-cta h2,.il-cta p{color:#fff}
+.il-cta .wp-block-buttons{justify-content:center}
+.il-section details{border:1px solid #e3e7ec;border-radius:8px;padding:14px 18px;margin-bottom:10px;background:#fff}
+.il-section summary{font-weight:700;cursor:pointer}
+.il-form{display:grid;gap:14px;max-width:760px;margin-top:20px}
+.il-form .il-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.il-form label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15px}
+.il-form input,.il-form select,.il-form textarea{font:inherit;font-weight:400;padding:11px 12px;border:1px solid #c9d1da;border-radius:8px;background:#fff;width:100%;box-sizing:border-box}
+.il-form .il-ok{flex-direction:row;align-items:flex-start;font-weight:400;font-size:14px}
+.il-form .il-ok input{width:auto;margin-top:3px}
+.il-form button{background:var(--il-wa);color:#fff;border:0;border-radius:8px;padding:14px 20px;font-weight:700;font-size:16px;cursor:pointer}
+.il-form button.il-alt{background:var(--il-navy)}
+.il-float{position:fixed;right:16px;bottom:16px;z-index:9999;display:flex;flex-direction:column;gap:10px}
+.il-float a{display:flex;align-items:center;gap:8px;color:#fff!important;text-decoration:none;font-weight:700;border-radius:30px;padding:12px 18px;box-shadow:0 6px 18px rgba(0,0,0,.25);font-size:15px}
+.il-float .w{background:var(--il-wa)}
+.il-float .t{background:var(--il-navy)}
+@media(max-width:781px){.il-section{padding:36px 0}.il-hero{padding:32px 18px!important;min-height:480px!important}.il-form .il-row{grid-template-columns:1fr}.il-band,.il-cta{padding:32px 18px!important}.il-float .t{display:none}.il-float a{padding:12px 16px}}
