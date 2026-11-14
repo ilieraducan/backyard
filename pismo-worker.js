@@ -6,6 +6,15 @@ var LANGS = { ru: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439", ro: "Rom\xE2n\u0
 var LANG_NAME_EN = { ru: "Russian", ro: "Romanian", uk: "Ukrainian" };
 var T = {
   ru: {
+    btnOfficeInfo: "\u{1F4CD} \u0410\u0434\u0440\u0435\u0441 \u0438 \u0432\u0440\u0435\u043C\u044F \u0440\u0430\u0431\u043E\u0442\u044B",
+    whereGo: "\u{1F4CD} *\u041A\u0443\u0434\u0430 \u0438\u0434\u0442\u0438*",
+    hours: "\u{1F558} \u0412\u0440\u0435\u043C\u044F \u0440\u0430\u0431\u043E\u0442\u044B",
+    booking: "\u{1F4C5} \u0417\u0430\u043F\u0438\u0441\u044C (Termin)",
+    zustNote: "\u2139\uFE0F \u0418\u0434\u0442\u0438 \u043D\u0443\u0436\u043D\u043E \u0438\u043C\u0435\u043D\u043D\u043E \u0432 \u044D\u0442\u043E \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u043E \u2014 \u043E\u043D\u043E \u043E\u0442\u0432\u0435\u0447\u0430\u0435\u0442 \u0437\u0430 \u0432\u0430\u0448 \u0430\u0434\u0440\u0435\u0441, \u0430 \u043D\u0435 \u0431\u043B\u0438\u0436\u0430\u0439\u0448\u0435\u0435.",
+    noHours: "\u0412\u0440\u0435\u043C\u044F \u0440\u0430\u0431\u043E\u0442\u044B \u0432 \u043F\u0438\u0441\u044C\u043C\u0435 \u043D\u0435 \u0443\u043A\u0430\u0437\u0430\u043D\u043E \u2014 \u0443\u0442\u043E\u0447\u043D\u0438\u0442\u0435 \u043F\u043E \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0443.",
+    maps: "\u{1F5FA} \u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043D\u0430 \u043A\u0430\u0440\u0442\u0435",
+    osmHours: "\u{1F558} \u041F\u043E \u0434\u0430\u043D\u043D\u044B\u043C \u043A\u0430\u0440\u0442\u044B (\u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C \u043D\u0435\u0442\u043E\u0447\u043D\u043E):",
+    yourAppt: "\u{1F4CC} \u0412\u0430\u0448 \u0442\u0435\u0440\u043C\u0438\u043D",
     welcome: "\u{1F44B} \u041F\u0440\u0438\u0432\u0435\u0442! \u042F \u043F\u043E\u043C\u043E\u0433\u0430\u044E \u0441 \u043D\u0435\u043C\u0435\u0446\u043A\u0438\u043C\u0438 \u043F\u0438\u0441\u044C\u043C\u0430\u043C\u0438 \u0438 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u0430\u043C\u0438.\n\n\u{1F4C4} *\u041F\u0438\u0441\u044C\u043C\u043E* \u2014 \u043F\u0440\u0438\u0448\u043B\u0438\u0442\u0435 \u0444\u043E\u0442\u043E \u0438\u043B\u0438 PDF \u043F\u0438\u0441\u044C\u043C\u0430. \u041E\u0431\u044A\u044F\u0441\u043D\u044E \u043F\u0440\u043E\u0441\u0442\u044B\u043C\u0438 \u0441\u043B\u043E\u0432\u0430\u043C\u0438: \u043E\u0442 \u043A\u043E\u0433\u043E, \u0447\u0442\u043E \u0445\u043E\u0442\u044F\u0442, \u0434\u043E \u043A\u0430\u043A\u043E\u0433\u043E \u0447\u0438\u0441\u043B\u0430, \u0447\u0442\u043E \u0434\u0435\u043B\u0430\u0442\u044C. \u041C\u043E\u0433\u0443 \u043D\u0430\u043F\u0438\u0441\u0430\u0442\u044C \u043E\u0442\u0432\u0435\u0442 \u043D\u0430 \u043D\u0435\u043C\u0435\u0446\u043A\u043E\u043C.\n\n\u{1F3E2} *\u0412 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u0435* \u2014 \u0432\u043A\u043B\u044E\u0447\u0438\u0442\u0435 \u0440\u0435\u0436\u0438\u043C, \u043A\u043E\u0433\u0434\u0430 \u0441\u0438\u0434\u0438\u0442\u0435 \u0443 \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0430 (Jobcenter, Ausl\xE4nderbeh\xF6rde, Krankenkasse\u2026). \u0413\u043E\u0432\u043E\u0440\u0438\u0442\u0435 \u0433\u043E\u043B\u043E\u0441\u043E\u043C \u2014 \u044F \u043F\u0435\u0440\u0435\u0432\u043E\u0436\u0443 \u0438 \u043E\u0431\u044A\u044F\u0441\u043D\u044F\u044E \u043E\u0431\u0435 \u0441\u0442\u043E\u0440\u043E\u043D\u044B.\n\n\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E: {free} \u043F\u0438\u0441\u044C\u043C\u0430 \u0438 {freeOffice} \u0432\u0438\u0437\u0438\u0442 \u0432 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u043E. \u0414\u0430\u043B\u044C\u0448\u0435 \u2014 \u043F\u043E\u0434\u043F\u0438\u0441\u043A\u0430.\n\n\u26A0\uFE0F \u042F \u043D\u0435 \u044E\u0440\u0438\u0441\u0442. \u0412\u0430\u0436\u043D\u044B\u0435 \u0441\u0440\u043E\u043A\u0438 \u0438 \u0441\u0443\u043C\u043C\u044B \u0441\u0432\u0435\u0440\u044F\u0439\u0442\u0435 \u0441 \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\u043E\u043C.",
     chooseLang: "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u044F\u0437\u044B\u043A:",
     langSet: "\u0413\u043E\u0442\u043E\u0432\u043E, \u044F\u0437\u044B\u043A: \u0420\u0443\u0441\u0441\u043A\u0438\u0439 \u{1F1F7}\u{1F1FA}",
@@ -45,6 +54,15 @@ var T = {
     tooLong: "\u0413\u043E\u043B\u043E\u0441\u043E\u0432\u043E\u0435 \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0434\u043B\u0438\u043D\u043D\u043E\u0435 \u2014 \u0434\u043E 2 \u043C\u0438\u043D\u0443\u0442, \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430."
   },
   ro: {
+    btnOfficeInfo: "\u{1F4CD} Adres\u0103 \u0219i program",
+    whereGo: "\u{1F4CD} *Unde mergi*",
+    hours: "\u{1F558} Program",
+    booking: "\u{1F4C5} Programare (Termin)",
+    zustNote: "\u2139\uFE0F Mergi exact la aceast\u0103 institu\u021Bie \u2014 e responsabil\u0103 de adresa ta, nu la cea mai apropiat\u0103.",
+    noHours: "Programul nu e trecut \xEEn scrisoare \u2014 \xEEntreab\u0103 la telefon.",
+    maps: "\u{1F5FA} Deschide pe hart\u0103",
+    osmHours: "\u{1F558} Conform h\u0103r\u021Bii (poate fi inexact):",
+    yourAppt: "\u{1F4CC} Programarea ta",
     welcome: "\u{1F44B} Bun\u0103! Te ajut cu scrisorile oficiale germane \u0219i cu vizitele la autorit\u0103\u021Bi.\n\n\u{1F4C4} *Scrisoare* \u2014 trimite o poz\u0103 sau PDF. \xCE\u021Bi explic simplu: de la cine e, ce vor, p\xE2n\u0103 c\xE2nd, ce trebuie s\u0103 faci. Pot scrie \u0219i un r\u0103spuns \xEEn german\u0103.\n\n\u{1F3E2} *La autoritate* \u2014 porne\u0219te modul c\xE2nd e\u0219ti la func\u021Bionar (Jobcenter, Ausl\xE4nderbeh\xF6rde, Krankenkasse\u2026). Vorbe\u0219te prin mesaje vocale \u2014 traduc \u0219i explic ambele p\u0103r\u021Bi.\n\nGratuit: {free} scrisori \u0219i {freeOffice} vizit\u0103. Apoi \u2014 abonament.\n\n\u26A0\uFE0F Nu sunt avocat. Verific\u0103 termenele \u0219i sumele \xEEn original.",
     chooseLang: "Alege limba:",
     langSet: "Gata, limba: Rom\xE2n\u0103 \u{1F1F7}\u{1F1F4}\u{1F1F2}\u{1F1E9}",
@@ -84,6 +102,15 @@ var T = {
     tooLong: "Mesajul vocal e prea lung \u2014 p\xE2n\u0103 la 2 minute, te rog."
   },
   uk: {
+    btnOfficeInfo: "\u{1F4CD} \u0410\u0434\u0440\u0435\u0441\u0430 \u0439 \u0433\u043E\u0434\u0438\u043D\u0438 \u0440\u043E\u0431\u043E\u0442\u0438",
+    whereGo: "\u{1F4CD} *\u041A\u0443\u0434\u0438 \u0439\u0442\u0438*",
+    hours: "\u{1F558} \u0413\u043E\u0434\u0438\u043D\u0438 \u0440\u043E\u0431\u043E\u0442\u0438",
+    booking: "\u{1F4C5} \u0417\u0430\u043F\u0438\u0441 (Termin)",
+    zustNote: "\u2139\uFE0F \u0419\u0442\u0438 \u043F\u043E\u0442\u0440\u0456\u0431\u043D\u043E \u0441\u0430\u043C\u0435 \u0432 \u0446\u044E \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0443 \u2014 \u0432\u043E\u043D\u0430 \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u0430\u0454 \u0437\u0430 \u0432\u0430\u0448\u0443 \u0430\u0434\u0440\u0435\u0441\u0443, \u0430 \u043D\u0435 \u043D\u0430\u0439\u0431\u043B\u0438\u0436\u0447\u0430.",
+    noHours: "\u0413\u043E\u0434\u0438\u043D\u0438 \u0440\u043E\u0431\u043E\u0442\u0438 \u0432 \u043B\u0438\u0441\u0442\u0456 \u043D\u0435 \u0432\u043A\u0430\u0437\u0430\u043D\u0456 \u2014 \u0443\u0442\u043E\u0447\u043D\u0456\u0442\u044C \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u043E\u043C.",
+    maps: "\u{1F5FA} \u0412\u0456\u0434\u043A\u0440\u0438\u0442\u0438 \u043D\u0430 \u043A\u0430\u0440\u0442\u0456",
+    osmHours: "\u{1F558} \u0417\u0430 \u0434\u0430\u043D\u0438\u043C\u0438 \u043A\u0430\u0440\u0442\u0438 (\u043C\u043E\u0436\u0435 \u0431\u0443\u0442\u0438 \u043D\u0435\u0442\u043E\u0447\u043D\u043E):",
+    yourAppt: "\u{1F4CC} \u0412\u0430\u0448 \u0442\u0435\u0440\u043C\u0456\u043D",
     welcome: "\u{1F44B} \u041F\u0440\u0438\u0432\u0456\u0442! \u042F \u0434\u043E\u043F\u043E\u043C\u0430\u0433\u0430\u044E \u0437 \u043D\u0456\u043C\u0435\u0446\u044C\u043A\u0438\u043C\u0438 \u043B\u0438\u0441\u0442\u0430\u043C\u0438 \u0442\u0430 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0430\u043C\u0438.\n\n\u{1F4C4} *\u041B\u0438\u0441\u0442* \u2014 \u043D\u0430\u0434\u0456\u0448\u043B\u0456\u0442\u044C \u0444\u043E\u0442\u043E \u0430\u0431\u043E PDF. \u041F\u043E\u044F\u0441\u043D\u044E \u043F\u0440\u043E\u0441\u0442\u0438\u043C\u0438 \u0441\u043B\u043E\u0432\u0430\u043C\u0438: \u0432\u0456\u0434 \u043A\u043E\u0433\u043E, \u0447\u043E\u0433\u043E \u0445\u043E\u0447\u0443\u0442\u044C, \u0434\u043E \u044F\u043A\u043E\u0433\u043E \u0447\u0438\u0441\u043B\u0430, \u0449\u043E \u0440\u043E\u0431\u0438\u0442\u0438. \u041C\u043E\u0436\u0443 \u043D\u0430\u043F\u0438\u0441\u0430\u0442\u0438 \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C \u043D\u0456\u043C\u0435\u0446\u044C\u043A\u043E\u044E.\n\n\u{1F3E2} *\u0412 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0456* \u2014 \u0443\u0432\u0456\u043C\u043A\u043D\u0456\u0442\u044C \u0440\u0435\u0436\u0438\u043C, \u043A\u043E\u043B\u0438 \u0441\u0438\u0434\u0438\u0442\u0435 \u0443 \u043F\u0440\u0430\u0446\u0456\u0432\u043D\u0438\u043A\u0430 (Jobcenter, Ausl\xE4nderbeh\xF6rde, Krankenkasse\u2026). \u0413\u043E\u0432\u043E\u0440\u0456\u0442\u044C \u0433\u043E\u043B\u043E\u0441\u043E\u043C \u2014 \u044F \u043F\u0435\u0440\u0435\u043A\u043B\u0430\u0434\u0430\u044E \u0439 \u043F\u043E\u044F\u0441\u043D\u044E\u044E \u043E\u0431\u0438\u0434\u0432\u0456 \u0441\u0442\u043E\u0440\u043E\u043D\u0438.\n\n\u0411\u0435\u0437\u043A\u043E\u0448\u0442\u043E\u0432\u043D\u043E: {free} \u043B\u0438\u0441\u0442\u0438 \u0442\u0430 {freeOffice} \u0432\u0456\u0437\u0438\u0442. \u0414\u0430\u043B\u0456 \u2014 \u043F\u0456\u0434\u043F\u0438\u0441\u043A\u0430.\n\n\u26A0\uFE0F \u042F \u043D\u0435 \u044E\u0440\u0438\u0441\u0442. \u0412\u0430\u0436\u043B\u0438\u0432\u0456 \u0441\u0442\u0440\u043E\u043A\u0438 \u0439 \u0441\u0443\u043C\u0438 \u0437\u0432\u0456\u0440\u044F\u0439\u0442\u0435 \u0437 \u043E\u0440\u0438\u0433\u0456\u043D\u0430\u043B\u043E\u043C.",
     chooseLang: "\u041E\u0431\u0435\u0440\u0456\u0442\u044C \u043C\u043E\u0432\u0443:",
     langSet: "\u0413\u043E\u0442\u043E\u0432\u043E, \u043C\u043E\u0432\u0430: \u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u{1F1FA}\u{1F1E6}",
@@ -152,6 +179,14 @@ Read the attached letter (photo pages or PDF) and answer ONLY with one JSON obje
  "free_help": "..."|null,              // only for medium/high: in ${L}, which FREE counselling fits (Migrationsberatung f\xFCr Erwachsene (MBE) / Jugendmigrationsdienst (JMD) for under 27, Schuldnerberatung, Mieterverein, Sozialberatung of Caritas/Diakonie/AWO, Unabh\xE4ngige Patientenberatung, Verbraucherzentrale) and that they can find the nearest MBE/JMD on bamf-navi.bamf.de
  "scam_warning": "..."|null,           // in ${L}, only if there are signs of a fake letter (odd IBAN abroad, pressure, wrong logo, threats, payment by gift cards)
  "reply_useful": true|false,           // would a written reply/Widerspruch/request help?
+ "visit_needed": true|false,           // must the reader go somewhere in person (appointment, bring documents)?
+ "office": {                           // contact data of the RESPONSIBLE office exactly as printed in the letter (header/footer/Besucheradresse). null fields if not printed. Never guess.
+   "name": "..."|null, "address": "..."|null,   // Besucheradresse preferred over Postanschrift/Postfach
+   "phone": "..."|null, "email": "..."|null,
+   "hours": "..."|null,                // \xD6ffnungszeiten as printed, translated to ${L}
+   "appointment": "..."|null,          // a fixed appointment from the letter (date, time, room) in ${L}
+   "booking": "..."|null               // how to book a Termin as printed (URL, phone, portal like jobcenter.digital), in ${L}
+ },
  "letter_text_de": "..."               // faithful German transcription of the letter body (no addresses of private persons, no IBAN, no tax-ID/Steuer-ID, no Versicherungsnummer: replace with [..])
 }
 Rules: never invent facts not in the letter; if a page is unreadable say so in summary. Do not give legal advice beyond what the letter states; for objections mention the Widerspruch deadline if stated (usually 1 month).`;
@@ -343,6 +378,7 @@ async function onCallback(q, env) {
   }
   if (kind === "reply") return writeReply(env, u, uid, chat);
   if (kind === "remind") return setReminder(env, u, uid, chat);
+  if (kind === "where") return officeInfo(env, u, uid, chat);
   if (kind === "ask") return send(env, chat, t(u.lang, "askQuestion"));
   if (kind === "pay") return payLink(env, u, uid, chat);
 }
@@ -396,7 +432,7 @@ async function processLetter(env, u, uid, chat, parts, replyTo) {
     if (!isSub(u)) u.letters++;
     u.monthCount++;
     await putUser(env, uid, u);
-    await env.KV.put(ctxKey(uid), JSON.stringify({ sender: r.sender, doc_type: r.doc_type, deadline: r.deadline, deadline_label: r.deadline_label, text: r.letter_text_de, summary: r.summary }), { expirationTtl: DAY });
+    await env.KV.put(ctxKey(uid), JSON.stringify({ office: r.office || null, sender: r.sender, doc_type: r.doc_type, deadline: r.deadline, deadline_label: r.deadline_label, text: r.letter_text_de, summary: r.summary }), { expirationTtl: DAY });
     await stat(env, "letters");
     await del(env, chat, wait);
     const lines = [];
@@ -415,6 +451,7 @@ async function processLetter(env, u, uid, chat, parts, replyTo) {
     if (r.reply_useful) row.push({ text: t(L, "btnReply"), callback_data: "reply" });
     if (r.deadline) row.push({ text: t(L, "btnRemind"), callback_data: "remind" });
     if (row.length) kb.push(row);
+    if (r.office?.address || r.office?.phone) kb.push([{ text: t(L, "btnOfficeInfo"), callback_data: "where" }]);
     kb.push([{ text: t(L, "btnExplainMore"), callback_data: "ask" }]);
     await send(env, chat, lines.join("\n").slice(0, 4e3), { reply_markup: { inline_keyboard: kb } });
     if (!isSub(u) && u.letters === FREE_LETTERS) await paywallSoft(env, u, chat);
@@ -468,6 +505,44 @@ ${c.text}
   }
 }
 __name(askQuestion, "askQuestion");
+async function officeInfo(env, u, uid, chat) {
+  const L = u.lang;
+  const c = await env.KV.get(ctxKey(uid), "json");
+  const o = c?.office;
+  if (!o) return send(env, chat, t(L, "sendLetter"));
+  const lines = [html(t(L, "whereGo")), ""];
+  if (o.name) lines.push(`<b>${esc(o.name)}</b>`);
+  if (o.address) lines.push(esc(o.address));
+  if (o.phone) lines.push(`\u260E\uFE0F ${esc(o.phone)}`);
+  if (o.email) lines.push(`\u2709\uFE0F ${esc(o.email)}`);
+  if (o.appointment) lines.push("", `${esc(t(L, "yourAppt"))}: <b>${esc(o.appointment)}</b>`);
+  if (o.hours) lines.push("", `${esc(t(L, "hours"))}: ${esc(o.hours)}`);
+  else {
+    const h = o.address ? await osmHours(o.name, o.address).catch(() => null) : null;
+    lines.push("", h ? `${esc(t(L, "osmHours"))} <code>${esc(h)}</code>` : esc(t(L, "noHours")));
+  }
+  if (o.booking) lines.push("", `${esc(t(L, "booking"))}: ${esc(o.booking)}`);
+  lines.push("", `<i>${esc(t(L, "zustNote"))}</i>`);
+  const q = encodeURIComponent([o.name, o.address].filter(Boolean).join(", "));
+  const kb = o.address ? { inline_keyboard: [[{ text: t(L, "maps"), url: `https://www.google.com/maps/search/?api=1&query=${q}` }]] } : void 0;
+  await stat(env, "where");
+  return send(env, chat, lines.join("\n"), kb ? { reply_markup: kb } : {});
+}
+__name(officeInfo, "officeInfo");
+async function osmHours(name, address) {
+  const H = { "User-Agent": "PismoBot/1.0 (Telegram bot; contact via bot)" };
+  const q = encodeURIComponent(`${name || ""} ${address}`.trim());
+  const r = await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&extratags=1&limit=3&countrycodes=de&q=${q}`, { headers: H });
+  let res = await r.json();
+  let hit = res.find((x) => x.extratags?.opening_hours);
+  if (!hit) {
+    const r2 = await fetch(`https://nominatim.openstreetmap.org/search?format=jsonv2&extratags=1&limit=3&countrycodes=de&q=${encodeURIComponent(address)}`, { headers: H });
+    res = await r2.json();
+    hit = res.find((x) => x.extratags?.opening_hours);
+  }
+  return hit?.extratags?.opening_hours || null;
+}
+__name(osmHours, "osmHours");
 async function setReminder(env, u, uid, chat) {
   const L = u.lang;
   const c = await env.KV.get(ctxKey(uid), "json");
