@@ -22,7 +22,7 @@ jobs:
           cd leads && curl -sL -o t.zip https://tranco-list.eu/top-1m.csv.zip && unzip -o t.zip >/dev/null && wc -l top-1m.csv
           S=$(( ${{ matrix.part }} * 250000 )); node find.mjs $S $(( S + 250000 ))
       - uses: actions/upload-artifact@v4
-        with: { name: "leads-${{ matrix.part }}", path: "leads/leads-*.json" }
+        with: { name: "leads-${{ matrix.part }}", path: "leads/leads-*.json", retention-days: 1 }
   merge:
     needs: find
     runs-on: ubuntu-latest
@@ -32,6 +32,10 @@ jobs:
       - uses: actions/download-artifact@v4
         with: { path: parts }
       - run: |
-          node -e 'const fs=require("fs");let all=[];for(const d of fs.readdirSync("parts"))for(const f of fs.readdirSync("parts/"+d))all=all.concat(JSON.parse(fs.readFileSync("parts/"+d+"/"+f)));fs.writeFileSync("leads/us-shopify.json",JSON.stringify(all));console.log(all.length)'
+          node -e 'const fs=require("fs");let all=[];for(const d of fs.readdirSync("parts"))for(const f of fs.readdirSync("parts/"+d))all=all.concat(JSON.parse(fs.readFileSync("parts/"+d+"/"+f)));fs.writeFileSync("plain.json",JSON.stringify(all));console.log(all.length)'
+          openssl rand -hex 32 > k.txt
+          openssl enc -aes-256-cbc -pbkdf2 -salt -in plain.json -out leads/us-shopify.enc -pass file:k.txt
+          openssl pkeyutl -encrypt -pubin -inkey leads/lead.pub -in k.txt -out leads/us-shopify.key.enc
+          rm -f plain.json k.txt
           git config user.name a11y-bot && git config user.email a11y-bot@users.noreply.github.com
-          git add leads/us-shopify.json && git commit -m "leads" && git pull --rebase origin kira-tmp && git push origin HEAD:kira-tmp
+          git add leads/us-shopify.enc leads/us-shopify.key.enc && git commit -m "leads" && git pull --rebase origin kira-tmp && git push origin HEAD:kira-tmp
