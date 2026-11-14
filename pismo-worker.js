@@ -1,0 +1,660 @@
+var __defProp = Object.defineProperty;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
+
+// src/i18n.js
+var LANGS = { ru: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439", ro: "Rom\xE2n\u0103", uk: "\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430" };
+var LANG_NAME_EN = { ru: "Russian", ro: "Romanian", uk: "Ukrainian" };
+var T = {
+  ru: {
+    welcome: "\u{1F44B} \u041F\u0440\u0438\u0432\u0435\u0442! \u042F \u043F\u043E\u043C\u043E\u0433\u0430\u044E \u0441 \u043D\u0435\u043C\u0435\u0446\u043A\u0438\u043C\u0438 \u043F\u0438\u0441\u044C\u043C\u0430\u043C\u0438 \u0438 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u0430\u043C\u0438.\n\n\u{1F4C4} *\u041F\u0438\u0441\u044C\u043C\u043E* \u2014 \u043F\u0440\u0438\u0448\u043B\u0438\u0442\u0435 \u0444\u043E\u0442\u043E \u0438\u043B\u0438 PDF \u043F\u0438\u0441\u044C\u043C\u0430. \u041E\u0431\u044A\u044F\u0441\u043D\u044E \u043F\u0440\u043E\u0441\u0442\u044B\u043C\u0438 \u0441\u043B\u043E\u0432\u0430\u043C\u0438: \u043E\u0442 \u043A\u043E\u0433\u043E, \u0447\u0442\u043E \u0445\u043E\u0442\u044F\u0442, \u0434\u043E \u043A\u0430\u043A\u043E\u0433\u043E \u0447\u0438\u0441\u043B\u0430, \u0447\u0442\u043E \u0434\u0435\u043B\u0430\u0442\u044C. \u041C\u043E\u0433\u0443 \u043D\u0430\u043F\u0438\u0441\u0430\u0442\u044C \u043E\u0442\u0432\u0435\u0442 \u043D\u0430 \u043D\u0435\u043C\u0435\u0446\u043A\u043E\u043C.\n\n\u{1F3E2} *\u0412 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u0435* \u2014 \u0432\u043A\u043B\u044E\u0447\u0438\u0442\u0435 \u0440\u0435\u0436\u0438\u043C, \u043A\u043E\u0433\u0434\u0430 \u0441\u0438\u0434\u0438\u0442\u0435 \u0443 \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0430 (Jobcenter, Ausl\xE4nderbeh\xF6rde, Krankenkasse\u2026). \u0413\u043E\u0432\u043E\u0440\u0438\u0442\u0435 \u0433\u043E\u043B\u043E\u0441\u043E\u043C \u2014 \u044F \u043F\u0435\u0440\u0435\u0432\u043E\u0436\u0443 \u0438 \u043E\u0431\u044A\u044F\u0441\u043D\u044F\u044E \u043E\u0431\u0435 \u0441\u0442\u043E\u0440\u043E\u043D\u044B.\n\n\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E: {free} \u043F\u0438\u0441\u044C\u043C\u0430 \u0438 {freeOffice} \u0432\u0438\u0437\u0438\u0442 \u0432 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u043E. \u0414\u0430\u043B\u044C\u0448\u0435 \u2014 \u043F\u043E\u0434\u043F\u0438\u0441\u043A\u0430.\n\n\u26A0\uFE0F \u042F \u043D\u0435 \u044E\u0440\u0438\u0441\u0442. \u0412\u0430\u0436\u043D\u044B\u0435 \u0441\u0440\u043E\u043A\u0438 \u0438 \u0441\u0443\u043C\u043C\u044B \u0441\u0432\u0435\u0440\u044F\u0439\u0442\u0435 \u0441 \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\u043E\u043C.",
+    chooseLang: "\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u044F\u0437\u044B\u043A:",
+    langSet: "\u0413\u043E\u0442\u043E\u0432\u043E, \u044F\u0437\u044B\u043A: \u0420\u0443\u0441\u0441\u043A\u0438\u0439 \u{1F1F7}\u{1F1FA}",
+    btnLetter: "\u{1F4C4} \u0420\u0430\u0437\u043E\u0431\u0440\u0430\u0442\u044C \u043F\u0438\u0441\u044C\u043C\u043E",
+    btnOffice: "\u{1F3E2} \u042F \u0432 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u0435",
+    btnLang: "\u{1F310} \u042F\u0437\u044B\u043A",
+    btnSub: "\u2B50 \u041F\u043E\u0434\u043F\u0438\u0441\u043A\u0430",
+    sendLetter: "\u041F\u0440\u0438\u0448\u043B\u0438\u0442\u0435 \u0444\u043E\u0442\u043E \u043F\u0438\u0441\u044C\u043C\u0430 (\u043C\u043E\u0436\u043D\u043E \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0441\u0442\u0440\u0430\u043D\u0438\u0446 \u043F\u043E\u0434\u0440\u044F\u0434) \u0438\u043B\u0438 PDF.",
+    working: "\u23F3 \u0427\u0438\u0442\u0430\u044E \u043F\u0438\u0441\u044C\u043C\u043E\u2026",
+    workingVoice: "\u23F3 \u0421\u043B\u0443\u0448\u0430\u044E\u2026",
+    error: "\u{1F615} \u041D\u0435 \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u043E\u0441\u044C. \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0435\u0449\u0451 \u0440\u0430\u0437 \u0438\u043B\u0438 \u043F\u0440\u0438\u0448\u043B\u0438\u0442\u0435 \u0431\u043E\u043B\u0435\u0435 \u0447\u0451\u0442\u043A\u043E\u0435 \u0444\u043E\u0442\u043E.",
+    notLetter: "\u041F\u043E\u0445\u043E\u0436\u0435, \u044D\u0442\u043E \u043D\u0435 \u043F\u0438\u0441\u044C\u043C\u043E. \u041F\u0440\u0438\u0448\u043B\u0438\u0442\u0435 \u0444\u043E\u0442\u043E \u0438\u043B\u0438 PDF \u043D\u0435\u043C\u0435\u0446\u043A\u043E\u0433\u043E \u043F\u0438\u0441\u044C\u043C\u0430.",
+    btnReply: "\u270D\uFE0F \u041E\u0442\u0432\u0435\u0442 \u043D\u0430 \u043D\u0435\u043C\u0435\u0446\u043A\u043E\u043C",
+    btnRemind: "\u23F0 \u041D\u0430\u043F\u043E\u043C\u043D\u0438\u0442\u044C \u043E \u0441\u0440\u043E\u043A\u0435",
+    btnExplainMore: "\u2753 \u0417\u0430\u0434\u0430\u0442\u044C \u0432\u043E\u043F\u0440\u043E\u0441",
+    askQuestion: "\u041D\u0430\u043F\u0438\u0448\u0438\u0442\u0435 \u0432\u043E\u043F\u0440\u043E\u0441 \u043F\u043E \u044D\u0442\u043E\u043C\u0443 \u043F\u0438\u0441\u044C\u043C\u0443 \u2014 \u043E\u0442\u0432\u0435\u0447\u0443.",
+    remindSet: "\u23F0 \u041D\u0430\u043F\u043E\u043C\u043D\u044E {d}: \u0437\u0430 3 \u0434\u043D\u044F, \u0437\u0430 1 \u0434\u0435\u043D\u044C \u0438 \u0432 \u0441\u0430\u043C \u0434\u0435\u043D\u044C \u0441\u0440\u043E\u043A\u0430.",
+    remindNoDate: "\u0412 \u043F\u0438\u0441\u044C\u043C\u0435 \u043D\u0435\u0442 \u0442\u043E\u0447\u043D\u043E\u0439 \u0434\u0430\u0442\u044B \u0441\u0440\u043E\u043A\u0430 \u2014 \u043D\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u0435 \u043D\u0435 \u043F\u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C.",
+    reminder: "\u23F0 \u041D\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u0435: {label}\n\u0421\u0440\u043E\u043A: *{d}* ({left}).",
+    leftToday: "\u0441\u0435\u0433\u043E\u0434\u043D\u044F",
+    leftDays: "\u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u0434\u043D\u0435\u0439: {n}",
+    officeOn: "\u{1F3E2} *\u0420\u0435\u0436\u0438\u043C \xAB\u0412 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u0435\xBB \u0432\u043A\u043B\u044E\u0447\u0451\u043D.*\n\n1\uFE0F\u20E3 \u041F\u043E\u043A\u0430\u0436\u0438\u0442\u0435 \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0443 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435 \u043D\u0438\u0436\u0435 (\u043D\u0430 \u043D\u0435\u043C\u0435\u0446\u043A\u043E\u043C).\n2\uFE0F\u20E3 \u041E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0439\u0442\u0435 \u0433\u043E\u043B\u043E\u0441\u043E\u0432\u044B\u0435: \u043A\u043E\u0433\u0434\u0430 \u0433\u043E\u0432\u043E\u0440\u0438\u0442 \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A \u2014 \u0434\u0435\u0440\u0436\u0438\u0442\u0435 \u0442\u0435\u043B\u0435\u0444\u043E\u043D \u043A \u043D\u0435\u043C\u0443. \u041A\u043E\u0433\u0434\u0430 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u0435 \u0432\u044B \u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u0435 \u043F\u043E-\u0440\u0443\u0441\u0441\u043A\u0438.\n3\uFE0F\u20E3 \u0412\u0430\u0448\u0438 \u0444\u0440\u0430\u0437\u044B \u044F \u043F\u043E\u043A\u0430\u0436\u0443 \u043A\u0440\u0443\u043F\u043D\u043E \u043D\u0430 \u043D\u0435\u043C\u0435\u0446\u043A\u043E\u043C \u2014 \u043F\u0440\u043E\u0441\u0442\u043E \u043F\u043E\u043A\u0430\u0436\u0438\u0442\u0435 \u044D\u043A\u0440\u0430\u043D.\n\n\u041C\u043E\u0436\u043D\u043E \u0441\u043D\u0430\u0447\u0430\u043B\u0430 \u043F\u0440\u0438\u0441\u043B\u0430\u0442\u044C \u043F\u0438\u0441\u044C\u043C\u043E, \u043F\u043E \u043A\u043E\u0442\u043E\u0440\u043E\u043C\u0443 \u0432\u044B \u043F\u0440\u0438\u0448\u043B\u0438, \u2014 \u0442\u043E\u0433\u0434\u0430 \u044F \u0431\u0443\u0434\u0443 \u0437\u043D\u0430\u0442\u044C \u043A\u043E\u043D\u0442\u0435\u043A\u0441\u0442.\n\u0412\u044B\u0445\u043E\u0434: /stop",
+    officeCard: "\u{1F1E9}\u{1F1EA} *Guten Tag!*\nIch spreche wenig Deutsch. Darf ich diese App zum \xDCbersetzen benutzen?\nEs wird nichts gespeichert. Danke!",
+    officeOff: "\u0420\u0435\u0436\u0438\u043C \xAB\u0412 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u0435\xBB \u0432\u044B\u043A\u043B\u044E\u0447\u0435\u043D. \u0423\u0434\u0430\u0447\u0438! \u{1F340}",
+    officeFrom: "\u{1F464} *\u0421\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A \u0441\u043A\u0430\u0437\u0430\u043B:*",
+    officeYou: "\u{1F5E3} *\u041F\u043E\u043A\u0430\u0436\u0438\u0442\u0435 \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0443:*",
+    officeMeaning: "\u{1F4A1} *\u0427\u0442\u043E \u044D\u0442\u043E \u0437\u043D\u0430\u0447\u0438\u0442:*",
+    paywall: "\u0411\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u044B\u0439 \u043B\u0438\u043C\u0438\u0442 \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u043B\u0441\u044F.\n\n\u2B50 \u041F\u043E\u0434\u043F\u0438\u0441\u043A\u0430 \u2014 {price} Stars \u0432 \u043C\u0435\u0441\u044F\u0446 (\u2248 {eur} \u20AC): \u043F\u0438\u0441\u044C\u043C\u0430 \u0431\u0435\u0437 \u043E\u0433\u0440\u0430\u043D\u0438\u0447\u0435\u043D\u0438\u0439 (\u0447\u0435\u0441\u0442\u043D\u043E\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0435), \u0440\u0435\u0436\u0438\u043C \xAB\u0412 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u0435\xBB, \u043D\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u044F \u043E \u0441\u0440\u043E\u043A\u0430\u0445.",
+    btnPay: "\u2B50 \u041E\u0444\u043E\u0440\u043C\u0438\u0442\u044C \u0437\u0430 {price} Stars",
+    paid: "\u2705 \u041F\u043E\u0434\u043F\u0438\u0441\u043A\u0430 \u0430\u043A\u0442\u0438\u0432\u043D\u0430 \u0434\u043E {d}. \u0421\u043F\u0430\u0441\u0438\u0431\u043E!",
+    subActive: "\u2B50 \u041F\u043E\u0434\u043F\u0438\u0441\u043A\u0430 \u0430\u043A\u0442\u0438\u0432\u043D\u0430 \u0434\u043E {d}.",
+    subNone: "\u041F\u043E\u0434\u043F\u0438\u0441\u043A\u0438 \u043D\u0435\u0442. \u041E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E: \u043F\u0438\u0441\u0435\u043C \u2014 {l}, \u0432\u0438\u0437\u0438\u0442\u043E\u0432 \u2014 {o}.",
+    privacy: "\u{1F512} \u041A\u043E\u043D\u0444\u0438\u0434\u0435\u043D\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C\n\u2022 \u0424\u043E\u0442\u043E \u0438 PDF \u043D\u0435 \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u044E\u0442\u0441\u044F \u2014 \u0442\u043E\u043B\u044C\u043A\u043E \u043E\u0431\u0440\u0430\u0431\u0430\u0442\u044B\u0432\u0430\u044E\u0442\u0441\u044F \u0438 \u0441\u0440\u0430\u0437\u0443 \u0443\u0434\u0430\u043B\u044F\u044E\u0442\u0441\u044F.\n\u2022 \u0422\u0435\u043A\u0441\u0442 \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0435\u0433\u043E \u043F\u0438\u0441\u044C\u043C\u0430 \u0445\u0440\u0430\u043D\u0438\u0442\u0441\u044F 24 \u0447\u0430\u0441\u0430, \u0447\u0442\u043E\u0431\u044B \u043E\u0442\u0432\u0435\u0447\u0430\u0442\u044C \u043D\u0430 \u0432\u043E\u043F\u0440\u043E\u0441\u044B \u0438 \u043F\u0438\u0441\u0430\u0442\u044C \u043E\u0442\u0432\u0435\u0442. \u041F\u043E\u0442\u043E\u043C \u0443\u0434\u0430\u043B\u044F\u0435\u0442\u0441\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438. /forget \u2014 \u0443\u0434\u0430\u043B\u0438\u0442\u044C \u0441\u0440\u0430\u0437\u0443.\n\u2022 \u0414\u043B\u044F \u0440\u0430\u0437\u0431\u043E\u0440\u0430 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F \u0418\u0418 Claude (Anthropic) \u0438 \u0440\u0430\u0441\u043F\u043E\u0437\u043D\u0430\u0432\u0430\u043D\u0438\u0435 \u0440\u0435\u0447\u0438 Cloudflare. \u0414\u0430\u043D\u043D\u044B\u0435 \u043D\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u044E\u0442\u0441\u044F \u0434\u043B\u044F \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F.\n\u2022 \u041D\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u044F \u0445\u0440\u0430\u043D\u044F\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u0434\u0430\u0442\u0443 \u0438 \u043A\u043E\u0440\u043E\u0442\u043A\u043E\u0435 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435.",
+    forgot: "\u{1F5D1} \u0423\u0434\u0430\u043B\u0435\u043D\u043E: \u0442\u0435\u043A\u0441\u0442 \u043F\u0438\u0441\u044C\u043C\u0430 \u0438 \u043D\u0430\u043F\u043E\u043C\u0438\u043D\u0430\u043D\u0438\u044F.",
+    paysupport: "\u041F\u043E \u0432\u043E\u043F\u0440\u043E\u0441\u0430\u043C \u043E\u043F\u043B\u0430\u0442\u044B \u043D\u0430\u043F\u0438\u0448\u0438\u0442\u0435 \u0441\u044E\u0434\u0430: {contact}. \u0412\u043E\u0437\u0432\u0440\u0430\u0442 Stars \u2014 \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 7 \u0434\u043D\u0435\u0439, \u0435\u0441\u043B\u0438 \u0441\u0435\u0440\u0432\u0438\u0441 \u043D\u0435 \u043F\u043E\u043C\u043E\u0433.",
+    terms: "\u0423\u0441\u043B\u043E\u0432\u0438\u044F: \u0441\u0435\u0440\u0432\u0438\u0441 \u0434\u0430\u0451\u0442 \u043F\u043E\u044F\u0441\u043D\u0435\u043D\u0438\u044F \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E \u0418\u0418 \u0438 \u043D\u0435 \u0437\u0430\u043C\u0435\u043D\u044F\u0435\u0442 \u044E\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043A\u0443\u044E \u043A\u043E\u043D\u0441\u0443\u043B\u044C\u0442\u0430\u0446\u0438\u044E. \u041F\u0440\u043E\u0432\u0435\u0440\u044F\u0439\u0442\u0435 \u0441\u0440\u043E\u043A\u0438 \u0438 \u0441\u0443\u043C\u043C\u044B \u043F\u043E \u043E\u0440\u0438\u0433\u0438\u043D\u0430\u043B\u0443. \u041F\u043E\u0434\u043F\u0438\u0441\u043A\u0443 \u043C\u043E\u0436\u043D\u043E \u043E\u0442\u043C\u0435\u043D\u0438\u0442\u044C \u0432 \u043B\u044E\u0431\u043E\u0439 \u043C\u043E\u043C\u0435\u043D\u0442 \u0432 \u043D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0430\u0445 Telegram.",
+    tooLong: "\u0413\u043E\u043B\u043E\u0441\u043E\u0432\u043E\u0435 \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0434\u043B\u0438\u043D\u043D\u043E\u0435 \u2014 \u0434\u043E 2 \u043C\u0438\u043D\u0443\u0442, \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430."
+  },
+  ro: {
+    welcome: "\u{1F44B} Bun\u0103! Te ajut cu scrisorile oficiale germane \u0219i cu vizitele la autorit\u0103\u021Bi.\n\n\u{1F4C4} *Scrisoare* \u2014 trimite o poz\u0103 sau PDF. \xCE\u021Bi explic simplu: de la cine e, ce vor, p\xE2n\u0103 c\xE2nd, ce trebuie s\u0103 faci. Pot scrie \u0219i un r\u0103spuns \xEEn german\u0103.\n\n\u{1F3E2} *La autoritate* \u2014 porne\u0219te modul c\xE2nd e\u0219ti la func\u021Bionar (Jobcenter, Ausl\xE4nderbeh\xF6rde, Krankenkasse\u2026). Vorbe\u0219te prin mesaje vocale \u2014 traduc \u0219i explic ambele p\u0103r\u021Bi.\n\nGratuit: {free} scrisori \u0219i {freeOffice} vizit\u0103. Apoi \u2014 abonament.\n\n\u26A0\uFE0F Nu sunt avocat. Verific\u0103 termenele \u0219i sumele \xEEn original.",
+    chooseLang: "Alege limba:",
+    langSet: "Gata, limba: Rom\xE2n\u0103 \u{1F1F7}\u{1F1F4}\u{1F1F2}\u{1F1E9}",
+    btnLetter: "\u{1F4C4} Explic\u0103 o scrisoare",
+    btnOffice: "\u{1F3E2} Sunt la autoritate",
+    btnLang: "\u{1F310} Limba",
+    btnSub: "\u2B50 Abonament",
+    sendLetter: "Trimite poza scrisorii (pot fi mai multe pagini la r\xE2nd) sau PDF.",
+    working: "\u23F3 Citesc scrisoarea\u2026",
+    workingVoice: "\u23F3 Ascult\u2026",
+    error: "\u{1F615} N-a mers. \xCEncearc\u0103 din nou sau trimite o poz\u0103 mai clar\u0103.",
+    notLetter: "Nu pare a fi o scrisoare. Trimite poza sau PDF-ul unei scrisori germane.",
+    btnReply: "\u270D\uFE0F R\u0103spuns \xEEn german\u0103",
+    btnRemind: "\u23F0 Aminte\u0219te-mi termenul",
+    btnExplainMore: "\u2753 Pune o \xEEntrebare",
+    askQuestion: "Scrie \xEEntrebarea despre aceast\u0103 scrisoare \u2014 \xEE\u021Bi r\u0103spund.",
+    remindSet: "\u23F0 \xCE\u021Bi amintesc pentru {d}: cu 3 zile \xEEnainte, cu o zi \xEEnainte \u0219i \xEEn ziua respectiv\u0103.",
+    remindNoDate: "Scrisoarea nu are o dat\u0103 exact\u0103 \u2014 nu pot seta memento.",
+    reminder: "\u23F0 Memento: {label}\nTermen: *{d}* ({left}).",
+    leftToday: "azi",
+    leftDays: "mai sunt {n} zile",
+    officeOn: "\u{1F3E2} *Modul \u201ELa autoritate\u201D e pornit.*\n\n1\uFE0F\u20E3 Arat\u0103-i func\u021Bionarului mesajul de mai jos (\xEEn german\u0103).\n2\uFE0F\u20E3 Trimite mesaje vocale: c\xE2nd vorbe\u0219te func\u021Bionarul \u2014 \u021Bine telefonul spre el. C\xE2nd vorbe\u0219ti tu \u2014 vorbe\u0219te \xEEn rom\xE2n\u0103.\n3\uFE0F\u20E3 Frazele tale le afi\u0219ez mare, \xEEn german\u0103 \u2014 arat\u0103 ecranul.\n\nPo\u021Bi trimite \xEEnt\xE2i scrisoarea pentru care ai venit \u2014 a\u0219a \u0219tiu contextul.\nIe\u0219ire: /stop",
+    officeCard: "\u{1F1E9}\u{1F1EA} *Guten Tag!*\nIch spreche wenig Deutsch. Darf ich diese App zum \xDCbersetzen benutzen?\nEs wird nichts gespeichert. Danke!",
+    officeOff: "Modul \u201ELa autoritate\u201D e oprit. Succes! \u{1F340}",
+    officeFrom: "\u{1F464} *Func\u021Bionarul a spus:*",
+    officeYou: "\u{1F5E3} *Arat\u0103-i func\u021Bionarului:*",
+    officeMeaning: "\u{1F4A1} *Ce \xEEnseamn\u0103:*",
+    paywall: "Limita gratuit\u0103 s-a terminat.\n\n\u2B50 Abonament \u2014 {price} Stars pe lun\u0103 (\u2248 {eur} \u20AC): scrisori nelimitate (utilizare corect\u0103), modul \u201ELa autoritate\u201D, memento-uri pentru termene.",
+    btnPay: "\u2B50 Aboneaz\u0103-te cu {price} Stars",
+    paid: "\u2705 Abonament activ p\xE2n\u0103 la {d}. Mul\u021Bumesc!",
+    subActive: "\u2B50 Abonament activ p\xE2n\u0103 la {d}.",
+    subNone: "F\u0103r\u0103 abonament. Gratuit r\u0103mas: scrisori \u2014 {l}, vizite \u2014 {o}.",
+    privacy: "\u{1F512} Confiden\u021Bialitate\n\u2022 Pozele \u0219i PDF-urile nu se salveaz\u0103 \u2014 doar se proceseaz\u0103 \u0219i se \u0219terg imediat.\n\u2022 Textul ultimei scrisori se p\u0103streaz\u0103 24 de ore, pentru \xEEntreb\u0103ri \u0219i r\u0103spuns. Apoi se \u0219terge automat. /forget \u2014 \u0219terge acum.\n\u2022 Se folose\u0219te AI Claude (Anthropic) \u0219i recunoa\u0219tere vocal\u0103 Cloudflare. Datele nu sunt folosite pentru antrenare.\n\u2022 Memento-urile p\u0103streaz\u0103 doar data \u0219i un titlu scurt.",
+    forgot: "\u{1F5D1} \u0218ters: textul scrisorii \u0219i memento-urile.",
+    paysupport: "Pentru pl\u0103\u021Bi scrie aici: {contact}. Rambursare Stars \xEEn 7 zile, dac\u0103 serviciul nu te-a ajutat.",
+    terms: "Condi\u021Bii: serviciul ofer\u0103 explica\u021Bii generate de AI \u0219i nu \xEEnlocuie\u0219te consultan\u021Ba juridic\u0103. Verific\u0103 termenele \u0219i sumele \xEEn original. Abonamentul se anuleaz\u0103 oric\xE2nd din set\u0103rile Telegram.",
+    tooLong: "Mesajul vocal e prea lung \u2014 p\xE2n\u0103 la 2 minute, te rog."
+  },
+  uk: {
+    welcome: "\u{1F44B} \u041F\u0440\u0438\u0432\u0456\u0442! \u042F \u0434\u043E\u043F\u043E\u043C\u0430\u0433\u0430\u044E \u0437 \u043D\u0456\u043C\u0435\u0446\u044C\u043A\u0438\u043C\u0438 \u043B\u0438\u0441\u0442\u0430\u043C\u0438 \u0442\u0430 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0430\u043C\u0438.\n\n\u{1F4C4} *\u041B\u0438\u0441\u0442* \u2014 \u043D\u0430\u0434\u0456\u0448\u043B\u0456\u0442\u044C \u0444\u043E\u0442\u043E \u0430\u0431\u043E PDF. \u041F\u043E\u044F\u0441\u043D\u044E \u043F\u0440\u043E\u0441\u0442\u0438\u043C\u0438 \u0441\u043B\u043E\u0432\u0430\u043C\u0438: \u0432\u0456\u0434 \u043A\u043E\u0433\u043E, \u0447\u043E\u0433\u043E \u0445\u043E\u0447\u0443\u0442\u044C, \u0434\u043E \u044F\u043A\u043E\u0433\u043E \u0447\u0438\u0441\u043B\u0430, \u0449\u043E \u0440\u043E\u0431\u0438\u0442\u0438. \u041C\u043E\u0436\u0443 \u043D\u0430\u043F\u0438\u0441\u0430\u0442\u0438 \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C \u043D\u0456\u043C\u0435\u0446\u044C\u043A\u043E\u044E.\n\n\u{1F3E2} *\u0412 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0456* \u2014 \u0443\u0432\u0456\u043C\u043A\u043D\u0456\u0442\u044C \u0440\u0435\u0436\u0438\u043C, \u043A\u043E\u043B\u0438 \u0441\u0438\u0434\u0438\u0442\u0435 \u0443 \u043F\u0440\u0430\u0446\u0456\u0432\u043D\u0438\u043A\u0430 (Jobcenter, Ausl\xE4nderbeh\xF6rde, Krankenkasse\u2026). \u0413\u043E\u0432\u043E\u0440\u0456\u0442\u044C \u0433\u043E\u043B\u043E\u0441\u043E\u043C \u2014 \u044F \u043F\u0435\u0440\u0435\u043A\u043B\u0430\u0434\u0430\u044E \u0439 \u043F\u043E\u044F\u0441\u043D\u044E\u044E \u043E\u0431\u0438\u0434\u0432\u0456 \u0441\u0442\u043E\u0440\u043E\u043D\u0438.\n\n\u0411\u0435\u0437\u043A\u043E\u0448\u0442\u043E\u0432\u043D\u043E: {free} \u043B\u0438\u0441\u0442\u0438 \u0442\u0430 {freeOffice} \u0432\u0456\u0437\u0438\u0442. \u0414\u0430\u043B\u0456 \u2014 \u043F\u0456\u0434\u043F\u0438\u0441\u043A\u0430.\n\n\u26A0\uFE0F \u042F \u043D\u0435 \u044E\u0440\u0438\u0441\u0442. \u0412\u0430\u0436\u043B\u0438\u0432\u0456 \u0441\u0442\u0440\u043E\u043A\u0438 \u0439 \u0441\u0443\u043C\u0438 \u0437\u0432\u0456\u0440\u044F\u0439\u0442\u0435 \u0437 \u043E\u0440\u0438\u0433\u0456\u043D\u0430\u043B\u043E\u043C.",
+    chooseLang: "\u041E\u0431\u0435\u0440\u0456\u0442\u044C \u043C\u043E\u0432\u0443:",
+    langSet: "\u0413\u043E\u0442\u043E\u0432\u043E, \u043C\u043E\u0432\u0430: \u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u{1F1FA}\u{1F1E6}",
+    btnLetter: "\u{1F4C4} \u0420\u043E\u0437\u0456\u0431\u0440\u0430\u0442\u0438 \u043B\u0438\u0441\u0442",
+    btnOffice: "\u{1F3E2} \u042F \u0432 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0456",
+    btnLang: "\u{1F310} \u041C\u043E\u0432\u0430",
+    btnSub: "\u2B50 \u041F\u0456\u0434\u043F\u0438\u0441\u043A\u0430",
+    sendLetter: "\u041D\u0430\u0434\u0456\u0448\u043B\u0456\u0442\u044C \u0444\u043E\u0442\u043E \u043B\u0438\u0441\u0442\u0430 (\u043C\u043E\u0436\u043D\u0430 \u043A\u0456\u043B\u044C\u043A\u0430 \u0441\u0442\u043E\u0440\u0456\u043D\u043E\u043A \u043F\u043E\u0441\u043F\u0456\u043B\u044C) \u0430\u0431\u043E PDF.",
+    working: "\u23F3 \u0427\u0438\u0442\u0430\u044E \u043B\u0438\u0441\u0442\u2026",
+    workingVoice: "\u23F3 \u0421\u043B\u0443\u0445\u0430\u044E\u2026",
+    error: "\u{1F615} \u041D\u0435 \u0432\u0438\u0439\u0448\u043B\u043E. \u0421\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0449\u0435 \u0440\u0430\u0437 \u0430\u0431\u043E \u043D\u0430\u0434\u0456\u0448\u043B\u0456\u0442\u044C \u0447\u0456\u0442\u043A\u0456\u0448\u0435 \u0444\u043E\u0442\u043E.",
+    notLetter: "\u0421\u0445\u043E\u0436\u0435, \u0446\u0435 \u043D\u0435 \u043B\u0438\u0441\u0442. \u041D\u0430\u0434\u0456\u0448\u043B\u0456\u0442\u044C \u0444\u043E\u0442\u043E \u0430\u0431\u043E PDF \u043D\u0456\u043C\u0435\u0446\u044C\u043A\u043E\u0433\u043E \u043B\u0438\u0441\u0442\u0430.",
+    btnReply: "\u270D\uFE0F \u0412\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C \u043D\u0456\u043C\u0435\u0446\u044C\u043A\u043E\u044E",
+    btnRemind: "\u23F0 \u041D\u0430\u0433\u0430\u0434\u0430\u0442\u0438 \u043F\u0440\u043E \u0441\u0442\u0440\u043E\u043A",
+    btnExplainMore: "\u2753 \u041F\u043E\u0441\u0442\u0430\u0432\u0438\u0442\u0438 \u043F\u0438\u0442\u0430\u043D\u043D\u044F",
+    askQuestion: "\u041D\u0430\u043F\u0438\u0448\u0456\u0442\u044C \u043F\u0438\u0442\u0430\u043D\u043D\u044F \u0449\u043E\u0434\u043E \u0446\u044C\u043E\u0433\u043E \u043B\u0438\u0441\u0442\u0430 \u2014 \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u043C.",
+    remindSet: "\u23F0 \u041D\u0430\u0433\u0430\u0434\u0430\u044E {d}: \u0437\u0430 3 \u0434\u043D\u0456, \u0437\u0430 1 \u0434\u0435\u043D\u044C \u0456 \u0432 \u0441\u0430\u043C \u0434\u0435\u043D\u044C \u0441\u0442\u0440\u043E\u043A\u0443.",
+    remindNoDate: "\u0423 \u043B\u0438\u0441\u0442\u0456 \u043D\u0435\u043C\u0430\u0454 \u0442\u043E\u0447\u043D\u043E\u0457 \u0434\u0430\u0442\u0438 \u0441\u0442\u0440\u043E\u043A\u0443 \u2014 \u043D\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043D\u043D\u044F \u043D\u0435 \u043F\u043E\u0441\u0442\u0430\u0432\u0438\u0442\u0438.",
+    reminder: "\u23F0 \u041D\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043D\u043D\u044F: {label}\n\u0421\u0442\u0440\u043E\u043A: *{d}* ({left}).",
+    leftToday: "\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456",
+    leftDays: "\u0437\u0430\u043B\u0438\u0448\u0438\u043B\u043E\u0441\u044C \u0434\u043D\u0456\u0432: {n}",
+    officeOn: "\u{1F3E2} *\u0420\u0435\u0436\u0438\u043C \xAB\u0412 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0456\xBB \u0443\u0432\u0456\u043C\u043A\u043D\u0435\u043D\u043E.*\n\n1\uFE0F\u20E3 \u041F\u043E\u043A\u0430\u0436\u0456\u0442\u044C \u043F\u0440\u0430\u0446\u0456\u0432\u043D\u0438\u043A\u0443 \u043F\u043E\u0432\u0456\u0434\u043E\u043C\u043B\u0435\u043D\u043D\u044F \u043D\u0438\u0436\u0447\u0435 (\u043D\u0456\u043C\u0435\u0446\u044C\u043A\u043E\u044E).\n2\uFE0F\u20E3 \u041D\u0430\u0434\u0441\u0438\u043B\u0430\u0439\u0442\u0435 \u0433\u043E\u043B\u043E\u0441\u043E\u0432\u0456: \u043A\u043E\u043B\u0438 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u043F\u0440\u0430\u0446\u0456\u0432\u043D\u0438\u043A \u2014 \u0442\u0440\u0438\u043C\u0430\u0439\u0442\u0435 \u0442\u0435\u043B\u0435\u0444\u043E\u043D \u0434\u043E \u043D\u044C\u043E\u0433\u043E. \u041A\u043E\u043B\u0438 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u0435 \u0432\u0438 \u2014 \u0433\u043E\u0432\u043E\u0440\u0456\u0442\u044C \u0443\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u043E\u044E.\n3\uFE0F\u20E3 \u0412\u0430\u0448\u0456 \u0444\u0440\u0430\u0437\u0438 \u044F \u043F\u043E\u043A\u0430\u0436\u0443 \u0432\u0435\u043B\u0438\u043A\u0438\u043C\u0438 \u043B\u0456\u0442\u0435\u0440\u0430\u043C\u0438 \u043D\u0456\u043C\u0435\u0446\u044C\u043A\u043E\u044E \u2014 \u043F\u0440\u043E\u0441\u0442\u043E \u043F\u043E\u043A\u0430\u0436\u0456\u0442\u044C \u0435\u043A\u0440\u0430\u043D.\n\n\u041C\u043E\u0436\u043D\u0430 \u0441\u043F\u0435\u0440\u0448\u0443 \u043D\u0430\u0434\u0456\u0441\u043B\u0430\u0442\u0438 \u043B\u0438\u0441\u0442, \u0437 \u044F\u043A\u0438\u043C \u0432\u0438 \u043F\u0440\u0438\u0439\u0448\u043B\u0438, \u2014 \u0442\u043E\u0434\u0456 \u044F \u0437\u043D\u0430\u0442\u0438\u043C\u0443 \u043A\u043E\u043D\u0442\u0435\u043A\u0441\u0442.\n\u0412\u0438\u0445\u0456\u0434: /stop",
+    officeCard: "\u{1F1E9}\u{1F1EA} *Guten Tag!*\nIch spreche wenig Deutsch. Darf ich diese App zum \xDCbersetzen benutzen?\nEs wird nichts gespeichert. Danke!",
+    officeOff: "\u0420\u0435\u0436\u0438\u043C \xAB\u0412 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0456\xBB \u0432\u0438\u043C\u043A\u043D\u0435\u043D\u043E. \u0423\u0441\u043F\u0456\u0445\u0456\u0432! \u{1F340}",
+    officeFrom: "\u{1F464} *\u041F\u0440\u0430\u0446\u0456\u0432\u043D\u0438\u043A \u0441\u043A\u0430\u0437\u0430\u0432:*",
+    officeYou: "\u{1F5E3} *\u041F\u043E\u043A\u0430\u0436\u0456\u0442\u044C \u043F\u0440\u0430\u0446\u0456\u0432\u043D\u0438\u043A\u0443:*",
+    officeMeaning: "\u{1F4A1} *\u0429\u043E \u0446\u0435 \u043E\u0437\u043D\u0430\u0447\u0430\u0454:*",
+    paywall: "\u0411\u0435\u0437\u043A\u043E\u0448\u0442\u043E\u0432\u043D\u0438\u0439 \u043B\u0456\u043C\u0456\u0442 \u0437\u0430\u043A\u0456\u043D\u0447\u0438\u0432\u0441\u044F.\n\n\u2B50 \u041F\u0456\u0434\u043F\u0438\u0441\u043A\u0430 \u2014 {price} Stars \u043D\u0430 \u043C\u0456\u0441\u044F\u0446\u044C (\u2248 {eur} \u20AC): \u043B\u0438\u0441\u0442\u0438 \u0431\u0435\u0437 \u043E\u0431\u043C\u0435\u0436\u0435\u043D\u044C (\u0447\u0435\u0441\u043D\u0435 \u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u0430\u043D\u043D\u044F), \u0440\u0435\u0436\u0438\u043C \xAB\u0412 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0456\xBB, \u043D\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E \u0441\u0442\u0440\u043E\u043A\u0438.",
+    btnPay: "\u2B50 \u041E\u0444\u043E\u0440\u043C\u0438\u0442\u0438 \u0437\u0430 {price} Stars",
+    paid: "\u2705 \u041F\u0456\u0434\u043F\u0438\u0441\u043A\u0430 \u0430\u043A\u0442\u0438\u0432\u043D\u0430 \u0434\u043E {d}. \u0414\u044F\u043A\u0443\u044E!",
+    subActive: "\u2B50 \u041F\u0456\u0434\u043F\u0438\u0441\u043A\u0430 \u0430\u043A\u0442\u0438\u0432\u043D\u0430 \u0434\u043E {d}.",
+    subNone: "\u041F\u0456\u0434\u043F\u0438\u0441\u043A\u0438 \u043D\u0435\u043C\u0430\u0454. \u0417\u0430\u043B\u0438\u0448\u0438\u043B\u043E\u0441\u044C \u0431\u0435\u0437\u043A\u043E\u0448\u0442\u043E\u0432\u043D\u043E: \u043B\u0438\u0441\u0442\u0456\u0432 \u2014 {l}, \u0432\u0456\u0437\u0438\u0442\u0456\u0432 \u2014 {o}.",
+    privacy: "\u{1F512} \u041A\u043E\u043D\u0444\u0456\u0434\u0435\u043D\u0446\u0456\u0439\u043D\u0456\u0441\u0442\u044C\n\u2022 \u0424\u043E\u0442\u043E \u0442\u0430 PDF \u043D\u0435 \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u044E\u0442\u044C\u0441\u044F \u2014 \u043B\u0438\u0448\u0435 \u043E\u0431\u0440\u043E\u0431\u043B\u044F\u044E\u0442\u044C\u0441\u044F \u0456 \u043E\u0434\u0440\u0430\u0437\u0443 \u0432\u0438\u0434\u0430\u043B\u044F\u044E\u0442\u044C\u0441\u044F.\n\u2022 \u0422\u0435\u043A\u0441\u0442 \u043E\u0441\u0442\u0430\u043D\u043D\u044C\u043E\u0433\u043E \u043B\u0438\u0441\u0442\u0430 \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u0454\u0442\u044C\u0441\u044F 24 \u0433\u043E\u0434\u0438\u043D\u0438, \u0449\u043E\u0431 \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u0430\u0442\u0438 \u043D\u0430 \u043F\u0438\u0442\u0430\u043D\u043D\u044F \u0439 \u043F\u0438\u0441\u0430\u0442\u0438 \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C. \u041F\u043E\u0442\u0456\u043C \u0432\u0438\u0434\u0430\u043B\u044F\u0454\u0442\u044C\u0441\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u043D\u043E. /forget \u2014 \u0432\u0438\u0434\u0430\u043B\u0438\u0442\u0438 \u043E\u0434\u0440\u0430\u0437\u0443.\n\u2022 \u0412\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u043E\u0432\u0443\u0454\u0442\u044C\u0441\u044F \u0428\u0406 Claude (Anthropic) \u0456 \u0440\u043E\u0437\u043F\u0456\u0437\u043D\u0430\u0432\u0430\u043D\u043D\u044F \u043C\u043E\u0432\u043B\u0435\u043D\u043D\u044F Cloudflare. \u0414\u0430\u043D\u0456 \u043D\u0435 \u0432\u0438\u043A\u043E\u0440\u0438\u0441\u0442\u043E\u0432\u0443\u044E\u0442\u044C\u0441\u044F \u0434\u043B\u044F \u043D\u0430\u0432\u0447\u0430\u043D\u043D\u044F.\n\u2022 \u041D\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043D\u043D\u044F \u0437\u0431\u0435\u0440\u0456\u0433\u0430\u044E\u0442\u044C \u043B\u0438\u0448\u0435 \u0434\u0430\u0442\u0443 \u0439 \u043A\u043E\u0440\u043E\u0442\u043A\u0443 \u043D\u0430\u0437\u0432\u0443.",
+    forgot: "\u{1F5D1} \u0412\u0438\u0434\u0430\u043B\u0435\u043D\u043E: \u0442\u0435\u043A\u0441\u0442 \u043B\u0438\u0441\u0442\u0430 \u0439 \u043D\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u043D\u043D\u044F.",
+    paysupport: "\u0417 \u043F\u0438\u0442\u0430\u043D\u044C \u043E\u043F\u043B\u0430\u0442\u0438 \u043F\u0438\u0448\u0456\u0442\u044C \u0441\u044E\u0434\u0438: {contact}. \u041F\u043E\u0432\u0435\u0440\u043D\u0435\u043D\u043D\u044F Stars \u2014 \u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C 7 \u0434\u043D\u0456\u0432, \u044F\u043A\u0449\u043E \u0441\u0435\u0440\u0432\u0456\u0441 \u043D\u0435 \u0434\u043E\u043F\u043E\u043C\u0456\u0433.",
+    terms: "\u0423\u043C\u043E\u0432\u0438: \u0441\u0435\u0440\u0432\u0456\u0441 \u0434\u0430\u0454 \u043F\u043E\u044F\u0441\u043D\u0435\u043D\u043D\u044F \u0437\u0430 \u0434\u043E\u043F\u043E\u043C\u043E\u0433\u043E\u044E \u0428\u0406 \u0439 \u043D\u0435 \u0437\u0430\u043C\u0456\u043D\u044E\u0454 \u044E\u0440\u0438\u0434\u0438\u0447\u043D\u0443 \u043A\u043E\u043D\u0441\u0443\u043B\u044C\u0442\u0430\u0446\u0456\u044E. \u041F\u0435\u0440\u0435\u0432\u0456\u0440\u044F\u0439\u0442\u0435 \u0441\u0442\u0440\u043E\u043A\u0438 \u0439 \u0441\u0443\u043C\u0438 \u0437\u0430 \u043E\u0440\u0438\u0433\u0456\u043D\u0430\u043B\u043E\u043C. \u041F\u0456\u0434\u043F\u0438\u0441\u043A\u0443 \u043C\u043E\u0436\u043D\u0430 \u0441\u043A\u0430\u0441\u0443\u0432\u0430\u0442\u0438 \u0431\u0443\u0434\u044C-\u043A\u043E\u043B\u0438 \u0432 \u043D\u0430\u043B\u0430\u0448\u0442\u0443\u0432\u0430\u043D\u043D\u044F\u0445 Telegram.",
+    tooLong: "\u0413\u043E\u043B\u043E\u0441\u043E\u0432\u0435 \u0437\u0430\u0434\u043E\u0432\u0433\u0435 \u2014 \u0434\u043E 2 \u0445\u0432\u0438\u043B\u0438\u043D, \u0431\u0443\u0434\u044C \u043B\u0430\u0441\u043A\u0430."
+  }
+};
+function t(lang, key, vars = {}) {
+  const s = (T[lang] || T.ru)[key] ?? T.ru[key] ?? key;
+  return s.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? `{${k}}`);
+}
+__name(t, "t");
+
+// src/prompts.js
+var today = /* @__PURE__ */ __name(() => (/* @__PURE__ */ new Date()).toISOString().slice(0, 10), "today");
+function letterSystem(lang) {
+  const L = LANG_NAME_EN[lang] || "Russian";
+  return `You help immigrants in Germany understand official German letters (Jobcenter, Familienkasse, Finanzamt, Ausl\xE4nderbeh\xF6rde, Krankenkasse, Rundfunkbeitrag, landlords, debt collectors, courts, employers, schools).
+Today is ${today()}. The user reads ${L} and little or no German.
+
+Read the attached letter (photo pages or PDF) and answer ONLY with one JSON object, no prose around it:
+{
+ "is_letter": true|false,              // false if the image is not a letter/official document
+ "sender": "...",                      // authority/company name as written, in German
+ "doc_type": "...",                    // short, in ${L} (e.g. "Bescheid \u043E \u043F\u043E\u0441\u043E\u0431\u0438\u0438")
+ "summary": "...",                     // 2-4 short sentences in ${L}, plain words a 60-year-old understands; keep key German terms in brackets once, e.g. "\u0440\u0435\u0448\u0435\u043D\u0438\u0435 (Bescheid)"
+ "what_they_want": "...",              // in ${L}: what the sender wants from the reader, or "\u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044F" equivalent
+ "deadline": "YYYY-MM-DD"|null,        // the most important deadline. If the letter gives a period ("innerhalb von 2 Wochen", "binnen eines Monats nach Bekanntgabe") compute the date from the letter date (Bekanntgabe = 3 days after the letter date per \xA7122 AO / \xA737 SGB X); null if none
+ "deadline_label": "...",              // in ${L}, max 60 chars, e.g. "\u0421\u0434\u0430\u0442\u044C \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B \u0432 Jobcenter"
+ "deadline_note": "..."|null,          // in ${L}: how the date was derived if computed, or uncertainty
+ "amounts": "..."|null,                // money amounts to pay or receive, with what for, in ${L}
+ "steps": ["...","..."],               // 2-5 concrete actions in ${L}, imperative, in order
+ "risk": "low"|"medium"|"high",        // high = benefit cut/Sanktion, R\xFCckforderung, Mahnung/Inkasso, K\xFCndigung, court, residence permit problems, deadline < 7 days
+ "free_help": "..."|null,              // only for medium/high: in ${L}, which FREE counselling fits (Migrationsberatung f\xFCr Erwachsene (MBE) / Jugendmigrationsdienst (JMD) for under 27, Schuldnerberatung, Mieterverein, Sozialberatung of Caritas/Diakonie/AWO, Unabh\xE4ngige Patientenberatung, Verbraucherzentrale) and that they can find the nearest MBE/JMD on bamf-navi.bamf.de
+ "scam_warning": "..."|null,           // in ${L}, only if there are signs of a fake letter (odd IBAN abroad, pressure, wrong logo, threats, payment by gift cards)
+ "reply_useful": true|false,           // would a written reply/Widerspruch/request help?
+ "letter_text_de": "..."               // faithful German transcription of the letter body (no addresses of private persons, no IBAN, no tax-ID/Steuer-ID, no Versicherungsnummer: replace with [..])
+}
+Rules: never invent facts not in the letter; if a page is unreadable say so in summary. Do not give legal advice beyond what the letter states; for objections mention the Widerspruch deadline if stated (usually 1 month).`;
+}
+__name(letterSystem, "letterSystem");
+function replySystem(lang) {
+  const L = LANG_NAME_EN[lang] || "Russian";
+  return `You write short, polite, formally correct German letters to German authorities/companies on behalf of an immigrant who reads ${L}.
+Today is ${today()}. Answer ONLY with JSON:
+{"german":"...","explain":"..."}
+"german": the complete letter in German: placeholders [Vorname Nachname], [Adresse], [Aktenzeichen/Kundennummer] where unknown (take Aktenzeichen/BG-Nummer from the letter if present), Ort/Datum line, Betreff, body, "Mit freundlichen Gr\xFC\xDFen". Keep it short (max ~180 words). If it is a Widerspruch, state "Hiermit lege ich Widerspruch gegen den Bescheid vom ... ein" and ask for Akteneinsicht/Begr\xFCndung follows; do not invent legal arguments.
+"explain": in ${L}, 2-4 sentences: what the letter says and how/where to send it (post/fax/online portal, keep a copy, send before the deadline; Einschreiben for important deadlines).`;
+}
+__name(replySystem, "replySystem");
+function qaSystem(lang) {
+  const L = LANG_NAME_EN[lang] || "Russian";
+  return `You are a friendly helper for immigrants in Germany dealing with German bureaucracy. Answer in ${L}, short (max 120 words), plain words, concrete next step. Keep important German terms in brackets once. If the question is about the letter given in context, rely on it. If unsure, say so and point to free counselling (Migrationsberatung MBE, bamf-navi.bamf.de). Not legal advice. Plain text only, no markdown tables. Today is ${today()}.`;
+}
+__name(qaSystem, "qaSystem");
+function officeSystem(lang) {
+  const L = LANG_NAME_EN[lang] || "Russian";
+  return `You are a live interpreter at a German office counter (Jobcenter, Ausl\xE4nderbeh\xF6rde, B\xFCrgeramt, Krankenkasse, doctor...). Two speakers: the OFFICIAL speaks German; the CLIENT speaks ${L}. You receive one utterance (from speech recognition, may contain errors) plus context.
+Answer ONLY with JSON:
+{"speaker":"official"|"client",
+ "translation":"...",      // if official: faithful translation into ${L}; if client: natural, polite, simple German sentence(s) the client can show on the screen (Sie-form)
+ "meaning":"..."|null,     // only if official: 1-2 short sentences in ${L} explaining bureaucratic terms or what the client must do/bring; null if obvious
+ "back":"..."|null}        // only if client: short back-translation of your German into ${L} so the client can check it
+Decide the speaker by the language of the utterance (German = official). Use the letter/visit context to resolve terms (e.g. "Eingliederungsvereinbarung", "Kooperationsplan", "Mitwirkungspflicht", "Weiterbewilligungsantrag"). Never add advice the official did not say into "translation". Today is ${today()}.`;
+}
+__name(officeSystem, "officeSystem");
+
+// src/index.js
+var DAY = 86400;
+var FREE_LETTERS = 3;
+var FREE_OFFICE = 1;
+var FAIR_USE_MONTH = 100;
+var index_default = {
+  async fetch(req, env, ctx) {
+    const url = new URL(req.url);
+    if (req.method === "GET" && url.pathname === "/setup") return setup(url, env);
+    if (req.method === "GET") return new Response("ok");
+    if (req.headers.get("X-Telegram-Bot-Api-Secret-Token") !== env.WEBHOOK_SECRET)
+      return new Response("forbidden", { status: 403 });
+    const update = await req.json();
+    ctx.waitUntil(handle(update, env, ctx).catch((e) => console.error("handle", e?.stack || e)));
+    return new Response("ok");
+  },
+  async scheduled(_ev, env, ctx) {
+    ctx.waitUntil(sendReminders(env));
+  }
+};
+async function tg(env, method, body) {
+  const r = await fetch(`https://api.telegram.org/bot${env.BOT_TOKEN}/${method}`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(body)
+  });
+  const j = await r.json();
+  if (!j.ok) console.error(method, JSON.stringify(j).slice(0, 300));
+  return j;
+}
+__name(tg, "tg");
+var esc = /* @__PURE__ */ __name((s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"), "esc");
+var html = /* @__PURE__ */ __name((s) => esc(s).replace(/\*([^*\n]+)\*/g, "<b>$1</b>"), "html");
+var send = /* @__PURE__ */ __name((env, chat, text, extra = {}) => tg(env, "sendMessage", { chat_id: chat, text, parse_mode: "HTML", disable_web_page_preview: true, ...extra }), "send");
+async function downloadFile(env, fileId) {
+  const f = await tg(env, "getFile", { file_id: fileId });
+  if (!f.ok) throw new Error("getFile failed");
+  const r = await fetch(`https://api.telegram.org/file/bot${env.BOT_TOKEN}/${f.result.file_path}`);
+  return { buf: await r.arrayBuffer(), path: f.result.file_path };
+}
+__name(downloadFile, "downloadFile");
+function b64(buf) {
+  const bytes = new Uint8Array(buf);
+  let s = "";
+  for (let i = 0; i < bytes.length; i += 32768) s += String.fromCharCode.apply(null, bytes.subarray(i, i + 32768));
+  return btoa(s);
+}
+__name(b64, "b64");
+var defUser = /* @__PURE__ */ __name((lang) => ({ lang, letters: 0, office: 0, subUntil: 0, month: "", monthCount: 0, mode: "letter", created: Date.now() }), "defUser");
+async function getUser(env, id, tgLang) {
+  const u = await env.KV.get(`u:${id}`, "json");
+  if (u) return u;
+  const lang = ["ro", "uk"].includes(tgLang) ? tgLang : tgLang === "mo" ? "ro" : "ru";
+  return { ...defUser(lang), isNew: true };
+}
+__name(getUser, "getUser");
+var putUser = /* @__PURE__ */ __name((env, id, u) => {
+  delete u.isNew;
+  return env.KV.put(`u:${id}`, JSON.stringify(u));
+}, "putUser");
+var isSub = /* @__PURE__ */ __name((u) => (u.subUntil || 0) * 1e3 > Date.now(), "isSub");
+var ctxKey = /* @__PURE__ */ __name((id) => `ctx:${id}`, "ctxKey");
+var convKey = /* @__PURE__ */ __name((id) => `conv:${id}`, "convKey");
+async function stat(env, name) {
+  const k = `stat:${(/* @__PURE__ */ new Date()).toISOString().slice(0, 10)}:${name}`;
+  const v = parseInt(await env.KV.get(k) || "0") + 1;
+  await env.KV.put(k, String(v), { expirationTtl: 120 * DAY });
+}
+__name(stat, "stat");
+async function claude(env, system, content, maxTokens = 2e3) {
+  const r = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json" },
+    body: JSON.stringify({ model: env.MODEL || "claude-sonnet-5-5", max_tokens: maxTokens, system, messages: [{ role: "user", content }] })
+  });
+  const j = await r.json();
+  if (!r.ok) throw new Error("claude " + r.status + " " + JSON.stringify(j).slice(0, 300));
+  return j.content.map((c) => c.text || "").join("");
+}
+__name(claude, "claude");
+function parseJson(s) {
+  const a = s.indexOf("{"), b = s.lastIndexOf("}");
+  return JSON.parse(s.slice(a, b + 1));
+}
+__name(parseJson, "parseJson");
+var mainKb = /* @__PURE__ */ __name((lang) => ({
+  keyboard: [[{ text: t(lang, "btnLetter") }, { text: t(lang, "btnOffice") }], [{ text: t(lang, "btnSub") }, { text: t(lang, "btnLang") }]],
+  resize_keyboard: true,
+  is_persistent: true
+}), "mainKb");
+var langKb = /* @__PURE__ */ __name(() => ({ inline_keyboard: [Object.entries(LANGS).map(([k, v]) => ({ text: v, callback_data: `lang:${k}` }))] }), "langKb");
+var btnIs = /* @__PURE__ */ __name((text, key) => Object.keys(LANGS).some((l) => t(l, key) === text), "btnIs");
+async function handle(up, env, ctx) {
+  if (up.pre_checkout_query) return tg(env, "answerPreCheckoutQuery", { pre_checkout_query_id: up.pre_checkout_query.id, ok: true });
+  if (up.callback_query) return onCallback(up.callback_query, env);
+  const m = up.message;
+  if (!m || m.chat.type !== "private") return;
+  const uid = m.from.id, chat = m.chat.id;
+  const u = await getUser(env, uid, m.from.language_code);
+  const L = u.lang;
+  if (m.successful_payment) return onPaid(m, u, env);
+  if (u.isNew) {
+    await putUser(env, uid, u);
+    await stat(env, "new_users");
+  }
+  const text = (m.text || "").trim();
+  if (text.startsWith("/start")) {
+    await send(env, chat, html(t(L, "welcome", { free: FREE_LETTERS, freeOffice: FREE_OFFICE })), { reply_markup: mainKb(L) });
+    return send(env, chat, t(L, "chooseLang"), { reply_markup: langKb() });
+  }
+  if (text === "/lang" || btnIs(text, "btnLang")) return send(env, chat, t(L, "chooseLang"), { reply_markup: langKb() });
+  if (text === "/privacy") return send(env, chat, html(t(L, "privacy")));
+  if (text === "/terms") return send(env, chat, html(t(L, "terms")));
+  if (text === "/paysupport") return send(env, chat, html(t(L, "paysupport", { contact: env.SUPPORT_CONTACT || "@support" })));
+  if (text === "/forget") return forget(env, uid, chat, L);
+  if (text === "/sub" || btnIs(text, "btnSub")) return subInfo(env, u, chat);
+  if (text === "/stats" && String(uid) === String(env.OWNER_ID)) return ownerStats(env, chat);
+  if (text === "/office" || btnIs(text, "btnOffice")) return officeStart(env, u, uid, chat);
+  if (text === "/stop") {
+    u.mode = "letter";
+    await putUser(env, uid, u);
+    await env.KV.delete(convKey(uid));
+    return send(env, chat, t(L, "officeOff"), { reply_markup: mainKb(L) });
+  }
+  if (text === "/letter" || btnIs(text, "btnLetter")) {
+    if (u.mode === "office") {
+      u.mode = "letter";
+      await putUser(env, uid, u);
+    }
+    return send(env, chat, t(L, "sendLetter"));
+  }
+  const photo = m.photo?.at(-1);
+  const doc = m.document && (/^image\//.test(m.document.mime_type || "") || m.document.mime_type === "application/pdf") ? m.document : null;
+  if (photo || doc) {
+    const part = { fileId: (photo || doc).file_id, mime: photo ? "image/jpeg" : doc.mime_type };
+    if (m.media_group_id) return collectAlbum(env, ctx, u, uid, chat, m, part);
+    return processLetter(env, u, uid, chat, [part], m.message_id);
+  }
+  if (m.voice || m.audio) {
+    if (u.mode !== "office") return officeVoiceOutside(env, u, uid, chat, m);
+    return officeUtterance(env, u, uid, chat, { voice: m.voice || m.audio });
+  }
+  if (text) {
+    if (u.mode === "office") return officeUtterance(env, u, uid, chat, { text });
+    return askQuestion(env, u, uid, chat, text);
+  }
+}
+__name(handle, "handle");
+async function onCallback(q, env) {
+  const uid = q.from.id, chat = q.message.chat.id;
+  const u = await getUser(env, uid, q.from.language_code);
+  const [kind, val] = (q.data || "").split(":");
+  await tg(env, "answerCallbackQuery", { callback_query_id: q.id });
+  if (kind === "lang" && LANGS[val]) {
+    u.lang = val;
+    await putUser(env, uid, u);
+    return send(env, chat, t(val, "langSet"), { reply_markup: mainKb(val) });
+  }
+  if (kind === "reply") return writeReply(env, u, uid, chat);
+  if (kind === "remind") return setReminder(env, u, uid, chat);
+  if (kind === "ask") return send(env, chat, t(u.lang, "askQuestion"));
+  if (kind === "pay") return payLink(env, u, uid, chat);
+}
+__name(onCallback, "onCallback");
+function monthTick(u) {
+  const mth = (/* @__PURE__ */ new Date()).toISOString().slice(0, 7);
+  if (u.month !== mth) {
+    u.month = mth;
+    u.monthCount = 0;
+  }
+}
+__name(monthTick, "monthTick");
+async function canUseLetter(env, u, chat) {
+  monthTick(u);
+  if (isSub(u)) return u.monthCount < FAIR_USE_MONTH;
+  if (u.letters < FREE_LETTERS) return true;
+  await paywall(env, u, chat);
+  return false;
+}
+__name(canUseLetter, "canUseLetter");
+async function collectAlbum(env, ctx, u, uid, chat, m, part) {
+  const g = `grp:${m.media_group_id}:`;
+  await env.KV.put(g + String(m.message_id).padStart(12, "0"), JSON.stringify(part), { expirationTtl: 300 });
+  await new Promise((r) => setTimeout(r, 3500));
+  const list = await env.KV.list({ prefix: g });
+  const keys = list.keys.map((k) => k.name).sort();
+  if (keys.at(-1) !== g + String(m.message_id).padStart(12, "0")) return;
+  const parts = [];
+  for (const k of keys.slice(0, 6)) parts.push(await env.KV.get(k, "json"));
+  return processLetter(env, u, uid, chat, parts.filter(Boolean), m.message_id);
+}
+__name(collectAlbum, "collectAlbum");
+async function processLetter(env, u, uid, chat, parts, replyTo) {
+  const L = u.lang;
+  if (!await canUseLetter(env, u, chat)) return;
+  await tg(env, "sendChatAction", { chat_id: chat, action: "typing" });
+  const wait = await send(env, chat, t(L, "working"), { reply_to_message_id: replyTo });
+  try {
+    const content = [];
+    for (const p of parts) {
+      const { buf } = await downloadFile(env, p.fileId);
+      if (p.mime === "application/pdf") content.push({ type: "document", source: { type: "base64", media_type: "application/pdf", data: b64(buf) } });
+      else content.push({ type: "image", source: { type: "base64", media_type: /png/.test(p.mime) ? "image/png" : /webp/.test(p.mime) ? "image/webp" : "image/jpeg", data: b64(buf) } });
+    }
+    content.push({ type: "text", text: "Here is the letter. Return the JSON." });
+    const r = parseJson(await claude(env, letterSystem(L), content, 3e3));
+    if (!r.is_letter) {
+      await del(env, chat, wait);
+      return send(env, chat, t(L, "notLetter"));
+    }
+    if (!isSub(u)) u.letters++;
+    u.monthCount++;
+    await putUser(env, uid, u);
+    await env.KV.put(ctxKey(uid), JSON.stringify({ sender: r.sender, doc_type: r.doc_type, deadline: r.deadline, deadline_label: r.deadline_label, text: r.letter_text_de, summary: r.summary }), { expirationTtl: DAY });
+    await stat(env, "letters");
+    await del(env, chat, wait);
+    const lines = [];
+    lines.push(`\u{1F4C4} <b>${esc(r.doc_type || "")}</b>${r.sender ? ` \u2014 ${esc(r.sender)}` : ""}`);
+    if (r.risk === "high") lines.push(`\u{1F534} <b>${L === "ro" ? "Important" : L === "uk" ? "\u0412\u0430\u0436\u043B\u0438\u0432\u043E" : "\u0412\u0430\u0436\u043D\u043E"}</b>`);
+    lines.push("", esc(r.summary));
+    if (r.what_they_want) lines.push("", `\u{1F3AF} ${esc(r.what_they_want)}`);
+    if (r.deadline) lines.push("", `\u23F0 <b>${fmtDate(r.deadline)}</b> \u2014 ${esc(r.deadline_label || "")}${r.deadline_note ? `
+<i>${esc(r.deadline_note)}</i>` : ""}`);
+    if (r.amounts) lines.push("", `\u{1F4B6} ${esc(r.amounts)}`);
+    if (r.steps?.length) lines.push("", r.steps.map((s, i) => `${i + 1}. ${esc(s)}`).join("\n"));
+    if (r.scam_warning) lines.push("", `\u{1F6A9} ${esc(r.scam_warning)}`);
+    if (r.free_help) lines.push("", `\u{1F91D} ${esc(r.free_help)}`);
+    const kb = [];
+    const row = [];
+    if (r.reply_useful) row.push({ text: t(L, "btnReply"), callback_data: "reply" });
+    if (r.deadline) row.push({ text: t(L, "btnRemind"), callback_data: "remind" });
+    if (row.length) kb.push(row);
+    kb.push([{ text: t(L, "btnExplainMore"), callback_data: "ask" }]);
+    await send(env, chat, lines.join("\n").slice(0, 4e3), { reply_markup: { inline_keyboard: kb } });
+    if (!isSub(u) && u.letters === FREE_LETTERS) await paywallSoft(env, u, chat);
+  } catch (e) {
+    console.error("letter", e?.stack || e);
+    await del(env, chat, wait);
+    await send(env, chat, t(L, "error"));
+  }
+}
+__name(processLetter, "processLetter");
+var del = /* @__PURE__ */ __name((env, chat, msg) => msg?.ok && tg(env, "deleteMessage", { chat_id: chat, message_id: msg.result.message_id }), "del");
+var fmtDate = /* @__PURE__ */ __name((iso) => {
+  const [y, m, d] = iso.split("-");
+  return `${d}.${m}.${y}`;
+}, "fmtDate");
+async function writeReply(env, u, uid, chat) {
+  const L = u.lang;
+  const c = await env.KV.get(ctxKey(uid), "json");
+  if (!c) return send(env, chat, t(L, "sendLetter"));
+  await tg(env, "sendChatAction", { chat_id: chat, action: "typing" });
+  try {
+    const r = parseJson(await claude(env, replySystem(L), [{ type: "text", text: `Letter from ${c.sender} (${c.doc_type}):
+${c.text}
+
+Write the most useful reply.` }], 1500));
+    await send(env, chat, `<pre>${esc(r.german)}</pre>`);
+    await send(env, chat, `\u{1F4A1} ${esc(r.explain)}`);
+    await stat(env, "replies");
+  } catch (e) {
+    console.error(e);
+    await send(env, chat, t(L, "error"));
+  }
+}
+__name(writeReply, "writeReply");
+async function askQuestion(env, u, uid, chat, q) {
+  const L = u.lang;
+  const c = await env.KV.get(ctxKey(uid), "json");
+  if (!c && !isSub(u) && u.letters >= FREE_LETTERS) return paywall(env, u, chat);
+  await tg(env, "sendChatAction", { chat_id: chat, action: "typing" });
+  try {
+    const context = c ? `Context \u2013 last letter from ${c.sender} (${c.doc_type}):
+${c.text}
+
+` : "";
+    const a = await claude(env, qaSystem(L), [{ type: "text", text: context + "Question: " + q.slice(0, 2e3) }], 700);
+    await send(env, chat, esc(a).slice(0, 4e3));
+    await stat(env, "questions");
+  } catch (e) {
+    console.error(e);
+    await send(env, chat, t(L, "error"));
+  }
+}
+__name(askQuestion, "askQuestion");
+async function setReminder(env, u, uid, chat) {
+  const L = u.lang;
+  const c = await env.KV.get(ctxKey(uid), "json");
+  if (!c?.deadline) return send(env, chat, t(L, "remindNoDate"));
+  const dl = /* @__PURE__ */ new Date(c.deadline + "T00:00:00Z");
+  for (const off of [3, 1, 0]) {
+    const day = new Date(dl.getTime() - off * DAY * 1e3);
+    if (day.getTime() + DAY * 1e3 < Date.now()) continue;
+    const key = `rem:${day.toISOString().slice(0, 10)}:${uid}:${c.deadline}`;
+    const ttl = Math.max(60, Math.floor((day.getTime() - Date.now()) / 1e3) + 2 * DAY);
+    await env.KV.put(key, JSON.stringify({ chat, lang: L, label: (c.deadline_label || "").slice(0, 60), deadline: c.deadline }), { expirationTtl: ttl });
+  }
+  await stat(env, "reminders");
+  return send(env, chat, html(t(L, "remindSet", { d: fmtDate(c.deadline) })));
+}
+__name(setReminder, "setReminder");
+async function sendReminders(env) {
+  const today2 = (/* @__PURE__ */ new Date()).toISOString().slice(0, 10);
+  let cursor;
+  do {
+    const list = await env.KV.list({ prefix: `rem:${today2}:`, cursor });
+    for (const k of list.keys) {
+      const r = await env.KV.get(k.name, "json");
+      if (!r) continue;
+      const n = Math.round((/* @__PURE__ */ new Date(r.deadline + "T00:00:00Z") - /* @__PURE__ */ new Date(today2 + "T00:00:00Z")) / 864e5);
+      const left = n <= 0 ? t(r.lang, "leftToday") : t(r.lang, "leftDays", { n });
+      await send(env, r.chat, html(t(r.lang, "reminder", { label: r.label, d: fmtDate(r.deadline), left })));
+      await env.KV.delete(k.name);
+    }
+    cursor = list.list_complete ? null : list.cursor;
+  } while (cursor);
+}
+__name(sendReminders, "sendReminders");
+async function forget(env, uid, chat, L) {
+  await env.KV.delete(ctxKey(uid));
+  await env.KV.delete(convKey(uid));
+  let cursor;
+  do {
+    const list = await env.KV.list({ prefix: "rem:", cursor });
+    for (const k of list.keys) if (k.name.split(":")[2] === String(uid)) await env.KV.delete(k.name);
+    cursor = list.list_complete ? null : list.cursor;
+  } while (cursor);
+  return send(env, chat, t(L, "forgot"));
+}
+__name(forget, "forget");
+async function officeStart(env, u, uid, chat) {
+  const L = u.lang;
+  if (!isSub(u)) {
+    if (u.office >= FREE_OFFICE) return paywall(env, u, chat);
+    u.office++;
+  }
+  u.mode = "office";
+  await putUser(env, uid, u);
+  await env.KV.put(convKey(uid), JSON.stringify([]), { expirationTtl: 3 * 3600 });
+  await stat(env, "office_sessions");
+  await send(env, chat, html(t(L, "officeOn")), { reply_markup: mainKb(L) });
+  return send(env, chat, html(t(L, "officeCard")));
+}
+__name(officeStart, "officeStart");
+async function officeVoiceOutside(env, u, uid, chat, m) {
+  try {
+    const text = await transcribe(env, m.voice || m.audio);
+    if (!text) return send(env, chat, t(u.lang, "error"));
+    return askQuestion(env, u, uid, chat, text);
+  } catch (e) {
+    console.error(e);
+    return send(env, chat, t(u.lang, "error"));
+  }
+}
+__name(officeVoiceOutside, "officeVoiceOutside");
+async function transcribe(env, v) {
+  if ((v.duration || 0) > 120) throw new Error("too long");
+  const { buf } = await downloadFile(env, v.file_id);
+  const out = await env.AI.run("@cf/openai/whisper-large-v3-turbo", { audio: b64(buf), vad_filter: true });
+  return (out?.text || "").trim();
+}
+__name(transcribe, "transcribe");
+async function officeUtterance(env, u, uid, chat, { voice, text }) {
+  const L = u.lang;
+  if (voice && (voice.duration || 0) > 120) return send(env, chat, t(L, "tooLong"));
+  await tg(env, "sendChatAction", { chat_id: chat, action: "typing" });
+  try {
+    const said = voice ? await transcribe(env, voice) : text;
+    if (!said) return send(env, chat, t(L, "error"));
+    const conv = await env.KV.get(convKey(uid), "json") || [];
+    const letter = await env.KV.get(ctxKey(uid), "json");
+    const context = (letter ? `Letter the client came about (${letter.sender}, ${letter.doc_type}):
+${letter.text?.slice(0, 3e3)}
+
+` : "") + (conv.length ? `Conversation so far:
+${conv.map((c) => `${c.s}: ${c.x}`).join("\n")}
+
+` : "");
+    const r = parseJson(await claude(env, officeSystem(L), [{ type: "text", text: `${context}Utterance: """${said.slice(0, 2e3)}"""` }], 800));
+    conv.push({ s: r.speaker, x: said.slice(0, 400) });
+    await env.KV.put(convKey(uid), JSON.stringify(conv.slice(-8)), { expirationTtl: 3 * 3600 });
+    await stat(env, "office_turns");
+    if (r.speaker === "official") {
+      let msg = `${html(t(L, "officeFrom"))}
+<i>${esc(said)}</i>
+
+${esc(r.translation)}`;
+      if (r.meaning) msg += `
+
+${html(t(L, "officeMeaning"))} ${esc(r.meaning)}`;
+      return send(env, chat, msg);
+    }
+    await send(env, chat, `${html(t(L, "officeYou"))}
+
+<b>${esc(r.translation)}</b>`);
+    if (r.back) await send(env, chat, `<i>\u21A9\uFE0E ${esc(r.back)}</i>`);
+  } catch (e) {
+    console.error("office", e?.stack || e);
+    await send(env, chat, String(e?.message) === "too long" ? t(L, "tooLong") : t(L, "error"));
+  }
+}
+__name(officeUtterance, "officeUtterance");
+var price = /* @__PURE__ */ __name((env) => parseInt(env.PRICE_STARS || "100"), "price");
+var eur = /* @__PURE__ */ __name((env) => (price(env) * 0.019).toFixed(2).replace(".", ","), "eur");
+async function paywall(env, u, chat) {
+  return send(env, chat, html(t(u.lang, "paywall", { price: price(env), eur: eur(env) })), {
+    reply_markup: { inline_keyboard: [[{ text: t(u.lang, "btnPay", { price: price(env) }), callback_data: "pay" }]] }
+  });
+}
+__name(paywall, "paywall");
+var paywallSoft = paywall;
+async function payLink(env, u, uid, chat) {
+  const r = await tg(env, "createInvoiceLink", {
+    title: env.BOT_TITLE || "Pismo+",
+    description: t(u.lang, "paywall", { price: price(env), eur: eur(env) }).split("\n").pop().slice(0, 250),
+    payload: `sub:${uid}`,
+    provider_token: "",
+    currency: "XTR",
+    prices: [{ label: "30 days", amount: price(env) }],
+    subscription_period: 2592e3
+  });
+  if (!r.ok) return send(env, chat, t(u.lang, "error"));
+  return send(env, chat, "\u2B50", { reply_markup: { inline_keyboard: [[{ text: t(u.lang, "btnPay", { price: price(env) }), url: r.result }]] } });
+}
+__name(payLink, "payLink");
+async function onPaid(m, u, env) {
+  const p = m.successful_payment;
+  u.subUntil = p.subscription_expiration_date || Math.floor(Date.now() / 1e3) + 30 * DAY;
+  u.lastCharge = p.telegram_payment_charge_id;
+  await putUser(env, m.from.id, u);
+  await stat(env, p.is_first_recurring || !p.is_recurring ? "subs_new" : "subs_renew");
+  await send(env, m.chat.id, t(u.lang, "paid", { d: new Date(u.subUntil * 1e3).toLocaleDateString("de-DE") }));
+  if (env.OWNER_ID) await send(env, env.OWNER_ID, `\u{1F4B0} Stars: +${p.total_amount} (${u.lang})`);
+}
+__name(onPaid, "onPaid");
+async function subInfo(env, u, chat) {
+  if (isSub(u)) return send(env, chat, t(u.lang, "subActive", { d: new Date(u.subUntil * 1e3).toLocaleDateString("de-DE") }));
+  await send(env, chat, t(u.lang, "subNone", { l: Math.max(0, FREE_LETTERS - u.letters), o: Math.max(0, FREE_OFFICE - u.office) }));
+  return paywall(env, u, chat);
+}
+__name(subInfo, "subInfo");
+async function ownerStats(env, chat) {
+  const days = [...Array(7)].map((_, i) => new Date(Date.now() - i * DAY * 1e3).toISOString().slice(0, 10));
+  const names = ["new_users", "letters", "replies", "questions", "reminders", "office_sessions", "office_turns", "subs_new", "subs_renew"];
+  const rows = [];
+  for (const d of days) {
+    const vals = await Promise.all(names.map((n) => env.KV.get(`stat:${d}:${n}`)));
+    rows.push(`${d.slice(5)}  ` + names.map((n, i) => `${n.replace(/_/g, "")[0]}${n.includes("_") ? n.split("_")[1][0] : ""}:${vals[i] || 0}`).join(" "));
+  }
+  return send(env, chat, `<pre>${esc(rows.join("\n"))}</pre>
+<i>nu=new users, l=letters, r=replies, q=questions, re=reminders, os/ot=office, sn/sr=subs</i>`);
+}
+__name(ownerStats, "ownerStats");
+async function setup(url, env) {
+  if (url.searchParams.get("key") !== env.WEBHOOK_SECRET) return new Response("forbidden", { status: 403 });
+  const hook = `${url.origin}/`;
+  const a = await tg(env, "setWebhook", { url: hook, secret_token: env.WEBHOOK_SECRET, allowed_updates: ["message", "callback_query", "pre_checkout_query"], drop_pending_updates: true });
+  const cmds = {
+    ru: [["start", "\u041D\u0430\u0447\u0430\u0442\u044C"], ["letter", "\u0420\u0430\u0437\u043E\u0431\u0440\u0430\u0442\u044C \u043F\u0438\u0441\u044C\u043C\u043E"], ["office", "\u042F \u0432 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u0435"], ["stop", "\u0412\u044B\u0439\u0442\u0438 \u0438\u0437 \u0440\u0435\u0436\u0438\u043C\u0430 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u0430"], ["sub", "\u041F\u043E\u0434\u043F\u0438\u0441\u043A\u0430"], ["lang", "\u042F\u0437\u044B\u043A"], ["privacy", "\u041A\u043E\u043D\u0444\u0438\u0434\u0435\u043D\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C"], ["forget", "\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u043C\u043E\u0438 \u0434\u0430\u043D\u043D\u044B\u0435"], ["paysupport", "\u041F\u043E\u043C\u043E\u0449\u044C \u0441 \u043E\u043F\u043B\u0430\u0442\u043E\u0439"], ["terms", "\u0423\u0441\u043B\u043E\u0432\u0438\u044F"]],
+    ro: [["start", "Start"], ["letter", "Explic\u0103 o scrisoare"], ["office", "Sunt la autoritate"], ["stop", "Ie\u0219i din modul autoritate"], ["sub", "Abonament"], ["lang", "Limba"], ["privacy", "Confiden\u021Bialitate"], ["forget", "\u0218terge datele mele"], ["paysupport", "Ajutor plat\u0103"], ["terms", "Condi\u021Bii"]],
+    uk: [["start", "\u041F\u043E\u0447\u0430\u0442\u0438"], ["letter", "\u0420\u043E\u0437\u0456\u0431\u0440\u0430\u0442\u0438 \u043B\u0438\u0441\u0442"], ["office", "\u042F \u0432 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0456"], ["stop", "\u0412\u0438\u0439\u0442\u0438 \u0437 \u0440\u0435\u0436\u0438\u043C\u0443 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438"], ["sub", "\u041F\u0456\u0434\u043F\u0438\u0441\u043A\u0430"], ["lang", "\u041C\u043E\u0432\u0430"], ["privacy", "\u041A\u043E\u043D\u0444\u0456\u0434\u0435\u043D\u0446\u0456\u0439\u043D\u0456\u0441\u0442\u044C"], ["forget", "\u0412\u0438\u0434\u0430\u043B\u0438\u0442\u0438 \u043C\u043E\u0457 \u0434\u0430\u043D\u0456"], ["paysupport", "\u0414\u043E\u043F\u043E\u043C\u043E\u0433\u0430 \u0437 \u043E\u043F\u043B\u0430\u0442\u043E\u044E"], ["terms", "\u0423\u043C\u043E\u0432\u0438"]]
+  };
+  const out = [a.ok];
+  for (const [lc, list] of Object.entries(cmds)) {
+    const commands = list.map(([command, description]) => ({ command, description }));
+    out.push((await tg(env, "setMyCommands", { commands, language_code: lc })).ok);
+    if (lc === "ru") out.push((await tg(env, "setMyCommands", { commands })).ok);
+  }
+  return new Response("setup: " + JSON.stringify(out));
+}
+__name(setup, "setup");
+export {
+  index_default as default
+};
+//# sourceMappingURL=index.js.map
