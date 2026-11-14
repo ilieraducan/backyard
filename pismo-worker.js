@@ -2253,7 +2253,24 @@ async function ownerStats(env, chat) {
 <i>nu=new users, l=letters, r=replies, q=questions, re=reminders, os/ot=office, sn/sr=subs</i>`);
 }
 __name(ownerStats, "ownerStats");
-var CHANNEL = "@pismo_plus";
+var CHANNELS = [
+  { lang: "ru", id: "@pismo_plus" },
+  { lang: "ro", id: "@pismo_plus_ro" },
+  { lang: "uk", id: "@pismo_plus_ua" }
+];
+var LNAME = { ro: "Romanian", uk: "Ukrainian" };
+async function channelText(env, idx, lang) {
+  const src = CHANNEL_POSTS[idx];
+  if (lang === "ru") return src;
+  const key = `ch:tr:${lang}:${idx}`;
+  const cached = await env.KV.get(key);
+  if (cached) return cached;
+  const sys = `Translate this Telegram channel post from Russian into natural, simple ${LNAME[lang]} for immigrants in Germany. Keep all emojis, line breaks, bullet points and links. Keep German official terms (Jobcenter, Bescheid, Widerspruch, etc.) in German. Replace "start=ch_ru" with "start=ch_${lang}". Where the text says the bot explains "\u043D\u0430 \u0440\u0443\u0441\u0441\u043A\u043E\u043C", say it explains in ${LNAME[lang]}. Output only the translated post, nothing else.`;
+  const out = (await claude(env, sys, [{ type: "text", text: src }], 1500)).trim();
+  await env.KV.put(key, out);
+  return out;
+}
+__name(channelText, "channelText");
 async function postNext(env) {
   if (!env.OWNER_ID) {
     const o = await env.KV.get("owner");
@@ -2263,36 +2280,53 @@ async function postNext(env) {
   if (idx >= CHANNEL_POSTS.length) {
     if (env.OWNER_ID && !await env.KV.get("ch:emptyalert")) {
       await env.KV.put("ch:emptyalert", "1", { expirationTtl: 7 * DAY });
-      await tg(env, "sendMessage", { chat_id: env.OWNER_ID, text: "\u{1F4ED} \u041F\u043E\u0441\u0442\u044B \u0434\u043B\u044F \u043A\u0430\u043D\u0430\u043B\u0430 @pismo_plus \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u043B\u0438\u0441\u044C \u2014 \u043F\u043E\u043F\u0440\u043E\u0441\u0438\u0442\u0435 Claude \u043D\u0430\u043F\u0438\u0441\u0430\u0442\u044C \u043D\u043E\u0432\u044B\u0435." });
+      await tg(env, "sendMessage", { chat_id: env.OWNER_ID, text: "\u{1F4ED} \u041F\u043E\u0441\u0442\u044B \u0434\u043B\u044F \u043A\u0430\u043D\u0430\u043B\u043E\u0432 Pismo+ \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u043B\u0438\u0441\u044C \u2014 \u043F\u043E\u043F\u0440\u043E\u0441\u0438\u0442\u0435 Claude \u043D\u0430\u043F\u0438\u0441\u0430\u0442\u044C \u043D\u043E\u0432\u044B\u0435." });
     }
     return "no posts left";
   }
-  const r = await tg(env, "sendMessage", { chat_id: CHANNEL, text: CHANNEL_POSTS[idx], link_preview_options: { is_disabled: true } });
-  if (r.ok) {
-    await env.KV.put("ch:idx", String(idx + 1));
-    await stat(env, "channel_posts");
+  const res = [];
+  for (const c of CHANNELS) {
+    try {
+      const text = await channelText(env, idx, c.lang);
+      const r = await tg(env, "sendMessage", { chat_id: c.id, text, link_preview_options: { is_disabled: true } });
+      res.push(`${c.lang}:${r.ok ? "ok" : r.description}`);
+    } catch (e) {
+      res.push(`${c.lang}:err`);
+      console.error("ch", c.lang, e?.message);
+    }
   }
-  return r.ok ? `posted #${idx + 1}/${CHANNEL_POSTS.length}` : "error " + (r.description || "");
+  await env.KV.put("ch:idx", String(idx + 1));
+  await stat(env, "channel_posts");
+  return `posted #${idx + 1}/${CHANNEL_POSTS.length} ` + res.join(" ");
 }
 __name(postNext, "postNext");
 async function chSetup(url, env) {
   if (url.searchParams.get("key") !== env.WEBHOOK_SECRET) return new Response("forbidden", { status: 403 });
   const out = {};
-  const img = await fetch(url.searchParams.get("photo") || "https://raw.githubusercontent.com/ilieraducan/backyard/cfc266706e0709bb12156c8151d7c7c4a73872f7/pismo-avatar.png");
-  if (img.ok) {
-    const fd = new FormData();
-    fd.append("chat_id", CHANNEL);
-    fd.append("photo", new Blob([await img.arrayBuffer()], { type: "image/png" }), "avatar.png");
-    out.photo = (await (await fetch(`https://api.telegram.org/bot${env.BOT_TOKEN}/setChatPhoto`, { method: "POST", body: fd })).json()).ok;
-  }
-  if (!await env.KV.get("ch:idx")) {
-    const r = await tg(env, "sendMessage", { chat_id: CHANNEL, text: CHANNEL_POSTS[0], link_preview_options: { is_disabled: true } });
-    out.welcome = r.ok;
-    if (r.ok) {
-      await env.KV.put("ch:idx", "1");
-      out.pin = (await tg(env, "pinChatMessage", { chat_id: CHANNEL, message_id: r.result.message_id, disable_notification: true })).ok;
+  const imgRes = await fetch(url.searchParams.get("photo") || "https://raw.githubusercontent.com/ilieraducan/backyard/cfc266706e0709bb12156c8151d7c7c4a73872f7/pismo-avatar.png");
+  const img = imgRes.ok ? await imgRes.arrayBuffer() : null;
+  for (const c of CHANNELS) {
+    const o = {};
+    if (img && !await env.KV.get(`ch:photo:${c.lang}`)) {
+      const fd = new FormData();
+      fd.append("chat_id", c.id);
+      fd.append("photo", new Blob([img], { type: "image/png" }), "avatar.png");
+      o.photo = (await (await fetch(`https://api.telegram.org/bot${env.BOT_TOKEN}/setChatPhoto`, { method: "POST", body: fd })).json()).ok;
+      if (o.photo) await env.KV.put(`ch:photo:${c.lang}`, "1");
     }
+    const welcomed = await env.KV.get(`ch:welcomed:${c.lang}`) || c.lang === "ru" && await env.KV.get("ch:idx");
+    if (!welcomed) {
+      const text = await channelText(env, 0, c.lang);
+      const r = await tg(env, "sendMessage", { chat_id: c.id, text, link_preview_options: { is_disabled: true } });
+      o.welcome = r.ok;
+      if (r.ok) {
+        await env.KV.put(`ch:welcomed:${c.lang}`, "1");
+        o.pin = (await tg(env, "pinChatMessage", { chat_id: c.id, message_id: r.result.message_id, disable_notification: true })).ok;
+      }
+    }
+    out[c.lang] = o;
   }
+  if (!await env.KV.get("ch:idx")) await env.KV.put("ch:idx", "1");
   return new Response("chsetup: " + JSON.stringify(out));
 }
 __name(chSetup, "chSetup");
