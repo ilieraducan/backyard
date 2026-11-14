@@ -1573,6 +1573,11 @@ async function handle(up, env, ctx) {
         await send(env, ref[1], t(r.lang, "refJoined"));
       }
     }
+    const src = (m.text || "").match(/^\/start ([a-z]{1,4}_[a-z]{2,3})$/);
+    if (src) {
+      u.src = src[1];
+      await stat(env, "src_" + src[1]);
+    }
     await putUser(env, uid, u);
     await stat(env, "new_users");
     if (u.refBy) await send(env, chat, t(L, "refWelcome"));
@@ -2105,6 +2110,12 @@ async function ownerStats(env, chat) {
     const vals = await Promise.all(names.map((n) => env.KV.get(`stat:${d}:${n}`)));
     rows.push(`${d.slice(5)}  ` + names.map((n, i) => `${n.replace(/_/g, "")[0]}${n.includes("_") ? n.split("_")[1][0] : ""}:${vals[i] || 0}`).join(" "));
   }
+  const srcRows = [];
+  for (const d of days) {
+    const l = await env.KV.list({ prefix: `stat:${d}:src_` });
+    for (const k of l.keys) srcRows.push(`${d.slice(5)} ${k.name.split(":src_")[1]}: ${await env.KV.get(k.name)}`);
+  }
+  if (srcRows.length) rows.push("", "Sources (new users):", ...srcRows);
   return send(env, chat, `<pre>${esc2(rows.join("\n"))}</pre>
 <i>nu=new users, l=letters, r=replies, q=questions, re=reminders, os/ot=office, sn/sr=subs</i>`);
 }
