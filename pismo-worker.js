@@ -5,6 +5,9 @@ var __name = (target, value) => __defProp(target, "name", { value, configurable:
 var CARD = "\u{1F1E9}\u{1F1EA} *Guten Tag!*\nIch spreche wenig Deutsch. Darf ich diese App zum \xDCbersetzen benutzen?\nEs wird nichts gespeichert. Danke!";
 var MORE = {
   en: {
+    btnFeedback: "\u{1F4AC} Feedback / correction",
+    askFeedback: "Write your feedback or suggestion \u2014 what to fix in the translation or in the bot. In one message.",
+    feedbackThanks: "\u{1F64F} Thank you! Your feedback was sent.",
     important: "Important",
     btnAddress: "\u{1F3E0} My address",
     askAddress: "\u{1F3E0} Enter your registered address (Meldeadresse), e.g. Hauptstra\xDFe 5, 21682 Stade. Postcode and town are enough.\n\nWhy: so I can find *your* office (Jobcenter, Ausl\xE4nderbeh\xF6rde\u2026) and a public-transport route. The address stays with the bot only; delete it with /forget.",
@@ -66,6 +69,9 @@ var MORE = {
     cmd: ["Start", "Explain a letter", "I'm at an office", "Leave office mode", "Subscription", "Language", "Privacy", "Delete my data", "Payment help", "Terms", "My address"]
   },
   tr: {
+    btnFeedback: "\u{1F4AC} Geri bildirim / d\xFCzeltme",
+    askFeedback: "Geri bildiriminizi veya \xF6nerinizi yaz\u0131n \u2014 \xE7eviride ya da botta neyi d\xFCzeltelim. Tek mesajda.",
+    feedbackThanks: "\u{1F64F} Te\u015Fekk\xFCrler! Geri bildiriminiz iletildi.",
     important: "\xD6nemli",
     btnAddress: "\u{1F3E0} Adresim",
     askAddress: "\u{1F3E0} Kay\u0131tl\u0131 adresinizi (Meldeadresse) yaz\u0131n, \xF6rn. Hauptstra\xDFe 5, 21682 Stade. Posta kodu ve \u015Fehir yeterli.\n\nNeden: *sizin* dairenizi (Jobcenter, Ausl\xE4nderbeh\xF6rde\u2026) bulmak ve toplu ta\u015F\u0131ma rotas\u0131 \xE7\u0131karmak i\xE7in. Adres yaln\u0131zca botta saklan\u0131r; silmek i\xE7in /forget.",
@@ -127,6 +133,9 @@ var MORE = {
     cmd: ["Ba\u015Fla", "Mektup a\xE7\u0131kla", "Dairedeyim", "Daire modundan \xE7\u0131k", "Abonelik", "Dil", "Gizlilik", "Verilerimi sil", "\xD6deme yard\u0131m\u0131", "Ko\u015Fullar", "Adresim"]
   },
   ar: {
+    btnFeedback: "\u{1F4AC} \u0645\u0644\u0627\u062D\u0638\u0627\u062A / \u062A\u0635\u062D\u064A\u062D",
+    askFeedback: "\u0627\u0643\u062A\u0628 \u0645\u0644\u0627\u062D\u0638\u062A\u0643 \u0623\u0648 \u0627\u0642\u062A\u0631\u0627\u062D\u0643 \u2014 \u0645\u0627 \u0627\u0644\u0630\u064A \u0646\u0635\u062D\u062D\u0647 \u0641\u064A \u0627\u0644\u062A\u0631\u062C\u0645\u0629 \u0623\u0648 \u0641\u064A \u0627\u0644\u0628\u0648\u062A. \u0641\u064A \u0631\u0633\u0627\u0644\u0629 \u0648\u0627\u062D\u062F\u0629.",
+    feedbackThanks: "\u{1F64F} \u0634\u0643\u0631\u0627\u064B! \u062A\u0645 \u0625\u0631\u0633\u0627\u0644 \u0645\u0644\u0627\u062D\u0638\u062A\u0643.",
     important: "\u0645\u0647\u0645",
     btnAddress: "\u{1F3E0} \u0639\u0646\u0648\u0627\u0646\u064A",
     askAddress: "\u{1F3E0} \u0627\u0643\u062A\u0628 \u0639\u0646\u0648\u0627\u0646 \u0633\u0643\u0646\u0643 \u0627\u0644\u0645\u0633\u062C\u0651\u0644 (Meldeadresse)\u060C \u0645\u062B\u0644\u0627\u064B: Hauptstra\xDFe 5, 21682 Stade. \u064A\u0643\u0641\u064A \u0627\u0644\u0631\u0645\u0632 \u0627\u0644\u0628\u0631\u064A\u062F\u064A \u0648\u0627\u0644\u0645\u062F\u064A\u0646\u0629.\n\n\u0644\u0645\u0627\u0630\u0627: \u0644\u0623\u062C\u062F *\u062F\u0627\u0626\u0631\u062A\u0643* (Jobcenter\u060C Ausl\xE4nderbeh\xF6rde\u2026) \u0648\u0637\u0631\u064A\u0642 \u0627\u0644\u0645\u0648\u0627\u0635\u0644\u0627\u062A \u0627\u0644\u0639\u0627\u0645\u0629. \u0627\u0644\u0639\u0646\u0648\u0627\u0646 \u064A\u0628\u0642\u0649 \u0644\u062F\u0649 \u0627\u0644\u0628\u0648\u062A \u0641\u0642\u0637\u061B \u0644\u0644\u062D\u0630\u0641: /forget.",
@@ -188,6 +197,9 @@ var MORE = {
     cmd: ["\u0627\u0628\u062F\u0623", "\u0627\u0634\u0631\u062D \u0631\u0633\u0627\u0644\u0629", "\u0623\u0646\u0627 \u0641\u064A \u0627\u0644\u062F\u0627\u0626\u0631\u0629", "\u0627\u0644\u062E\u0631\u0648\u062C \u0645\u0646 \u0648\u0636\u0639 \u0627\u0644\u062F\u0627\u0626\u0631\u0629", "\u0627\u0644\u0627\u0634\u062A\u0631\u0627\u0643", "\u0627\u0644\u0644\u063A\u0629", "\u0627\u0644\u062E\u0635\u0648\u0635\u064A\u0629", "\u0627\u062D\u0630\u0641 \u0628\u064A\u0627\u0646\u0627\u062A\u064A", "\u0645\u0633\u0627\u0639\u062F\u0629 \u0627\u0644\u062F\u0641\u0639", "\u0627\u0644\u0634\u0631\u0648\u0637", "\u0639\u0646\u0648\u0627\u0646\u064A"]
   },
   pl: {
+    btnFeedback: "\u{1F4AC} Opinia / poprawka",
+    askFeedback: "Napisz opini\u0119 lub sugesti\u0119 \u2014 co poprawi\u0107 w t\u0142umaczeniu lub w bocie. W jednej wiadomo\u015Bci.",
+    feedbackThanks: "\u{1F64F} Dzi\u0119kuj\u0119! Opinia zosta\u0142a przekazana.",
     important: "Wa\u017Cne",
     btnAddress: "\u{1F3E0} M\xF3j adres",
     askAddress: "\u{1F3E0} Podaj adres zameldowania (Meldeadresse), np. Hauptstra\xDFe 5, 21682 Stade. Wystarczy kod pocztowy i miasto.\n\nPo co: \u017Ceby znale\u017A\u0107 *Tw\xF3j* urz\u0105d (Jobcenter, Ausl\xE4nderbeh\xF6rde\u2026) i tras\u0119 komunikacj\u0105 miejsk\u0105. Adres zostaje tylko w bocie; usuni\u0119cie \u2014 /forget.",
@@ -249,6 +261,9 @@ var MORE = {
     cmd: ["Start", "Wyja\u015Bnij pismo", "Jestem w urz\u0119dzie", "Wyjd\u017A z trybu urz\u0119du", "Subskrypcja", "J\u0119zyk", "Prywatno\u015B\u0107", "Usu\u0144 moje dane", "Pomoc z p\u0142atno\u015Bci\u0105", "Warunki", "M\xF3j adres"]
   },
   bg: {
+    btnFeedback: "\u{1F4AC} \u041E\u0442\u0437\u0438\u0432 / \u043F\u043E\u043F\u0440\u0430\u0432\u043A\u0430",
+    askFeedback: "\u041D\u0430\u043F\u0438\u0448\u0435\u0442\u0435 \u043E\u0442\u0437\u0438\u0432 \u0438\u043B\u0438 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435 \u2014 \u043A\u0430\u043A\u0432\u043E \u0434\u0430 \u043F\u043E\u043F\u0440\u0430\u0432\u0438\u043C \u0432 \u043F\u0440\u0435\u0432\u043E\u0434\u0430 \u0438\u043B\u0438 \u0432 \u0431\u043E\u0442\u0430. \u0421 \u0435\u0434\u043D\u043E \u0441\u044A\u043E\u0431\u0449\u0435\u043D\u0438\u0435.",
+    feedbackThanks: "\u{1F64F} \u0411\u043B\u0430\u0433\u043E\u0434\u0430\u0440\u044F! \u041E\u0442\u0437\u0438\u0432\u044A\u0442 \u0435 \u0438\u0437\u043F\u0440\u0430\u0442\u0435\u043D.",
     important: "\u0412\u0430\u0436\u043D\u043E",
     btnAddress: "\u{1F3E0} \u041C\u043E\u044F\u0442 \u0430\u0434\u0440\u0435\u0441",
     askAddress: "\u{1F3E0} \u041D\u0430\u043F\u0438\u0448\u0435\u0442\u0435 \u0430\u0434\u0440\u0435\u0441\u0430 \u0441\u0438 \u043F\u043E \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F (Meldeadresse), \u043D\u0430\u043F\u0440. Hauptstra\xDFe 5, 21682 Stade. \u0414\u043E\u0441\u0442\u0430\u0442\u044A\u0447\u043D\u0438 \u0441\u0430 \u043F\u043E\u0449\u0435\u043D\u0441\u043A\u0438 \u043A\u043E\u0434 \u0438 \u0433\u0440\u0430\u0434.\n\n\u0417\u0430\u0449\u043E: \u0437\u0430 \u0434\u0430 \u043D\u0430\u043C\u0438\u0440\u0430\u043C *\u0432\u0430\u0448\u0430\u0442\u0430* \u0438\u043D\u0441\u0442\u0438\u0442\u0443\u0446\u0438\u044F (Jobcenter, Ausl\xE4nderbeh\xF6rde\u2026) \u0438 \u043C\u0430\u0440\u0448\u0440\u0443\u0442 \u0441 \u0433\u0440\u0430\u0434\u0441\u043A\u0438\u044F \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442. \u0410\u0434\u0440\u0435\u0441\u044A\u0442 \u043E\u0441\u0442\u0430\u0432\u0430 \u0441\u0430\u043C\u043E \u043F\u0440\u0438 \u0431\u043E\u0442\u0430; \u0438\u0437\u0442\u0440\u0438\u0432\u0430\u043D\u0435 \u2014 /forget.",
@@ -310,6 +325,9 @@ var MORE = {
     cmd: ["\u0421\u0442\u0430\u0440\u0442", "\u041E\u0431\u044F\u0441\u043D\u0438 \u043F\u0438\u0441\u043C\u043E", "\u0412 \u0438\u043D\u0441\u0442\u0438\u0442\u0443\u0446\u0438\u044F \u0441\u044A\u043C", "\u0418\u0437\u0445\u043E\u0434 \u043E\u0442 \u0440\u0435\u0436\u0438\u043C\u0430", "\u0410\u0431\u043E\u043D\u0430\u043C\u0435\u043D\u0442", "\u0415\u0437\u0438\u043A", "\u041F\u043E\u0432\u0435\u0440\u0438\u0442\u0435\u043B\u043D\u043E\u0441\u0442", "\u0418\u0437\u0442\u0440\u0438\u0439 \u0434\u0430\u043D\u043D\u0438\u0442\u0435 \u043C\u0438", "\u041F\u043E\u043C\u043E\u0449 \u0441 \u043F\u043B\u0430\u0449\u0430\u043D\u0435", "\u0423\u0441\u043B\u043E\u0432\u0438\u044F", "\u041C\u043E\u044F\u0442 \u0430\u0434\u0440\u0435\u0441"]
   },
   sr: {
+    btnFeedback: "\u{1F4AC} Utisak / ispravka",
+    askFeedback: "Napi\u0161ite utisak ili predlog \u2014 \u0161ta da ispravimo u prevodu ili u botu. U jednoj poruci.",
+    feedbackThanks: "\u{1F64F} Hvala! Utisak je poslat.",
     important: "Va\u017Eno",
     btnAddress: "\u{1F3E0} Moja adresa",
     askAddress: "\u{1F3E0} Upi\u0161ite adresu prijave (Meldeadresse), npr. Hauptstra\xDFe 5, 21682 Stade. Dovoljni su po\u0161tanski broj i grad.\n\nZa\u0161to: da prona\u0111em *va\u0161* ured (Jobcenter, Ausl\xE4nderbeh\xF6rde\u2026) i rutu javnim prevozom. Adresa ostaje samo kod bota; brisanje \u2014 /forget.",
@@ -371,6 +389,9 @@ var MORE = {
     cmd: ["Po\u010Detak", "Objasni pismo", "U uredu sam", "Iza\u0111i iz re\u017Eima ureda", "Pretplata", "Jezik", "Privatnost", "Obri\u0161i moje podatke", "Pomo\u0107 oko pla\u0107anja", "Uslovi", "Moja adresa"]
   },
   sq: {
+    btnFeedback: "\u{1F4AC} Koment / korrigjim",
+    askFeedback: "Shkruani komentin ose sugjerimin \u2014 \xE7far\xEB t\xEB korrigjojm\xEB n\xEB p\xEBrkthim ose n\xEB bot. N\xEB nj\xEB mesazh.",
+    feedbackThanks: "\u{1F64F} Faleminderit! Komenti u d\xEBrgua.",
     important: "E r\xEBnd\xEBsishme",
     btnAddress: "\u{1F3E0} Adresa ime",
     askAddress: "\u{1F3E0} Shkruani adres\xEBn e regjistrimit (Meldeadresse), p.sh. Hauptstra\xDFe 5, 21682 Stade. Mjaftojn\xEB kodi postar dhe qyteti.\n\nPse: p\xEBr t\xEB gjetur zyr\xEBn *tuaj* (Jobcenter, Ausl\xE4nderbeh\xF6rde\u2026) dhe rrug\xEBn me transport publik. Adresa ruhet vet\xEBm te boti; fshirja \u2014 /forget.",
@@ -432,6 +453,9 @@ var MORE = {
     cmd: ["Fillo", "Shpjego letr\xEBn", "Jam n\xEB zyr\xEB", "Dil nga m\xEBnyra e zyr\xEBs", "Abonimi", "Gjuha", "Privat\xEBsia", "Fshi t\xEB dh\xEBnat e mia", "Ndihm\xEB p\xEBr pages\xEBn", "Kushtet", "Adresa ime"]
   },
   fa: {
+    btnFeedback: "\u{1F4AC} \u0646\u0638\u0631 / \u0627\u0635\u0644\u0627\u062D",
+    askFeedback: "\u0646\u0638\u0631 \u06CC\u0627 \u067E\u06CC\u0634\u0646\u0647\u0627\u062F\u062A\u0627\u0646 \u0631\u0627 \u0628\u0646\u0648\u06CC\u0633\u06CC\u062F \u2014 \u0686\u0647 \u0686\u06CC\u0632\u06CC \u062F\u0631 \u062A\u0631\u062C\u0645\u0647 \u06CC\u0627 \u0631\u0628\u0627\u062A \u0627\u0635\u0644\u0627\u062D \u0634\u0648\u062F. \u062F\u0631 \u06CC\u06A9 \u067E\u06CC\u0627\u0645.",
+    feedbackThanks: "\u{1F64F} \u0645\u0645\u0646\u0648\u0646! \u0646\u0638\u0631 \u0634\u0645\u0627 \u0627\u0631\u0633\u0627\u0644 \u0634\u062F.",
     important: "\u0645\u0647\u0645",
     btnAddress: "\u{1F3E0} \u0622\u062F\u0631\u0633 \u0645\u0646",
     askAddress: "\u{1F3E0} \u0622\u062F\u0631\u0633 \u062B\u0628\u062A\u200C\u0634\u062F\u0647\u200C\u062A\u0627\u0646 (Meldeadresse) \u0631\u0627 \u0628\u0646\u0648\u06CC\u0633\u06CC\u062F\u060C \u0645\u062B\u0644\u0627\u064B: Hauptstra\xDFe 5, 21682 Stade. \u06A9\u062F \u067E\u0633\u062A\u06CC \u0648 \u0634\u0647\u0631 \u06A9\u0627\u0641\u06CC \u0627\u0633\u062A.\n\n\u0686\u0631\u0627: \u062A\u0627 \u0627\u062F\u0627\u0631\u0647 *\u0634\u0645\u0627* (Jobcenter\u060C Ausl\xE4nderbeh\xF6rde\u2026) \u0648 \u0645\u0633\u06CC\u0631 \u0628\u0627 \u062D\u0645\u0644\u200C\u0648\u0646\u0642\u0644 \u0639\u0645\u0648\u0645\u06CC \u0631\u0627 \u067E\u06CC\u062F\u0627 \u06A9\u0646\u0645. \u0622\u062F\u0631\u0633 \u0641\u0642\u0637 \u0646\u0632\u062F \u0631\u0628\u0627\u062A \u0645\u06CC\u200C\u0645\u0627\u0646\u062F\u061B \u0628\u0631\u0627\u06CC \u062D\u0630\u0641: /forget.",
@@ -494,6 +518,10 @@ var MORE = {
   }
 };
 var MORE_KU = {
+  btnFeedback: "\u{1F4AC} N\xEAr\xEEn / rastkirin",
+  askFeedback: "N\xEAr\xEEn an p\xEA\u015Fniyara xwe biniv\xEEse \u2014 di werger\xEA an di bot\xEA de \xE7i rast bikin. Di yek peyam\xEA de.",
+  feedbackThanks: "\u{1F64F} Spas! N\xEAr\xEEna te hat \u015Fandin.",
+  betaNote: "\u{1F9EA} Wergera kurd\xEE h\xEEn ne b\xEAk\xEAmas\xEE ye \u2014 dibe ku hin hevok ne xwezay\xEE bin. Ji kerema xwe bi bi\u015Fkoka j\xEAr\xEEn rastkirin \xFB p\xEA\u015Fniyaran bi\u015F\xEEne.\n\n(Kurdish translation is in beta \u2014 please send corrections.)",
   "important": "Gir\xEEng",
   "btnAddress": "\u{1F3E0} Navn\xEE\u015Fana min",
   "askAddress": "\u{1F3E0} Navn\xEE\u015Fana xwe ya qeydkir\xEE (Meldeadresse) biniv\xEEse, m\xEEnak: Hauptstra\xDFe 5, 21682 Stade. Koda post\xEA \xFB bajar bes in.\n\nJi bo \xE7i: da ku ez dezgeha *te* (Jobcenter, Ausl\xE4nderbeh\xF6rde\u2026) \xFB r\xEAya bi veguhastina gi\u015Ft\xEE bib\xEEnim. Navn\xEE\u015Fan ten\xEA li cem bot\xEA dim\xEEne; j\xEAbirin \u2014 /forget.",
@@ -567,6 +595,9 @@ var MORE_KU = {
   ]
 };
 var MORE_HY = {
+  btnFeedback: "\u{1F4AC} \u053F\u0561\u0580\u056E\u056B\u0584 / \u0578\u0582\u0572\u0572\u0578\u0582\u0574",
+  askFeedback: "\u0533\u0580\u0565\u0584 \u0571\u0565\u0580 \u056F\u0561\u0580\u056E\u056B\u0584\u0568 \u056F\u0561\u0574 \u0561\u057C\u0561\u057B\u0561\u0580\u056F\u0568 \u2014 \u056B\u0576\u0579 \u0578\u0582\u0572\u0572\u0565\u056C \u0569\u0561\u0580\u0563\u0574\u0561\u0576\u0578\u0582\u0569\u0575\u0561\u0576 \u056F\u0561\u0574 \u0562\u0578\u057F\u056B \u0574\u0565\u057B\u0589 \u0544\u0565\u056F \u0570\u0561\u0572\u0578\u0580\u0564\u0561\u0563\u0580\u0578\u0582\u0569\u0575\u0561\u0574\u0562\u0589",
+  feedbackThanks: "\u{1F64F} \u0547\u0576\u0578\u0580\u0570\u0561\u056F\u0561\u056C\u0578\u0582\u0569\u0575\u0578\u0582\u0576\u0589 \u053F\u0561\u0580\u056E\u056B\u0584\u0576 \u0578\u0582\u0572\u0561\u0580\u056F\u057E\u0561\u056E \u0567\u0589",
   "important": "\u053F\u0561\u0580\u0587\u0578\u0580 \u0567",
   "btnAddress": "\u{1F3E0} \u053B\u0574 \u0570\u0561\u057D\u0581\u0565\u0576",
   "askAddress": "\u{1F3E0} \u0533\u0580\u0565\u0584 \u0571\u0565\u0580 \u0563\u0580\u0561\u0576\u0581\u0574\u0561\u0576 \u0570\u0561\u057D\u0581\u0565\u0576 (Meldeadresse), \u0585\u0580\u056B\u0576\u0561\u056F\u055D Hauptstra\xDFe 5, 21682 Stade\u0589 \u0532\u0561\u057E\u0561\u056F\u0561\u0576 \u0567 \u0583\u0578\u057D\u057F\u0561\u0575\u056B\u0576 \u056B\u0576\u0564\u0565\u0584\u057D\u0568 \u0587 \u0584\u0561\u0572\u0561\u0584\u0568\u0589\n\n\u053B\u0576\u0579\u056B \u0570\u0561\u0574\u0561\u0580\u055D \u0578\u0580\u057A\u0565\u057D\u0566\u056B \u0563\u057F\u0576\u0565\u0574 *\u0571\u0565\u0580* \u0570\u0561\u057D\u057F\u0561\u057F\u0578\u0582\u0569\u0575\u0578\u0582\u0576\u0568 (Jobcenter, Ausl\xE4nderbeh\xF6rde\u2026) \u0587 \u0570\u0561\u057D\u0561\u0580\u0561\u056F\u0561\u056F\u0561\u0576 \u057F\u0580\u0561\u0576\u057D\u057A\u0578\u0580\u057F\u0578\u057E \u0565\u0580\u0569\u0578\u0582\u0572\u056B\u0576\u0589 \u0540\u0561\u057D\u0581\u0565\u0576 \u0574\u0576\u0578\u0582\u0574 \u0567 \u0574\u056B\u0561\u0575\u0576 \u0562\u0578\u057F\u056B \u0574\u0578\u057F, \u057B\u0576\u057B\u0565\u056C\u055D /forget\u0589",
@@ -640,6 +671,10 @@ var MORE_HY = {
   ]
 };
 var MORE_CKB = {
+  btnFeedback: "\u{1F4AC} \u0695\u0627 / \u0695\u0627\u0633\u062A\u06A9\u0631\u062F\u0646\u06D5\u0648\u06D5",
+  askFeedback: "\u0695\u0627 \u06CC\u0627\u0646 \u067E\u06CE\u0634\u0646\u06CC\u0627\u0631\u06D5\u06A9\u06D5\u062A \u0628\u0646\u0648\u0648\u0633\u06D5 \u2014 \u0686\u06CC \u0644\u06D5 \u0648\u06D5\u0631\u06AF\u06CE\u0695\u0627\u0646 \u06CC\u0627\u0646 \u0628\u06C6\u062A\u06D5\u06A9\u06D5\u062F\u0627 \u0695\u0627\u0633\u062A \u0628\u06A9\u06D5\u06CC\u0646\u06D5\u0648\u06D5. \u0644\u06D5 \u06CC\u06D5\u06A9 \u067E\u06D5\u06CC\u0627\u0645\u062F\u0627.",
+  feedbackThanks: "\u{1F64F} \u0633\u0648\u067E\u0627\u0633! \u0695\u0627\u06A9\u06D5\u062A \u0646\u06CE\u0631\u062F\u0631\u0627.",
+  betaNote: "\u{1F9EA} \u0648\u06D5\u0631\u06AF\u06CE\u0695\u0627\u0646\u06CC \u0633\u06C6\u0631\u0627\u0646\u06CC \u0647\u06CE\u0634\u062A\u0627 \u062A\u06D5\u0648\u0627\u0648 \u0646\u06CC\u06CC\u06D5 \u2014 \u0644\u06D5\u0648\u0627\u0646\u06D5\u06CC\u06D5 \u0647\u06D5\u0646\u062F\u06CE\u06A9 \u0695\u0633\u062A\u06D5 \u0633\u0631\u0648\u0634\u062A\u06CC \u0646\u06D5\u0628\u0646. \u062A\u06A9\u0627\u06CC\u06D5 \u0628\u06D5 \u062F\u0648\u06AF\u0645\u06D5\u06CC \u062E\u0648\u0627\u0631\u06D5\u0648\u06D5 \u0695\u0627\u0633\u062A\u06A9\u0631\u062F\u0646\u06D5\u0648\u06D5 \u0648 \u067E\u06CE\u0634\u0646\u06CC\u0627\u0631 \u0628\u0646\u06CE\u0631\u06D5.\n\n(Sorani translation is in beta \u2014 please send corrections.)",
   "important": "\u06AF\u0631\u0646\u06AF",
   "btnAddress": "\u{1F3E0} \u0646\u0627\u0648\u0646\u06CC\u0634\u0627\u0646\u06D5\u06A9\u06D5\u0645",
   "askAddress": "\u{1F3E0} \u0646\u0627\u0648\u0646\u06CC\u0634\u0627\u0646\u06CC \u062A\u06C6\u0645\u0627\u0631\u06A9\u0631\u0627\u0648\u062A (Meldeadresse) \u0628\u0646\u0648\u0648\u0633\u06D5\u060C \u0628\u06C6 \u0646\u0645\u0648\u0648\u0646\u06D5: Hauptstra\xDFe 5, 21682 Stade. \u06A9\u06C6\u062F\u06CC \u067E\u06C6\u0633\u062A \u0648 \u0634\u0627\u0631 \u0628\u06D5\u0633\u06D5.\n\n\u0628\u06C6\u0686\u06CC: \u0628\u06C6 \u0626\u06D5\u0648\u06D5\u06CC \u0641\u06D5\u0631\u0645\u0627\u0646\u06AF\u06D5\u06CC *\u062A\u06C6* (Jobcenter\u060C Ausl\xE4nderbeh\xF6rde\u2026) \u0648 \u0695\u06CE\u06AF\u0627\u06CC \u06AF\u0648\u0627\u0633\u062A\u0646\u06D5\u0648\u06D5\u06CC \u06AF\u0634\u062A\u06CC \u0628\u062F\u06C6\u0632\u0645\u06D5\u0648\u06D5. \u0646\u0627\u0648\u0646\u06CC\u0634\u0627\u0646 \u062A\u06D5\u0646\u0647\u0627 \u0644\u0627\u06CC \u0628\u06C6\u062A\u06D5\u06A9\u06D5 \u062F\u06D5\u0645\u06CE\u0646\u06CE\u062A\u06D5\u0648\u06D5\u061B \u0633\u0695\u06CC\u0646\u06D5\u0648\u06D5 \u2014 /forget.",
@@ -713,6 +748,10 @@ var MORE_CKB = {
   ]
 };
 var MORE_PS = {
+  btnFeedback: "\u{1F4AC} \u0646\u0638\u0631 / \u0633\u0645\u0648\u0646",
+  askFeedback: "\u062E\u067E\u0644 \u0646\u0638\u0631 \u06CC\u0627 \u0648\u0693\u0627\u0646\u062F\u06CC\u0632 \u0648\u0644\u06CC\u06A9\u0626 \u2014 \u067E\u0647 \u0698\u0628\u0627\u0693\u0647 \u06CC\u0627 \u0628\u0648\u067C \u06A9\u06D0 \u0685\u0647 \u0633\u0645 \u06A9\u0693\u0648. \u067E\u0647 \u06CC\u0648\u0647 \u067E\u06CC\u063A\u0627\u0645 \u06A9\u06D0.",
+  feedbackThanks: "\u{1F64F} \u0645\u0646\u0646\u0647! \u0633\u062A\u0627\u0633\u0648 \u0646\u0638\u0631 \u0648\u0644\u06D0\u0696\u0644 \u0634\u0648.",
+  betaNote: "\u{1F9EA} \u067E\u069A\u062A\u0648 \u0698\u0628\u0627\u0693\u0647 \u0644\u0627 \u0628\u0634\u067E\u0693\u0647 \u0646\u0647 \u062F\u0647 \u2014 \u06A9\u06D0\u062F\u0627\u06CC \u0634\u064A \u0681\u06CC\u0646\u06D0 \u062C\u0645\u0644\u06D0 \u0637\u0628\u06CC\u0639\u064A \u0646\u0647 \u0648\u064A. \u0645\u0647\u0631\u0628\u0627\u0646\u064A \u0648\u06A9\u0693\u0626 \u062F \u0644\u0627\u0646\u062F\u06D0 \u062A\u06BC\u06CD \u067E\u0647 \u0645\u0631\u0633\u062A\u0647 \u0633\u0645\u0648\u0646\u0648\u0646\u0647 \u0627\u0648 \u0648\u0693\u0627\u0646\u062F\u06CC\u0632\u0648\u0646\u0647 \u0631\u0627\u0648\u0644\u06D0\u0696\u0626.\n\n(Pashto translation is in beta \u2014 please send corrections.)",
   "important": "\u0645\u0647\u0645",
   "btnAddress": "\u{1F3E0} \u0632\u0645\u0627 \u067E\u062A\u0647",
   "askAddress": "\u{1F3E0} \u062E\u067E\u0644\u0647 \u062B\u0628\u062A \u0634\u0648\u06D0 \u067E\u062A\u0647 (Meldeadresse) \u0648\u0644\u06CC\u06A9\u0626\u060C \u062F \u0628\u06D0\u0644\u06AB\u06D0 \u067E\u0647 \u062A\u0648\u06AB\u0647: Hauptstra\xDFe 5, 21682 Stade. \u067E\u0648\u0633\u062A\u064A \u06A9\u0648\u0689 \u0627\u0648 \u069A\u0627\u0631 \u0628\u0633 \u062F\u064A.\n\n\u0648\u0644\u06D0: \u0685\u0648 *\u0633\u062A\u0627\u0633\u0648* \u0627\u062F\u0627\u0631\u0647 (Jobcenter\u060C Ausl\xE4nderbeh\xF6rde\u2026) \u0627\u0648 \u062F \u0639\u0627\u0645\u0647 \u062A\u0631\u0627\u0646\u0633\u067E\u0648\u0631\u062A \u0644\u0627\u0631 \u067E\u06CC\u062F\u0627 \u06A9\u0693\u0645. \u067E\u062A\u0647 \u06CC\u0648\u0627\u0632\u06D0 \u0644\u0647 \u0628\u0648\u067C \u0633\u0631\u0647 \u067E\u0627\u062A\u06D0 \u06A9\u06D0\u0696\u064A\u061B \u062F \u0693\u0646\u06AB\u0648\u0644\u0648 \u0644\u067E\u0627\u0631\u0647 \u2014 /forget.",
@@ -793,6 +832,9 @@ var LANGS = { ru: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439", uk: "\u0423\u043
 var LANG_NAME_EN = { ru: "Russian", ro: "Romanian", uk: "Ukrainian", ...MORE_NAME_EN };
 var T = {
   ru: {
+    btnFeedback: "\u{1F4AC} \u041E\u0442\u0437\u044B\u0432 / \u0438\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435",
+    askFeedback: "\u041D\u0430\u043F\u0438\u0448\u0438\u0442\u0435 \u043E\u0442\u0437\u044B\u0432 \u0438\u043B\u0438 \u043F\u0440\u0435\u0434\u043B\u043E\u0436\u0435\u043D\u0438\u0435 \u2014 \u0447\u0442\u043E \u0438\u0441\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u0432 \u043F\u0435\u0440\u0435\u0432\u043E\u0434\u0435 \u0438\u043B\u0438 \u0432 \u0440\u0430\u0431\u043E\u0442\u0435 \u0431\u043E\u0442\u0430. \u041E\u0434\u043D\u0438\u043C \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435\u043C.",
+    feedbackThanks: "\u{1F64F} \u0421\u043F\u0430\u0441\u0438\u0431\u043E! \u041E\u0442\u0437\u044B\u0432 \u043F\u0435\u0440\u0435\u0434\u0430\u043D.",
     important: "\u0412\u0430\u0436\u043D\u043E",
     cmd: ["\u041D\u0430\u0447\u0430\u0442\u044C", "\u0420\u0430\u0437\u043E\u0431\u0440\u0430\u0442\u044C \u043F\u0438\u0441\u044C\u043C\u043E", "\u042F \u0432 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u0435", "\u0412\u044B\u0439\u0442\u0438 \u0438\u0437 \u0440\u0435\u0436\u0438\u043C\u0430 \u0432\u0435\u0434\u043E\u043C\u0441\u0442\u0432\u0430", "\u041F\u043E\u0434\u043F\u0438\u0441\u043A\u0430", "\u042F\u0437\u044B\u043A", "\u041A\u043E\u043D\u0444\u0438\u0434\u0435\u043D\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C", "\u0423\u0434\u0430\u043B\u0438\u0442\u044C \u043C\u043E\u0438 \u0434\u0430\u043D\u043D\u044B\u0435", "\u041F\u043E\u043C\u043E\u0449\u044C \u0441 \u043E\u043F\u043B\u0430\u0442\u043E\u0439", "\u0423\u0441\u043B\u043E\u0432\u0438\u044F", "\u041C\u043E\u0439 \u0430\u0434\u0440\u0435\u0441"],
     btnAddress: "\u{1F3E0} \u041C\u043E\u0439 \u0430\u0434\u0440\u0435\u0441",
@@ -854,6 +896,9 @@ var T = {
     tooLong: "\u0413\u043E\u043B\u043E\u0441\u043E\u0432\u043E\u0435 \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0434\u043B\u0438\u043D\u043D\u043E\u0435 \u2014 \u0434\u043E 2 \u043C\u0438\u043D\u0443\u0442, \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430."
   },
   ro: {
+    btnFeedback: "\u{1F4AC} P\u0103rere / corectur\u0103",
+    askFeedback: "Scrie o p\u0103rere sau o sugestie \u2014 ce s\u0103 corect\u0103m \xEEn traducere sau \xEEn bot. \xCEntr-un singur mesaj.",
+    feedbackThanks: "\u{1F64F} Mul\u021Bumesc! P\u0103rerea a fost trimis\u0103.",
     important: "Important",
     cmd: ["Start", "Explic\u0103 o scrisoare", "Sunt la autoritate", "Ie\u0219i din modul autoritate", "Abonament", "Limba", "Confiden\u021Bialitate", "\u0218terge datele mele", "Ajutor plat\u0103", "Condi\u021Bii", "Adresa mea"],
     btnAddress: "\u{1F3E0} Adresa mea",
@@ -915,6 +960,9 @@ var T = {
     tooLong: "Mesajul vocal e prea lung \u2014 p\xE2n\u0103 la 2 minute, te rog."
   },
   uk: {
+    btnFeedback: "\u{1F4AC} \u0412\u0456\u0434\u0433\u0443\u043A / \u0432\u0438\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043D\u044F",
+    askFeedback: "\u041D\u0430\u043F\u0438\u0448\u0456\u0442\u044C \u0432\u0456\u0434\u0433\u0443\u043A \u0430\u0431\u043E \u043F\u0440\u043E\u043F\u043E\u0437\u0438\u0446\u0456\u044E \u2014 \u0449\u043E \u0432\u0438\u043F\u0440\u0430\u0432\u0438\u0442\u0438 \u0432 \u043F\u0435\u0440\u0435\u043A\u043B\u0430\u0434\u0456 \u0447\u0438 \u0432 \u0440\u043E\u0431\u043E\u0442\u0456 \u0431\u043E\u0442\u0430. \u041E\u0434\u043D\u0438\u043C \u043F\u043E\u0432\u0456\u0434\u043E\u043C\u043B\u0435\u043D\u043D\u044F\u043C.",
+    feedbackThanks: "\u{1F64F} \u0414\u044F\u043A\u0443\u044E! \u0412\u0456\u0434\u0433\u0443\u043A \u043F\u0435\u0440\u0435\u0434\u0430\u043D\u043E.",
     important: "\u0412\u0430\u0436\u043B\u0438\u0432\u043E",
     cmd: ["\u041F\u043E\u0447\u0430\u0442\u0438", "\u0420\u043E\u0437\u0456\u0431\u0440\u0430\u0442\u0438 \u043B\u0438\u0441\u0442", "\u042F \u0432 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0456", "\u0412\u0438\u0439\u0442\u0438 \u0437 \u0440\u0435\u0436\u0438\u043C\u0443 \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438", "\u041F\u0456\u0434\u043F\u0438\u0441\u043A\u0430", "\u041C\u043E\u0432\u0430", "\u041A\u043E\u043D\u0444\u0456\u0434\u0435\u043D\u0446\u0456\u0439\u043D\u0456\u0441\u0442\u044C", "\u0412\u0438\u0434\u0430\u043B\u0438\u0442\u0438 \u043C\u043E\u0457 \u0434\u0430\u043D\u0456", "\u0414\u043E\u043F\u043E\u043C\u043E\u0433\u0430 \u0437 \u043E\u043F\u043B\u0430\u0442\u043E\u044E", "\u0423\u043C\u043E\u0432\u0438", "\u041C\u043E\u044F \u0430\u0434\u0440\u0435\u0441\u0430"],
     btnAddress: "\u{1F3E0} \u041C\u043E\u044F \u0430\u0434\u0440\u0435\u0441\u0430",
@@ -1175,10 +1223,17 @@ async function handle(up, env, ctx) {
     await putUser(env, uid, u);
     return forget(env, uid, chat, L);
   }
+  if (text === "/feedback") return askFeedback(env, u, uid, chat);
+  if (u.awaiting === "feedback" && text && !text.startsWith("/")) return saveFeedback(env, u, uid, chat, m, text);
   if (text === "/address" || btnIs(text, "btnAddress")) return askAddress(env, u, uid, chat);
   if (u.awaiting === "address" && text && !text.startsWith("/") && !Object.keys(LANGS).some((l) => Object.values({ a: t(l, "btnLetter"), b: t(l, "btnOffice"), c: t(l, "btnSub"), d: t(l, "btnLang") }).includes(text))) return saveAddress(env, u, uid, chat, text);
   if (text === "/sub" || btnIs(text, "btnSub")) return subInfo(env, u, chat);
   if (text === "/stats" && String(uid) === String(env.OWNER_ID)) return ownerStats(env, chat);
+  if (text === "/feedbacks" && String(uid) === String(env.OWNER_ID)) {
+    const l = await env.KV.list({ prefix: "fb:" });
+    const items = await Promise.all(l.keys.slice(-20).map(async (k) => [k.name, await env.KV.get(k.name, "json")]));
+    return send(env, chat, items.map(([k, v]) => `${k.slice(3, 13)} [${v?.lang}] ${esc(v?.text || "")}`).join("\n\n").slice(0, 4e3) || "\u2014");
+  }
   if (text === "/office" || btnIs(text, "btnOffice")) return officeStart(env, u, uid, chat);
   if (text === "/stop") {
     u.mode = "letter";
@@ -1219,6 +1274,7 @@ async function onCallback(q, env) {
     u.lang = val;
     await putUser(env, uid, u);
     await send(env, chat, t(val, "langSet"), { reply_markup: mainKb(val) });
+    if (T[val].betaNote) await send(env, chat, esc(T[val].betaNote), { reply_markup: { inline_keyboard: [[{ text: t(val, "btnFeedback"), callback_data: "fb" }]] } });
     if (!u.home && !u.addrAsked) {
       u.addrAsked = true;
       return askAddress(env, u, uid, chat);
@@ -1229,6 +1285,7 @@ async function onCallback(q, env) {
   if (kind === "remind") return setReminder(env, u, uid, chat);
   if (kind === "where") return officeInfo(env, u, uid, chat);
   if (kind === "addr") return askAddress(env, u, uid, chat);
+  if (kind === "fb") return askFeedback(env, u, uid, chat);
   if (kind === "skipaddr") {
     u.awaiting = null;
     await putUser(env, uid, u);
@@ -1400,6 +1457,23 @@ ${esc(t(L, "noOfficeFound"))}`);
   return send(env, chat, lines.join("\n"), kb.length ? { reply_markup: { inline_keyboard: kb } } : {});
 }
 __name(officeInfo, "officeInfo");
+async function askFeedback(env, u, uid, chat) {
+  u.awaiting = "feedback";
+  await putUser(env, uid, u);
+  return send(env, chat, t(u.lang, "askFeedback"));
+}
+__name(askFeedback, "askFeedback");
+async function saveFeedback(env, u, uid, chat, m, text) {
+  u.awaiting = null;
+  await putUser(env, uid, u);
+  const key = `fb:${(/* @__PURE__ */ new Date()).toISOString()}:${uid}`;
+  await env.KV.put(key, JSON.stringify({ lang: u.lang, text: text.slice(0, 2e3) }), { expirationTtl: 365 * DAY });
+  await stat(env, "feedback");
+  if (env.OWNER_ID) await send(env, env.OWNER_ID, `\u{1F4AC} Feedback [${u.lang}] from ${m.from.username ? "@" + esc(m.from.username) : uid}:
+${esc(text.slice(0, 3e3))}`);
+  return send(env, chat, t(u.lang, "feedbackThanks"));
+}
+__name(saveFeedback, "saveFeedback");
 var NOMI = { "User-Agent": "PismoBot/1.0 (Telegram bot; contact via bot)", "Accept-Language": "de" };
 async function askAddress(env, u, uid, chat) {
   u.awaiting = "address";
@@ -1645,10 +1719,10 @@ async function setup(url, env) {
   if (url.searchParams.get("key") !== env.WEBHOOK_SECRET) return new Response("forbidden", { status: 403 });
   const hook = `${url.origin}/`;
   const a = await tg(env, "setWebhook", { url: hook, secret_token: env.WEBHOOK_SECRET, allowed_updates: ["message", "callback_query", "pre_checkout_query"], drop_pending_updates: true });
-  const ids = ["start", "letter", "office", "stop", "sub", "lang", "privacy", "forget", "paysupport", "terms", "address"];
+  const ids = ["start", "letter", "office", "stop", "sub", "lang", "privacy", "forget", "paysupport", "terms", "address", "feedback"];
   const out = [a.ok];
   for (const lc of Object.keys(LANGS)) {
-    const commands = ids.map((command, i) => ({ command, description: (T[lc].cmd || T.en.cmd)[i] }));
+    const commands = ids.map((command, i) => ({ command, description: i === 11 ? T[lc].btnFeedback.replace(/^💬 /, "") : (T[lc].cmd || T.en.cmd)[i] }));
     out.push((await tg(env, "setMyCommands", { commands, language_code: lc })).ok);
     if (lc === "en") out.push((await tg(env, "setMyCommands", { commands })).ok);
   }
