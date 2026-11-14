@@ -493,8 +493,81 @@ var MORE = {
     cmd: ["\u0634\u0631\u0648\u0639", "\u062A\u0648\u0636\u06CC\u062D \u0646\u0627\u0645\u0647", "\u062F\u0631 \u0627\u062F\u0627\u0631\u0647 \u0647\u0633\u062A\u0645", "\u062E\u0631\u0648\u062C \u0627\u0632 \u062D\u0627\u0644\u062A \u0627\u062F\u0627\u0631\u0647", "\u0627\u0634\u062A\u0631\u0627\u06A9", "\u0632\u0628\u0627\u0646", "\u062D\u0631\u06CC\u0645 \u062E\u0635\u0648\u0635\u06CC", "\u062D\u0630\u0641 \u0627\u0637\u0644\u0627\u0639\u0627\u062A \u0645\u0646", "\u06A9\u0645\u06A9 \u067E\u0631\u062F\u0627\u062E\u062A", "\u0634\u0631\u0627\u06CC\u0637", "\u0622\u062F\u0631\u0633 \u0645\u0646"]
   }
 };
-var MORE_NAMES = { en: "English", tr: "T\xFCrk\xE7e", ar: "\u0627\u0644\u0639\u0631\u0628\u064A\u0629", pl: "Polski", bg: "\u0411\u044A\u043B\u0433\u0430\u0440\u0441\u043A\u0438", sr: "Srpski / Hrvatski / Bosanski", sq: "Shqip", fa: "\u0641\u0627\u0631\u0633\u06CC / \u062F\u0631\u06CC" };
-var MORE_NAME_EN = { en: "English", tr: "Turkish", ar: "Arabic", pl: "Polish", bg: "Bulgarian", sr: "Serbian/Croatian/Bosnian (Latin script, match the user's variant)", sq: "Albanian", fa: "Persian (Farsi/Dari, match the user's variant)" };
+var MORE_KU = {
+  "important": "Gir\xEEng",
+  "btnAddress": "\u{1F3E0} Navn\xEE\u015Fana min",
+  "askAddress": "\u{1F3E0} Navn\xEE\u015Fana xwe ya qeydkir\xEE (Meldeadresse) biniv\xEEse, m\xEEnak: Hauptstra\xDFe 5, 21682 Stade. Koda post\xEA \xFB bajar bes in.\n\nJi bo \xE7i: da ku ez dezgeha *te* (Jobcenter, Ausl\xE4nderbeh\xF6rde\u2026) \xFB r\xEAya bi veguhastina gi\u015Ft\xEE bib\xEEnim. Navn\xEE\u015Fan ten\xEA li cem bot\xEA dim\xEEne; j\xEAbirin \u2014 /forget.",
+  "btnSkip": "Derbas bike",
+  "addressSaved": "\u2705 Navn\xEE\u015Fan hat tomarkirin: {a}\nHer\xEAm: {c}",
+  "addressNotFound": "Min ev navn\xEE\u015Fan ned\xEEt. Koda post\xEA \xFB bajar biniv\xEEse, m\xEEnak: 21682 Stade.",
+  "skipped": "Ba\u015F e. Tu dikar\xEE navn\xEE\u015Fan\xEA pa\u015F\xEA bi bi\u015Fkoka \u201C\u{1F3E0} Navn\xEE\u015Fana min\u201D z\xEAde bik\xEE.",
+  "btnRoute": "\u{1F68C} R\xEA bi veguhastina gi\u015Ft\xEE",
+  "foundOffice": "\u{1F50E} Di namey\xEA de navn\xEE\u015Fan tune. Li gor\xEE navn\xEE\u015Fana te, bi \xEEhtimaleke mezin div\xEA tu her\xEE vir:",
+  "confirmOffice": "\u26A0\uFE0F Li ser nex\u015Fey\xEA hat d\xEEtin \u2014 ber\xEE \xE7\xFBn\xEA telefon bike \xFB pi\u015Ftrast bike ku ev \u015Faxa te ye.",
+  "noOfficeFound": "Min navn\xEE\u015Fan bixweber ned\xEEt. Li malpera bajar/nav\xE7ey\xEA bin\xEAre an j\xEE li hejmara navend\xEE bigere.",
+  "needAddress": "Ji bo d\xEEtina dezgeh\xEA \xFB r\xEAy\xEA, navn\xEE\u015Fana xwe z\xEAde bike \u2014 bi\u015Fkoka \u201C\u{1F3E0} Navn\xEE\u015Fana min\u201D.",
+  "btnOfficeInfo": "\u{1F4CD} Navn\xEE\u015Fan \xFB demjim\xEAr\xEAn xebat\xEA",
+  "whereGo": "\u{1F4CD} *Div\xEA tu her\xEE ku*",
+  "hours": "\u{1F558} Demjim\xEAr\xEAn xebat\xEA",
+  "booking": "\u{1F4C5} Randev\xFB (Termin)",
+  "zustNote": "\u2139\uFE0F Div\xEA tu tam her\xEE v\xEA dezgeh\xEA \u2014 ew ji navn\xEE\u015Fana te berpirsiyar e, ne ya her\xEE n\xEAz\xEEk.",
+  "noHours": "Di namey\xEA de demjim\xEAr\xEAn xebat\xEA tune \u2014 bi telefon\xEA bipirse.",
+  "maps": "\u{1F5FA} Li ser nex\u015Fey\xEA veke",
+  "osmHours": "\u{1F558} Li gor\xEE nex\u015Fey\xEA (dibe ku ne rast be):",
+  "yourAppt": "\u{1F4CC} Randev\xFBya te",
+  "welcome": "\u{1F44B} Silav! Ez di namey\xEAn ferm\xEE y\xEAn alman\xEE \xFB dezgehan de al\xEEkariy\xEA dikim.\n\n\u{1F4C4} *Name* \u2014 w\xEAne an PDF bi\u015F\xEEne. Ez bi zimanek\xEE h\xEAsan \u015F\xEErove dikim: ji k\xEA ye, \xE7i dixwazin, heta keng\xEA, div\xEA tu \xE7i bik\xEE. Ez dikarim bersivek\xEA bi alman\xEE j\xEE biniv\xEEsim.\n\n\u{1F3E2} *Li dezgeh\xEA* \u2014 dema ku tu li ber karmendek\xEE r\xFBni\u015Ft\xEE v\xEA mod\xEA veke (Jobcenter, Ausl\xE4nderbeh\xF6rde, Krankenkasse\u2026). Bi peyam\xEAn deng\xEE biaxive \u2014 ez herdu aliyan werdiger\xEEnim \xFB \u015F\xEErove dikim.\n\nBela\u015F: {free} name \xFB {freeOffice} serdan. Pa\u015F\xEA abonet\xEE.\n\n\u26A0\uFE0F Ez ne par\xEAzer im. Dem \xFB m\xEEqdar\xEAn gir\xEEng bi or\xEEj\xEEnal\xEA re kontrol bike.",
+  "chooseLang": "Ziman\xEA xwe hilbij\xEAre:",
+  "langSet": "Temam, ziman: Kurd\xEE (Kurmanc\xEE)",
+  "btnLetter": "\u{1F4C4} Namey\xEA \u015F\xEErove bike",
+  "btnOffice": "\u{1F3E2} Ez li dezgeh\xEA me",
+  "btnLang": "\u{1F310} Ziman",
+  "btnSub": "\u2B50 Abonet\xEE",
+  "sendLetter": "W\xEAney\xEA namey\xEA (\xE7end r\xFBpel li pey hev j\xEE dibe) an PDF bi\u015F\xEEne.",
+  "working": "\u23F3 Ez namey\xEA dixw\xEEnim\u2026",
+  "workingVoice": "\u23F3 Ez guhdar\xEE dikim\u2026",
+  "error": "\u{1F615} Neb\xFB. D\xEEsa bicerib\xEEne an w\xEAneyek\xEE zelaltir bi\u015F\xEEne.",
+  "notLetter": "Ev wek\xEE namey\xEA xuya nake. W\xEAne an PDF-a nameyeke alman\xEE bi\u015F\xEEne.",
+  "btnReply": "\u270D\uFE0F Bersiv bi alman\xEE",
+  "btnRemind": "\u23F0 Dem\xEA bi b\xEEra min b\xEEne",
+  "btnExplainMore": "\u2753 Pirsek\xEA bipirse",
+  "askQuestion": "Pirsa xwe ya derbar\xEA v\xEA namey\xEA de biniv\xEEse \u2014 ez \xEA bersiv bidim.",
+  "remindSet": "\u23F0 Ez \xEA ji bo {d} bi b\xEEra te b\xEEnim: 3 roj ber\xEA, 1 roj ber\xEA \xFB di w\xEA roj\xEA de.",
+  "remindNoDate": "Di namey\xEA de d\xEEroka tam tune \u2014 ez nikarim b\xEEran\xEEn\xEA saz bikim.",
+  "reminder": "\u23F0 B\xEEran\xEEn: {label}\nDem: *{d}* ({left}).",
+  "leftToday": "\xEEro",
+  "leftDays": "{n} roj maye",
+  "officeOn": "\u{1F3E2} *Moda \u201CLi dezgeh\xEA\u201D veb\xFB.*\n\n1\uFE0F\u20E3 Peyama j\xEAr\xEEn (bi alman\xEE) n\xEE\u015Fan\xEE karmend bide.\n2\uFE0F\u20E3 Peyam\xEAn deng\xEE bi\u015F\xEEne: dema karmend diaxive, telefon\xEA ber bi w\xEE ve bigire. Dema tu diaxiv\xEE, bi kurd\xEE biaxive.\n3\uFE0F\u20E3 Ez \xEA hevok\xEAn te bi t\xEEp\xEAn mezin bi alman\xEE n\xEE\u015Fan bidim \u2014 ten\xEA ekran\xEA n\xEE\u015Fan bide.\n\nTu dikar\xEE p\xEA\u015F\xEE nameya ku ji bo w\xEA hat\xEE bi\u015F\xEEn\xEE, da ku ez mijar\xEA bizanibim.\nDerketin: /stop",
+  "officeCard": "\u{1F1E9}\u{1F1EA} *Guten Tag!*\nIch spreche wenig Deutsch. Darf ich diese App zum \xDCbersetzen benutzen?\nEs wird nichts gespeichert. Danke!",
+  "officeOff": "Moda \u201CLi dezgeh\xEA\u201D hat girtin. Serkeftin! \u{1F340}",
+  "officeFrom": "\u{1F464} *Karmend got:*",
+  "officeYou": "\u{1F5E3} *N\xEE\u015Fan\xEE karmend bide:*",
+  "officeMeaning": "\u{1F4A1} *Wateya w\xEA:*",
+  "paywall": "S\xEEnor\xEA bela\u015F qediya.\n\n\u2B50 Abonet\xEE \u2014 meh\xEA {price} Stars (\u2248 {eur} \u20AC): namey\xEAn b\xEAs\xEEnor (bikaran\xEEna adil), moda \u201CLi dezgeh\xEA\u201D, b\xEEran\xEEn\xEAn deman.",
+  "btnPay": "\u2B50 Bi {price} Stars abone bibe",
+  "paid": "\u2705 Abonet\xEE heta {d} \xE7alak e. Spas!",
+  "subActive": "\u2B50 Abonet\xEE heta {d} \xE7alak e.",
+  "subNone": "Abonet\xEE tune. Bela\u015F maye: name \u2014 {l}, serdan \u2014 {o}.",
+  "privacy": "\u{1F512} Nepen\xEE\n\u2022 W\xEAne \xFB PDF nay\xEAn tomarkirin \u2014 ten\xEA t\xEAn \u015Fixulandin \xFB yekser t\xEAn j\xEAbirin.\n\u2022 Niv\xEEsa nameya daw\xEE 24 saetan t\xEA parastin da ku ez bersiva pirsan bidim \xFB bersiv\xEA biniv\xEEsim, pa\u015F\xEA bixweber t\xEA j\xEAbirin. /forget niha j\xEA dibe.\n\u2022 AI Claude (Anthropic) \xFB naskirina deng\xEA Cloudflare t\xEAn bikaran\xEEn. Dane ji bo perwerdey\xEA nay\xEAn bikaran\xEEn.\n\u2022 B\xEEran\xEEn ten\xEA d\xEErok \xFB sernavek\xEE kurt dipar\xEAzin.\n\u2022 Navn\xEE\u015Fana qeydkir\xEE (heke te dabe) heta tu j\xEA neb\xEE t\xEA parastin (/forget).",
+  "forgot": "\u{1F5D1} Hat j\xEAbirin: niv\xEEsa namey\xEA, b\xEEran\xEEn \xFB navn\xEE\u015Fan.",
+  "paysupport": "Ji bo pirs\xEAn dravdan\xEA li vir biniv\xEEse: {contact}. Heke xizmet al\xEEkar neb\xFB, vegerandina Stars di nav 7 rojan de.",
+  "terms": "Merc: xizmet bi AI \u015F\xEEroveyan dide \xFB \u015F\xFBna \u015F\xEAwirmendiya hiq\xFBq\xEE nagire. Dem \xFB m\xEEqdaran bi or\xEEj\xEEnal\xEA re kontrol bike. Tu dikar\xEE aboney\xEA her dem di m\xEEheng\xEAn Telegram de betal bik\xEE.",
+  "tooLong": "Peyama deng\xEE pir dir\xEAj e \u2014 ji kerema xwe heta 2 deq\xEEqeyan.",
+  "cmd": [
+    "Destp\xEAk",
+    "Namey\xEA \u015F\xEErove bike",
+    "Ez li dezgeh\xEA me",
+    "Ji moda dezgeh\xEA derkeve",
+    "Abonet\xEE",
+    "Ziman",
+    "Nepen\xEE",
+    "Daney\xEAn min j\xEA bibe",
+    "Al\xEEkariya dravdan\xEA",
+    "Merc",
+    "Navn\xEE\u015Fana min"
+  ]
+};
+var MORE_NAMES = { en: "English", tr: "T\xFCrk\xE7e", ar: "\u0627\u0644\u0639\u0631\u0628\u064A\u0629", pl: "Polski", bg: "\u0411\u044A\u043B\u0433\u0430\u0440\u0441\u043A\u0438", sr: "Srpski / Hrvatski / Bosanski", sq: "Shqip", fa: "\u0641\u0627\u0631\u0633\u06CC / \u062F\u0631\u06CC", ku: "Kurd\xEE (Kurmanc\xEE)" };
+var MORE_NAME_EN = { en: "English", tr: "Turkish", ar: "Arabic (simple Modern Standard Arabic that Syrians, Iraqis and other Arabic speakers easily understand)", pl: "Polish", bg: "Bulgarian", sr: "Serbian/Croatian/Bosnian (Latin script, match the user's variant)", sq: "Albanian", fa: "Persian (Farsi/Dari, match the user's variant)", ku: "Kurdish Kurmanji (Latin script)" };
 
 // src/i18n.js
 var LANGS = { ru: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439", uk: "\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430", ro: "Rom\xE2n\u0103", ...MORE_NAMES };
@@ -684,7 +757,7 @@ var T = {
     tooLong: "\u0413\u043E\u043B\u043E\u0441\u043E\u0432\u0435 \u0437\u0430\u0434\u043E\u0432\u0433\u0435 \u2014 \u0434\u043E 2 \u0445\u0432\u0438\u043B\u0438\u043D, \u0431\u0443\u0434\u044C \u043B\u0430\u0441\u043A\u0430."
   }
 };
-Object.assign(T, MORE);
+Object.assign(T, MORE, { ku: MORE_KU });
 function t(lang, key, vars = {}) {
   const s = (T[lang] || T.ru)[key] ?? T.ru[key] ?? key;
   return s.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? `{${k}}`);
@@ -808,7 +881,7 @@ var defUser = /* @__PURE__ */ __name((lang) => ({ lang, letters: 0, office: 0, s
 async function getUser(env, id, tgLang) {
   const u = await env.KV.get(`u:${id}`, "json");
   if (u) return u;
-  const map = { mo: "ro", hr: "sr", bs: "sr", sh: "sr", me: "sr", cnr: "sr", prs: "fa", be: "ru", kk: "ru", ky: "ru", uz: "ru", tg: "fa" };
+  const map = { kmr: "ku", ckb: "ku", mo: "ro", hr: "sr", bs: "sr", sh: "sr", me: "sr", cnr: "sr", prs: "fa", be: "ru", kk: "ru", ky: "ru", uz: "ru", tg: "fa" };
   const c = map[tgLang] || tgLang;
   const lang = LANGS[c] ? c : "en";
   return { ...defUser(lang), isNew: true };
