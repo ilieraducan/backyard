@@ -1,0 +1,22 @@
+name: a11y-scan
+on:
+  push:
+    branches: [kira-tmp]
+    paths: ["a11y/urls.txt"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: kira-tmp }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: cd a11y && npm install --no-audit --no-fund && npx playwright install --with-deps chromium
+      - run: cd a11y && node scan.mjs
+      - run: |
+          git config user.name a11y-bot && git config user.email a11y-bot@users.noreply.github.com
+          git add a11y/results.json a11y/shots && git commit -m "scan results" && git pull --rebase origin kira-tmp && git push origin HEAD:kira-tmp
