@@ -7,7 +7,7 @@ specs.json = [{"id": "c20261118-1", "theme": "green|brown|rust|slate",
                "hook_sub": "What you actually need",
                "slides": [{"h": "Short heading", "t": "1-3 short sentences"}, ...3-5],
                "cta": "My full list of popular picks", "url": "ilieraducan.github.io/backyard/gear"}]
-Writes tiktok/<id>-1.png ... into the repo. Needs Playwright (python) + Chromium.
+Writes tiktok/<id>-1.jpg (JPEG: TikTok rejects PNG photos) ... into the repo. Needs Playwright (python) + Chromium.
 """
 import json, sys, html, pathlib
 from playwright.sync_api import sync_playwright
@@ -68,8 +68,8 @@ def main(path):
             for i, h in enumerate(slides(s), 1):
                 pg.set_content(h)
                 pg.wait_for_timeout(120)
-                f = out / f"{s['id']}-{i}.png"
-                pg.screenshot(path=str(f))
+                f = out / f"{s['id']}-{i}.jpg"
+                pg.screenshot(path=str(f), type="jpeg", quality=92)
                 print("wrote", f)
         b.close()
 
