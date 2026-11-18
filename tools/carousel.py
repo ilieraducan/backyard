@@ -70,8 +70,9 @@ def main(path):
                 pg.wait_for_timeout(120)
                 f = out / f"{s['id']}-{i}.jpg"
                 pg.screenshot(path=str(f), type="jpeg", quality=92)
-                print("wrote", f)
+                print("wrote", f, "-> use URL https://ilieraducan.github.io/backyard/tiktok/" + f.name)
         b.close()
+    print("NOTE: TikTok via Metricool accepts only JPEG/WebP photos. Use the .jpg URLs above, never .png.")
 
 
 if __name__ == "__main__":
