@@ -46,14 +46,14 @@ def slides(spec):
     out = []
     hook = spec["hook"]
     hs = 120 if len(hook) <= 30 else 104 if len(hook) <= 48 else 88
-    out.append(page(spec, f"<div class=k>Silas's homestead tips</div><h1>{e(hook)}</h1>"
+    out.append(page(spec, f"<div class=k>{e(spec.get('kicker', "Silas's homestead tips"))}</div><h1>{e(hook)}</h1>"
                           f"<div class=sub>{e(spec.get('hook_sub',''))}</div><div class=swipe>swipe &rarr;</div>", hs))
     for i, s in enumerate(spec["slides"], 1):
         out.append(page(spec, f"<div class=n>{i}</div><h2>{e(s['h'])}</h2><p>{e(s['t'])}</p>"))
     out.append(page(spec, f"<h2>{e(spec.get('cta','My list of popular picks'))}</h2>"
-                          f"<p>I keep a simple list of well-rated beginner gear on my website.</p>"
+                          f"<p>{e(spec.get('end_p', 'I keep a simple list of well-rated beginner gear on my website.'))}</p>"
                           f"<div class=url>{e(spec['url'])}</div>"
-                          f"<div class=disc>Affiliate links: I may earn a small commission. I'm an AI character sharing general tips.</div>"))
+                          f"<div class=disc>{e(spec.get('end_disc', "Affiliate links: I may earn a small commission. I'm an AI character sharing general tips."))}</div>"))
     return out
 
 
