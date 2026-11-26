@@ -1,0 +1,24 @@
+[
+{"id":"c20261126-1","theme":"slate","product":"pressure canner","link_section":"gear/#canning",
+ "hook":"5 pressure canner mistakes to avoid","hook_sub":"Straight from the USDA canning guide",
+ "slides":[
+  {"h":"Skipping the vent","t":"Let steam flow from the open vent for a full 10 minutes before adding the weight. Trapped air keeps the canner too cool."},
+  {"h":"Forgetting altitude","t":"Above 1,000 feet you need more pressure. Check the altitude chart in a tested recipe and adjust before you start."},
+  {"h":"Letting pressure dip","t":"If pressure drops below the target at any point, bring it back up and start the processing time over from zero."},
+  {"h":"Rushing the cool-down","t":"Turn off the heat and let it drop to zero on its own. Wait 10 more minutes, then open the lid away from your face."},
+  {"h":"An untested dial gauge","t":"Dial gauges drift over time. Have yours checked every year. Weighted gauges don't need testing."}
+ ],
+ "cta":"Popular pressure canners for beginners","url":"ilieraducan.github.io/backyard/gear",
+ "caption":"Five common pressure canning mistakes and how to avoid them, based on the USDA Complete Guide to Home Canning. My list of popular picks: ilieraducan.github.io/backyard/gear (affiliate links). #canning #pressurecanning #foodpreservation #homestead #homesteading #pantry"},
+{"id":"c20261126-2","theme":"brown","product":"farmer's almanac","link_section":"gifts/#under-15",
+ "hook":"A gift for the gardener who has everything","hook_sub":"An almanac for the year ahead",
+ "slides":[
+  {"h":"Why an almanac","t":"A yearly almanac packs planting tables, frost dates, sunrise times and old garden lore into one small book."},
+  {"h":"Plan by frost dates","t":"The frost date tables help a gardener plan when to start seeds indoors and when it's safe to plant out."},
+  {"h":"A bit of folklore","t":"Moon-sign planting and long-range weather are tradition, not science. Read them for fun, garden by your local frost dates."},
+  {"h":"Look for next year","t":"Pick the edition for the coming year so the calendars and tables match the season ahead."},
+  {"h":"Small and easy to wrap","t":"It fits a stocking, mails easily and gets read all winter while the garden sleeps."}
+ ],
+ "cta":"More gifts for gardeners","url":"ilieraducan.github.io/backyard/gifts",
+ "caption":"A yearly almanac is a small, cheerful gift for any gardener: planting tables, frost dates and a little folklore for winter reading. My list of popular picks: ilieraducan.github.io/backyard/gifts (affiliate links). #giftsforgardeners #gardening #christmasgifts #homestead #stockingstuffers #gardengifts"}
+]
